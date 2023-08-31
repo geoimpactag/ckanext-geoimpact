@@ -27,4 +27,11 @@ setup(
         [ckan.plugins]
         geoimpact=ckanext.geoimpact.plugins:GeoimpactPlugin
     ''',
+    message_extractors={
+        'ckanext': [
+            ('**.py', 'python', None),
+            ('**.js', 'javascript', None),
+            ('**/templates/**.html', 'ckan', None),
+        ],
+    }
 )
