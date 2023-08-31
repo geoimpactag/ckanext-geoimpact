@@ -22,7 +22,7 @@ setup(
     license='',  # TODO: add license
     packages=find_packages(exclude=("tests",)),
     include_package_data=True,
-    install_requires=['ckan'],  # TODO: if we overweite the the fluent plugin, we need to add it here
+    install_requires=['ckan', 'flask'],  # TODO: if we overweite the the fluent plugin, we need to add it here
     entry_points='''
         [ckan.plugins]
         geoimpact=ckanext.geoimpact.plugins:GeoimpactPlugin

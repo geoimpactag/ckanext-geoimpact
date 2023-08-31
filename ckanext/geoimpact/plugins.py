@@ -1,13 +1,17 @@
 from ckan import plugins as p
+import ckan.lib.mailer as mailer
 from ckan.common import CKANConfig
 from ckan.plugins import IAuthFunctions, toolkit
 
+from .patches import send_reset_link
 from .utils.auth_functions import user_list
 
 
 class GeoimpactPlugin(p.SingletonPlugin):
     p.implements(p.IConfigurer, inherit=True)
     p.implements(IAuthFunctions, inherit=True)
+
+    mailer.send_reset_link = send_reset_link
 
     # IConfigurer
     def update_config(self, config: CKANConfig):
