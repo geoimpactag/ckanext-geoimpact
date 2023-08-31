@@ -1,35 +1,80 @@
 {% trans %}
-<hr>
-{{ site_title }} - Invitation
-<hr>
+<html>
+    <head>
+        <style>
+            /* Inline CSS for email clients that support it */
+            .container {
+                font-family: Arial, sans-serif;
+                max-width: 600px;
+                margin: 20px auto;
+                padding: 20px;
+                border: 1px solid #575756;
+                background-color: #fff;
+            }
+            .header, .button {
+                background-color: #008b31;
+                color: #FFF;
+                padding: 10px;
+            }
+            .header {
+                text-align: center;
+            }
+            .footer {
+                text-align: center;
+                color: #004016;
+                padding: 10px;
+                border-top: 1px solid #575756;
+            }
+            .button {
+                display: inline-block;
+                border-radius: 4px;
+                text-decoration: none;
+                margin: 20px 0;
+            }
+            a {
+                color: #E85F25;
+                margin: 0 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                {{ site_title }} - Invitation
+            </div>
 
-<h2>Hello, {{ user_name }}!</h2>
+            <h2>Hello, {{ user_name }}!</h2>
 
-<p>We're pleased to invite you to {{ site_title }}.</p>
+            <p>We're pleased to invite you to {{ site_title }}.</p>
 
-<h3>Account Details:</h3>
-<ul>
-    <li>
-        Username: {{ user_name }} (You can modify this later.)
-    </li>
-    <li>
-        Group: {{ group_title }}
-    </li>
-    <li>
-        Type: {{ group_type }}
-    </li>
-    <li>
-        Role: {{ role_name }}
-    </li>
-</ul>
+            <h3>Account Details:</h3>
+            <ul>
+                <li>
+                    Username: {{ user_name }} (You can modify this later.)
+                </li>
+                <li>
+                    Group: {{ group_title }}
+                </li>
+                <li>
+                    Type: {{ group_type }}
+                </li>
+                <li>
+                    Role: {{ role_name }}
+                </li>
+            </ul>
 
-<p>To activate your account, please set your password here:</p>
-<p>Reset Password: (<a href="{{ reset_link }}">{{ reset_link }}</a>)</p>
+            <p>To activate your account, click the link below:</p>
+            <a href="{{ reset_link }}" class="button">Set Password</a>
 
-<p>Wishing you a wonderful day!</p>
+            <p>Wishing you a wonderful day!</p>
 
-<hr>
-{{ site_title }}
-{{ site_url }}
-<hr>
+            <div class="footer">
+                <a href="https://www.swissenergyplanning.ch/blog">Blog</a>
+                <a href="https://www.swissenergyplanning.ch/">Website</a>
+                <a href="https://www.swissenergyplanning.ch/kontakt">Contact</a>
+                <a href="https://www.swissenergyplanning.ch/sep-datenschutz">Privacy Policy</a>
+            </div>
+        </div>
+    </body>
+</html>
 {% endtrans %}
