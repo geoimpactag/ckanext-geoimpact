@@ -17,6 +17,8 @@ class GeoimpactPlugin(p.SingletonPlugin):
         """
         toolkit.add_template_directory(config, 'templates')
 
+        return config
+
     # IAuthFunctions
     def get_auth_functions(self):
         """
@@ -26,3 +28,5 @@ class GeoimpactPlugin(p.SingletonPlugin):
         auth_functions = {
             'user_list': user_list,
         }
+
+        return auth_functions
