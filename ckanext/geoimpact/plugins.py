@@ -3,7 +3,7 @@ import ckan.lib.mailer as mailer
 from ckan.common import CKANConfig
 from ckan.plugins import IAuthFunctions, toolkit
 
-from .patches import send_reset_link
+from .patches.send_reset_link import send_reset_link
 from .utils.auth_functions import user_list
 
 
