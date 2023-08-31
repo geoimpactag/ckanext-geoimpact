@@ -14,4 +14,10 @@ def send_reset_link(user):
     }
     body = render('emails/reset_password.html', extra_vars=context)
     subject = "Password Reset for {}".format(user.name)
-    mail_recipient(user.display_name, user.email, subject, body)
+    mail_recipient(
+        recipient_name=user.display_name,
+        recipient_email=user.email,
+        subject=subject,
+        body=body,
+        headers={'Content-Type': 'text/html; charset=UTF-8'}
+    )
