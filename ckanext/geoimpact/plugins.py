@@ -2,7 +2,7 @@ from ckan import plugins as p
 from ckan.common import CKANConfig
 from ckan.plugins import IAuthFunctions, toolkit
 
-from utils.auth_functions import user_list
+from .utils.auth_functions import user_list
 
 
 class GeoimpactPlugin(p.SingletonPlugin):
