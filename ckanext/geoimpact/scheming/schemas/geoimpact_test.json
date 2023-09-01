@@ -134,6 +134,84 @@
       ]
     },
     {
+      "field_name": "categories",
+      "label": {
+          "en": "Categories",
+          "de": "Kategorien",
+          "fr": "Catégories",
+          "it": "Categorie"
+      },
+      "form_snippet": "multiple_select.html",
+      "display_snippet": "multiple_choice.html",
+      "validators": "scheming_multiple_choice",
+      "output_validators": "scheming_multiple_choice_output",
+      "choices": [
+        {
+          "value": "building",
+          "label": {
+              "en": "Building",
+              "de": "Gebäude",
+              "fr": "Bâtiment",
+              "it": "Edificio"
+            }
+        },
+        {
+          "value": "real_estate",
+          "label": {
+              "en": "Real estate",
+              "de": "Liegenschaft",
+              "fr": "Immobilier",
+              "it": "Immobiliare"
+            }
+        },
+        {
+          "value": "heat",
+          "label": {
+              "en": "Heat",
+              "de": "Wärme",
+              "fr": "Chaleur",
+              "it": "Calore"
+            }
+        },
+        {
+          "value": "electricity",
+          "label": {
+              "en": "Electricity",
+              "de": "Strom",
+              "fr": "Électricité",
+              "it": "Elettricità"
+            }
+        },
+        {
+          "value": "mobility",
+          "label": {
+              "en": "Mobility",
+              "de": "Mobilität",
+              "fr": "Mobilité",
+              "it": "Mobilità"
+            }
+        },
+        {
+          "value": "companies",
+          "label": {
+              "en": "Companies",
+              "de": "Unternehmen",
+              "fr": "Entreprises",
+              "it": "Aziende"
+            }
+        },
+        {
+          "value": "persons",
+          "label": {
+              "en": "Persons",
+              "de": "Personen",
+              "fr": "Personnes",
+              "it": "Persone"
+            }
+        }
+      ]
+    },
+    {
       "field_name": "data_level",
       "preset": "fluent_text",
       "required": false,
