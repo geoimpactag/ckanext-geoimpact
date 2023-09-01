@@ -27,26 +27,6 @@
           "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?"
         }
       }
-    },
-    {
-      "preset_name": "multilingual_multiple_select"
-      "values": {
-        "form_snippet": multiple_select.html,
-        "display_snippet": list_inline.html,
-        "validators": scheming_multiple_choice,
-        "output_validators": scheming_multiple_choice_output,
-      },
-    field_name: subject
-    label:
-      en: "Subject"
-      fr: "Sujet"
-    select_size: 10
-    choices:
-    - label:
-        en: Arts, Music, Literature
-        fr: Arts, musique, littérature
-      replaces: [AA]
-      value: arts_music_literature
     }
   ]
 }
