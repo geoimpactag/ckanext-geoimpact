@@ -81,13 +81,57 @@
       }
     },
     {
-      "field_name": "keywords",
+      "field_name": "dataprovider",
       "preset": "fluent_tags",
       "label": {
-          "de": "Schlagworte (Fluent)",
-          "fr": "Mots-cl\u00e9s",
-          "it": "Parole chiave"
+          "en": "Dataprovider",
+          "de": "Datenprovider",
+          "fr": "provider",
+          "it": "provider"
       }
+    },
+    {
+      "field_name": "dataprovider2",
+      "preset": "custom_fluent_tags",
+      "label": {
+          "en": "Dataprovider2",
+          "de": "Datenprovider2",
+          "fr": "provider2",
+          "it": "provider2"
+      }
+    },
+    {
+      "field_name": "dataprovider3",
+      "label": {
+          "en": "Dataprovider3",
+          "de": "Datenprovider3",
+          "fr": "provider3",
+          "it": "provider3"
+      },
+      "form_snippet": "multiple_select.html",
+      "display_snippet": "multiple_choice.html",
+      "validators": "scheming_multiple_choice",
+      "output_validators": "scheming_multiple_choice_output",
+      "choices": [
+        {
+          "value": "bfe",
+          "label": {
+              "en": "SFOE",
+              "de": "BFE",
+              "fr": "OFEN",
+              "it": "UFE"
+            }
+        },
+        {
+          "value": "bfs",
+          "label": {
+              "en": "FSO",
+              "de": "BFS",
+              "fr": "OFS",
+              "it": "UST"
+            }
+        }
+      ]
     },
     {
       "field_name": "data_level",
