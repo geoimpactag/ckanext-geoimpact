@@ -7,7 +7,7 @@
     {
       "field_name": "title_translated",
       "preset": "fluent_core_translated",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Title",
           "de": "Titel",
@@ -39,7 +39,7 @@
     {
       "field_name": "short_description",
       "preset": "fluent_text_full",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Short description",
           "de": "Kurzbeschreibung",
@@ -51,7 +51,7 @@
       "field_name": "notes_translated",
       "preset": "fluent_core_translated",
       "form_snippet": "fluent_markdown.html",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Description",
           "de": "Beschreibung",
@@ -136,7 +136,7 @@
     {
       "field_name": "data_level",
       "preset": "fluent_text",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Data level",
           "de": "Datenebene",
@@ -147,7 +147,7 @@
     {
       "field_name": "data_periodicity",
       "preset": "select",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Update interval",
           "de": "Aktualisierungsintervall",
@@ -205,7 +205,7 @@
     {
       "field_name": "data_genesis",
       "preset": "select",
-      "required": true,
+      "required": false,
       "label": {
           "de": "Datengenese",
           "fr": "Genèse des données",
