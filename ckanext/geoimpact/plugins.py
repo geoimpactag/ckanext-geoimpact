@@ -45,6 +45,9 @@ class GeoimpactPlugin(p.SingletonPlugin):
         This function is called by ckan to get the dataset facets.
         We overwrite the default dataset facets here
         """
-        facets_dict['categories'] = _('Categories')
+        lang_code = toolkit.request.environ['CKAN_LANG']
+        # facets_dict['categories'] = _('Categories')
+        facets_dict['categories_' + lang_code] = _('Categories')
+        facets_dict['dataprovider2_' + lang_code] = _('Categories')
         return facets_dict
 
