@@ -1,0 +1,344 @@
+{
+  "scheming_version": 1,
+  "dataset_type": "geoimpact-test",
+  "about_url": "http://github.com/open-data/ckanext-fluent",
+  "form_languages": ["en", "de", "fr", "it"],
+  "dataset_fields": [
+    {
+      "field_name": "title_translated",
+      "preset": "fluent_core_translated",
+      "required": true,
+      "label": {
+          "en": "Title",
+          "de": "Titel",
+          "fr": "Titre",
+          "it": "Titolo"
+      }
+    },
+    {
+      "field_name": "title_for_slug",
+      "preset": "title",
+      "label": {
+          "en": "ID for this record",
+          "de": "ID für diesen Eintrag",
+          "fr": "ID pour cette entrée",
+          "it": "ID di questa voce"
+      }
+    },
+    {
+      "field_name": "name",
+      "preset": "dataset_slug",
+      "label": {
+          "en": "URL for this record",
+          "de": "URL zu diesem Eintrag",
+          "fr": "URL de cette entrée",
+          "it": "URL a questa voce"
+      },
+      "form_placeholder": "my_dataset_id"
+    },
+    {
+      "field_name": "short_description",
+      "preset": "fluent_text_full",
+      "required": true,
+      "label": {
+          "en": "Short description",
+          "de": "Kurzbeschreibung",
+          "fr": "Brève description",
+          "it": "Breve descrizione"
+      }
+    },
+    {
+      "field_name": "notes_translated",
+      "preset": "fluent_core_translated",
+      "form_snippet": "fluent_markdown.html",
+      "required": true,
+      "label": {
+          "en": "Description",
+          "de": "Beschreibung",
+          "fr": "Description",
+          "it": "Descrizione"
+      }
+    },
+    {
+      "field_name": "owner_org",
+      "preset": "dataset_organization",
+      "help_inline": true,
+      "label": {
+          "en": "Provide in organization",
+          "de": "Bereitstellen in Organisation",
+          "fr": "Mise à disposition dans l'organisation",
+          "it": "Fornite nell'organizzazione"
+      }
+    },
+    {
+      "field_name": "tag_string",
+      "preset": "tag_string_autocomplete",
+      "label": {
+          "en": "Keywords",
+          "de": "Schlagworte",
+          "fr": "Mots-cl\u00e9s",
+          "it": "Parole chiave"
+      }
+    },
+    {
+      "field_name": "keywords",
+      "preset": "fluent_tags",
+      "label": {
+          "de": "Schlagworte (Fluent)",
+          "fr": "Mots-cl\u00e9s",
+          "it": "Parole chiave"
+      }
+    },
+    {
+      "field_name": "data_level",
+      "preset": "fluent_text",
+      "required": true,
+      "label": {
+          "en": "Data level",
+          "de": "Datenebene",
+          "fr": "Niveau des données",
+          "it": "Livello dei dati"
+      }
+    },
+    {
+      "field_name": "data_periodicity",
+      "preset": "select",
+      "required": true,
+      "label": {
+          "en": "Update interval",
+          "de": "Aktualisierungsintervall",
+          "fr": "Intervalle d'actualisation",
+          "it": "Intervallo di aggiornamento"
+      },
+      "choices": [
+        {
+          "value": "weekly",
+          "label": {
+              "en": "weekly",
+              "de": "wöchentlich",
+              "fr": "hebdomadaire",
+              "it": "invariato"
+            }
+        },
+        {
+          "value": "monthly",
+          "label": {
+              "en": "monthly",
+              "de": "monatlich",
+              "fr": "mensuel",
+              "it": "mensile"
+            }
+        },
+        {
+          "value": "semiannual",
+          "label": {
+              "en": "semiannual",
+              "de": "halbjährlich",
+              "fr": "semestriel",
+              "it": "semestrale"
+            }
+        },
+        {
+          "value": "annual",
+          "label": {
+              "en": "annual",
+              "de": "jährlich",
+              "fr": "annuel",
+              "it": "annuale"
+            }
+        },
+        {
+          "value": "irregular",
+          "label": {
+              "en": "irregular",
+              "de": "unregelmässig",
+              "fr": "irrégulier",
+              "it": "irregolare"
+            }
+        }
+      ]
+    },
+    {
+      "field_name": "data_genesis",
+      "preset": "select",
+      "required": true,
+      "label": {
+          "de": "Datengenese",
+          "fr": "Genèse des données",
+          "it": "Genesi dei dati"
+      },
+      "choices": [
+        {
+          "value": "raw",
+          "label": {
+              "de": "unverändert",
+              "fr": "inchangé",
+              "it": "invariato"
+            }
+        },
+        {
+          "value": "derived",
+          "label": {
+              "de": "abgeleitet",
+              "fr": "dérivé",
+              "it": "derivato"
+            }
+        },
+        {
+          "value": "modelled",
+          "label": {
+              "de": "modelliert",
+              "fr": "modélisé",
+              "it": "modellato"
+            }
+        }
+      ]
+    },
+    {
+      "field_name": "count",
+      "label": {
+          "de": "Anzahl",
+          "fr": "Nombre",
+          "it": "Numero"
+      },
+      "validators": "ignore_missing int_validator"
+    },
+    {
+      "field_name": "coverage",
+      "label": {
+          "de": "Abdeckung %",
+          "fr": "Couverture %",
+          "it": "Copertura %"
+      },
+      "validators": "ignore_missing int_validator"
+    },
+    {
+      "field_name": "count_without_0",
+      "label": {
+          "de": "Anzahl ohne 0",
+          "fr": "Nombre sans 0",
+          "it": "Numero senza 0"
+      },
+      "validators": "ignore_missing int_validator"
+    },
+    {
+      "field_name": "coverage_without_0",
+      "label": {
+          "de": "Abdeckung ohne 0 %",
+          "fr": "Couverture sans 0 %",
+          "it": "Copertura senza 0 %"
+      },
+      "validators": "ignore_missing int_validator"
+    },
+    {
+      "field_name": "last_update",
+      "label": {
+          "de": "Datenstand",
+          "fr": "État des données",
+          "it": "Stato dei dati"
+      }
+    },
+    {
+      "field_name": "addon",
+      "preset": "radio",
+      "label": "Add-on",
+      "choices": [
+          {
+          "value": "no",
+          "label": {
+              "de": "nein",
+              "fr": "non",
+              "it": "no"
+            }
+          },
+          {
+          "value": "energysimulation",
+          "label": "EnergySimulation"
+          },
+          {
+          "value": "kbdm",
+          "label": "KBDM"
+          },
+          {
+          "value": "documedia",
+          "label": "Documedia"
+          }
+      ]
+    },
+    {
+      "field_name": "marketsense",
+      "preset": "radio",
+      "label": "MarketSense",
+      "choices": [
+          {
+          "value": "yes",
+          "label": {
+              "de": "ja",
+              "fr": "oui",
+              "it": "si"
+            }
+          },
+          {
+          "value": "no",
+          "label": {
+              "de": "nein",
+              "fr": "non",
+              "it": "no"
+            }
+          }
+      ]
+    },
+    {
+      "field_name": "historized",
+      "preset": "radio",
+      "label": {
+          "de": "Historisiert",
+          "fr": "Historisé",
+          "it": "Storicizzato"
+      },
+      "choices": [
+          {
+          "value": "yes",
+          "label": {
+              "de": "ja",
+              "fr": "oui",
+              "it": "si"
+            }
+          },
+          {
+          "value": "no",
+          "label": {
+              "de": "nein",
+              "fr": "non",
+              "it": "no"
+            }
+          }
+      ]
+    },
+    {
+      "field_name": "link_source",
+      "preset": "fluent_link",
+      "label": {
+          "de": "Link zur Datenquelle",
+          "fr": "Lien vers la source de données",
+          "it": "Collegamento all'origine dei dati"
+      }
+    },
+    {
+      "field_name": "link_provider",
+      "preset": "fluent_link",
+      "label": {
+          "de": "Link zum Datenprovider",
+          "fr": "provider",
+          "it": "provider"
+      }
+    }
+  ],
+  "resource_fields": [
+    {
+      "field_name": "url_provider",
+      "label": "URL Provider",
+      "preset": "resource_url_upload"
+    }
+  ]
+}
