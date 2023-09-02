@@ -3,7 +3,7 @@ import ckan.lib.mailer as mailer
 from ckan.common import _, CKANConfig
 
 from .patches.emails import send_reset_link, send_invite
-from .utils.auth_functions import user_list
+from .utils.auth_functions import user_list, user_show, group_show
 
 
 class GeoimpactPlugin(p.SingletonPlugin):
@@ -32,6 +32,8 @@ class GeoimpactPlugin(p.SingletonPlugin):
         """
         auth_functions = {
             'user_list': user_list,
+            'user_show': user_show,
+            'group_show': group_show,
         }
 
         return auth_functions
