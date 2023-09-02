@@ -1,7 +1,6 @@
 from ckan import plugins as p
 import ckan.lib.mailer as mailer
-from ckan.common import CKANConfig
-from ckan.plugins import IAuthFunctions, toolkit
+from ckan.common import _, CKANConfig
 
 from .patches.emails import send_reset_link, send_invite
 from .utils.auth_functions import user_list
@@ -9,7 +8,7 @@ from .utils.auth_functions import user_list
 
 class GeoimpactPlugin(p.SingletonPlugin):
     p.implements(p.IConfigurer, inherit=True)
-    p.implements(IAuthFunctions, inherit=True)
+    p.implements(p.IAuthFunctions, inherit=True)
 
     # Monkey patches for emails to use custom templates
     mailer.send_reset_link = send_reset_link
@@ -21,7 +20,7 @@ class GeoimpactPlugin(p.SingletonPlugin):
         This function is called by ckan to update the config
         We overwrite the default config here
         """
-        toolkit.add_template_directory(config, 'templates')
+        p.toolkit.add_template_directory(config, 'templates')
 
         return config
 
