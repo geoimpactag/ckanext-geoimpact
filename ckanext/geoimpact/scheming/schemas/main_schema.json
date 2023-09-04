@@ -156,66 +156,102 @@
       "preset": "custom_fluent_multi_select",
       "choices": [
         {
-          "value": "building",
+          "value": "identifiers",
           "label": {
-              "en": "Building",
-              "de": "Gebäude",
-              "fr": "Bâtiment",
-              "it": "Edificio"
+              "en": "Identifiers",
+              "de": "Identifikatoren",
+              "fr": "Identificateurs",
+              "it": "Identificatori"
             }
         },
         {
-          "value": "real_estate",
+          "value": "building_usage",
           "label": {
-              "en": "Real estate",
-              "de": "Liegenschaft",
-              "fr": "Immobilier",
-              "it": "Immobiliare"
+              "en": "Building usage",
+              "de": "Gebäudenutzung",
+              "fr": "Bâtiment utilisation",
+              "it": "Edificio uso"
             }
         },
         {
-          "value": "heat",
+          "value": "geometric_properties",
           "label": {
-              "en": "Heat",
-              "de": "Wärme",
-              "fr": "Chaleur",
-              "it": "Calore"
+              "en": "Geometric properties",
+              "de": "Geometrische Eigenschaften",
+              "fr": "Propriétés géométriques",
+              "it": "Proprietà geometriche"
             }
         },
         {
-          "value": "electricity",
+          "value": "building_renovation",
           "label": {
-              "en": "Electricity",
-              "de": "Strom",
-              "fr": "Électricité",
-              "it": "Elettricità"
+              "en": "Building renovation",
+              "de": "Gebäuderenovierung",
+              "fr": "Rénovation de bâtiment",
+              "it": "Ristrutturazione dell'edificio"
             }
         },
         {
-          "value": "mobility",
+          "value": "energy_consumption",
           "label": {
-              "en": "Mobility",
-              "de": "Mobilität",
-              "fr": "Mobilité",
-              "it": "Mobilità"
+              "en": "Energy consumption",
+              "de": "Energieverbrauch",
+              "fr": "Consommation d'énergie",
+              "it": "Consumo di energia"
             }
         },
         {
-          "value": "companies",
+          "value": "energy_production",
           "label": {
-              "en": "Companies",
-              "de": "Unternehmen",
-              "fr": "Entreprises",
-              "it": "Aziende"
+              "en": "Energy production",
+              "de": "Energieproduktion",
+              "fr": "Production d'énergie",
+              "it": "Produzione di energia"
             }
         },
         {
-          "value": "persons",
+          "value": "energy_potential",
           "label": {
-              "en": "Persons",
-              "de": "Personen",
-              "fr": "Personnes",
-              "it": "Persone"
+              "en": "Energy potential",
+              "de": "Energiepotenzial",
+              "fr": "Potentiel énergétique",
+              "it": "Potenziale energetico"
+            }
+        },
+        {
+          "value": "energy_tariffs",
+          "label": {
+              "en": "Energy tariffs",
+              "de": "Energietarife",
+              "fr": "Tarifs de l'énergie",
+              "it": "Tariffe energetiche"
+            }
+        },
+        {
+          "value": "solar_energy",
+          "label": {
+              "en": "Solar energy",
+              "de": "Solarenergie",
+              "fr": "Énergie solaire",
+              "it": "Energia solare"
+            }
+        },
+        {
+          "value": "solar_energy",
+          "label": {
+              "en": "Solar energy",
+              "de": "Solarenergie",
+              "fr": "Énergie solaire",
+              "it": "Energia solare"
+            }
+        },
+        {
+          "value": "district_heating",
+          "label": {
+              "en": "District heating",
+              "de": "Fernwärme",
+              "fr": "Chauffage urbain",
+              "it": "Teleriscaldamento"
             }
         }
       ]
