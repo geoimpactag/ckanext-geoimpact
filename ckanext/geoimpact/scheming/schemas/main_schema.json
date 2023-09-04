@@ -585,7 +585,6 @@
     },
     {
       "field_name": "example_values",
-      "preset": "fluent_text_full",
       "label": {
           "en": "Example values",
           "de": "Beispielwerte",
