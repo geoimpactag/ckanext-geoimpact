@@ -147,6 +147,8 @@
     },
     {
       "field_name": "subcategories",
+      "select_size": 5,
+      "sorted_choices": true,
       "label": {
           "en": "Subcategories",
           "de": "Unterkategorien",
