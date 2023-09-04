@@ -457,5 +457,10 @@
     }
   ],
   "resource_fields": [
+    {
+      "field_name": "url_provider",
+      "label": "URL Provider",
+      "preset": "resource_url_upload"
+    }
   ]
 }
