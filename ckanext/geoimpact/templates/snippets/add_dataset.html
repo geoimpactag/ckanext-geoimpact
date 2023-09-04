@@ -1,0 +1,38 @@
+{% set schemas = h.get_available_schemas() %}
+{% set dataset_type = h.default_package_type() %}
+{% set route_name_default = dataset_type ~ '.new' %}
+{% set link_label_default = h.humanize_entity_type('package', dataset_type, 'add link') or _("Add Dataset") %}
+
+{% if schemas|length > 1 %}
+    <!-- Display dropdown for multiple schemas -->
+    <div class="dropdown">
+        <button
+            id="geoimpact-add-dataset-dropdown"
+            class="btn btn-primary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+        >{{ link_label_default }}
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu" aria-labelledby="geoimpact-add-dataset-dropdown">
+            {% for schema in schemas %}
+                {% set schema_url = '/' + schema.name + '/new' %}
+                {% set link_label = schema.display_name  %}
+                <li>
+                    {% if group %}
+                        <a class="dropdown-item" href="{{ schema_url }}?group={{ group }}">{{ link_label }}</a>
+                    {% else %}
+                        <a class="dropdown-item" href="{{ schema_url }}">{{ link_label }}</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% else %}
+    <!-- Default behavior for single schema or none -->
+    {% if group %}
+        {% link_for link_label_default, named_route=route_name_default, group=group, class_='btn btn-primary', icon='plus-square' %}
+    {% else %}
+        {% link_for link_label_default, named_route=route_name_default, class_='btn btn-primary', icon='plus-square' %}
+    {% endif %}
+{% endif %}

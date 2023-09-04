@@ -4,15 +4,23 @@ from ckan.common import _, CKANConfig
 
 from .patches.emails import send_reset_link, send_invite
 from .utils.auth_functions import user_list, user_show, group_show
+from .utils.template_helpers import get_available_schemas
 
 
 class GeoimpactPlugin(p.SingletonPlugin):
     p.implements(p.IConfigurer, inherit=True)
     p.implements(p.IAuthFunctions, inherit=True)
+    p.implements(p.ITemplateHelpers, inherit=True)
 
     # Monkey patches for emails to use custom templates
     mailer.send_reset_link = send_reset_link
     mailer.send_invite = send_invite
+
+    # Helper functions
+    def get_helpers(self):
+        return {
+            'get_available_schemas': get_available_schemas,
+        }
 
     # IConfigurer
     def update_config(self, config: CKANConfig):
