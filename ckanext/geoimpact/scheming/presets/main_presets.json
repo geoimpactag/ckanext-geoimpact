@@ -39,7 +39,7 @@
         "output_validators": "scheming_multiple_choice_output",
         "help_text": {
           "en": "Select one or more categories by marking categories with Ctrl+click or Shift+click.",
-          "de": "Wähle eine oder mehrere Kategorien mit Strg+Klick oder Umschalt+Klick markieren aus.",
+          "de": "Wähle eine oder mehrere Kategorien durch Markieren mit Strg+Klick oder Umschalt+Klick aus.",
           "fr": "Select one or more categories by marking categories with Ctrl+click or Shift+click.",
           "it": "Select one or more categories by marking categories with Ctrl+click or Shift+click."
         }
