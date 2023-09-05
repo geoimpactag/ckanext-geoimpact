@@ -23,9 +23,9 @@
     <ul>
     {%- for choice in choices -%}
         {%- if choices.url != '' -%}
-            <a href="{{ choice['url'] }}" target="_blank">{{ choice['label'] }}</a>
+            <li><a href="{{ choice['url'] }}" target="_blank">{{ choice['label'] }}</a></li>
         {%- else -%}
-            {{ choice['label'] }}
+            <li>{{ choice['label'] }}</li>
         {%- endif -%}
     {%- endfor -%}
     </ul>
