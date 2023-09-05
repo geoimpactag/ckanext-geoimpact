@@ -237,15 +237,6 @@
             }
         },
         {
-          "value": "solar_energy",
-          "label": {
-              "en": "Solar energy",
-              "de": "Solarenergie",
-              "fr": "Énergie solaire",
-              "it": "Energia solare"
-            }
-        },
-        {
           "value": "district_heating",
           "label": {
               "en": "District heating",
