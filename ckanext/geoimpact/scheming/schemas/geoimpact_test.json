@@ -146,10 +146,22 @@
         {
           "value": "nourl",
           "label": {
-              "en": "FSO",
-              "de": "BFS",
-              "fr": "OFS",
-              "it": "UST"
+              "en": "nourl",
+              "de": "nourl",
+              "fr": "nourl",
+              "it": "nourl"
+          }
+        },
+        {
+          "value": "parturl",
+          "label": {
+              "en": "parturl",
+              "de": "parturl",
+              "fr": "parturl",
+              "it": "parturl"
+          },
+          "url": {
+            "en": "parturl"
           }
         }
       ]
