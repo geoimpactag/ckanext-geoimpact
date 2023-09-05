@@ -8,11 +8,14 @@ def send_reset_link(user):
     """
     Send the user a link to reset their password.
     """
+    if (user.email is None) or not len(user.email):
+        raise MailerException(_("No recipient email address available!"))
+    
     reset_link = get_reset_link(user)
     context = {
         'user_name': user.name,
         'reset_link': reset_link,
-        'site_title': 'Your Site Title'  # Replace with actual site title
+        'site_title': config.get('ckan.site_title')
     }
     body = render('emails/reset_password.html', extra_vars=context)
     subject = "Password Reset for {}".format(user.name)

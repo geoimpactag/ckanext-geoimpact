@@ -1,5 +1,7 @@
 import json
 import os.path
+from flask import request
+from ckan import model
 from ckan import plugins as p
 
 # Try importing yaml, and set a flag if successful
@@ -63,3 +65,78 @@ def get_available_schemas():
         }
         for schema in valid_schemas
     ]
+
+
+def get_fluent_label_from_schema(field_name, value):
+    lang_code = p.toolkit.request.environ['CKAN_LANG']
+    schemas = _get_valid_schemas()
+
+    # Check if value is a string representation of a list
+    if isinstance(value, str) and value.startswith('[') and value.endswith(']'):
+        try:
+            value = json.loads(value)
+        except json.JSONDecodeError:
+            pass
+
+    # Ensure values is a list, even if it's a single string
+    values = value if isinstance(value, list) else [value]
+
+    result_labels = []
+
+    for v in values:
+        label_found = False
+        for schema in schemas:
+            for field in schema.get('dataset_fields', []):
+                if field['field_name'] == field_name:
+                    for choice in field.get('choices', []):
+                        if choice['value'] == v:
+                            result_labels.append(choice['label'].get(lang_code, v))
+                            label_found = True
+                            break  # exit the inner loop once label is found
+                    if label_found:
+                        break  # exit the outer loop once label is found
+
+        # If label is not found for this value, append the value itself
+        if not label_found:
+            result_labels.append(v)
+
+    return set(result_labels)
+
+
+def get_fluent_value_from_label(field_name, label):
+    lang_code = p.toolkit.request.environ['CKAN_LANG']
+    schemas = _get_valid_schemas()
+
+    for schema in schemas:
+        for field in schema.get('dataset_fields', []):
+            if field['field_name'] == field_name:
+                for choice in field.get('choices', []):
+                    if choice['label'].get(lang_code) == label:
+                        return choice['value']
+
+    return None
+
+
+def group_facet_items_by_label(items):
+
+    # Get the current categories from the URL
+    current_categories = request.args.getlist('categories')
+    current_labels = [get_fluent_label_from_schema('categories', category) for category in current_categories]
+    # Flatten the list of lists into a single list
+    current_labels = [label for sublist in current_labels for label in sublist]
+
+    grouped = {}
+    for item in items:
+        labels = get_fluent_label_from_schema('categories', item['name'])
+        for label in labels:
+            if label in grouped:
+                grouped[label]['count'] += item['count']
+            else:
+                # Check if label is currently active
+                is_active = label in current_labels
+                grouped[label] = {
+                    'name': label,
+                    'count': item['count'],
+                    'active': is_active
+                }
+    return list(grouped.values())
