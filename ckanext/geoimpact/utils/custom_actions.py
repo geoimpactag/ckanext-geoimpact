@@ -2,6 +2,7 @@ import ckan.plugins as p
 from ckan.logic.action.get import organization_list as original_organization_list
 from . import _requester_is_admin
 
+
 def organization_list(context, data_dict):
     """
     Override CKAN's default method to retrieve a list of organizations.

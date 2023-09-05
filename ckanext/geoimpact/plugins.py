@@ -45,8 +45,9 @@ class GeoimpactPlugin(p.SingletonPlugin):
         This function is called by ckan before a search is executed
         We overwrite the default search here
         """
+        filter_query = search_params.get('fq', '')
         # Check if 'categories' parameter is present
-        if 'categories:' in search_params['fq']:
+        if filter_query and 'categories:' in filter_query:
             # Replace the filter query to include wildcards for a broader match
             search_params['fq'] = search_params['fq'].replace('categories:"', 'categories:*"').replace('"', '"*')
 
