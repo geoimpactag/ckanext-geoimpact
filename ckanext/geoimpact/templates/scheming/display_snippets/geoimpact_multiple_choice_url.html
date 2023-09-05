@@ -11,7 +11,7 @@
 {%- endfor -%}
 
 {%- if choices|length == 1 -%}
-    {%- if choices[0].get('url') is defined -%}
+    {%- if choices[0].url != '' -%}
         <a href="{{ choices[0]['url'] }}" target="_blank">{{ choices[0]['label'] }}</a>
     {%- else -%}
         {{ choices[0]['label'] }}
@@ -22,7 +22,7 @@
     {%- endif -%}
     <ul>
     {%- for choice in choices -%}
-        {%- if choice.get('url') is defined -%}
+        {%- if choices.url != '' -%}
             <a href="{{ choice['url'] }}" target="_blank">{{ choice['label'] }}</a>
         {%- else -%}
             {{ choice['label'] }}
