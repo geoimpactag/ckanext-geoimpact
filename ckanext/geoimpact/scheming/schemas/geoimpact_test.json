@@ -122,10 +122,10 @@
               "it": "UFE"
           },
           "url": {
-            "en": "Url_en",
-            "de": "Url_de",
-            "fr": "Url_fr",
-            "it": "Url_it"
+            "en": "https://www.bfe.admin.ch/bfe/en/home.html",
+            "de": "https://www.bfe.admin.ch/bfe/de/home.html",
+            "fr": "https://www.bfe.admin.ch/bfe/fr/home.html",
+            "it": "https://www.bfe.admin.ch/bfe/it/home.html"
           }
         },
         {
@@ -141,6 +141,15 @@
             "de": "Url",
             "fr": "Url",
             "it": "Url"
+          }
+        },
+        {
+          "value": "nourl",
+          "label": {
+              "en": "FSO",
+              "de": "BFS",
+              "fr": "OFS",
+              "it": "UST"
           }
         }
       ]
