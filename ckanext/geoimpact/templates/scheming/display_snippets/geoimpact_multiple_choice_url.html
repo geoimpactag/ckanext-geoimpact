@@ -1,0 +1,21 @@
+{%- set values = data[field.field_name] -%}
+{%- set choices = [] -%}
+
+{%- for choice in h.scheming_field_choices(field) -%}
+    {%- if choice.value in values -%}
+      {%- do choices.append({'label': h.scheming_language_text(choice.label), 'url': h.scheming_language_text(choice.url)}) -%}
+    {%- endif -%}
+{%- endfor -%}
+
+{%- if labels|length == 1 -%}
+    <a href="{{ choices[0]['url'] }}" target="_blank">{{ choices[0]['label'] }}</a>
+{%- else -%}
+    {%- if field.get('sorted_choices') -%}
+        {%- set choices = choices|sort(attribute='label') -%}
+    {%- endif -%}
+    <ul>
+    {%- for choice in choices -%}
+       <li><a href="{{ choice['url'] }}" target="_blank">{{ choice['label'] }}</a></li>
+    {%- endfor -%}
+    </ul>
+{%- endif -%}
