@@ -29,13 +29,13 @@
       }
     },
     {
-      "preset_name": "custom_fluent_multi_select",
+      "preset_name": "geoimpact_fluent_multi_select_url",
       "values": {
         "form_include_blank_choice": true,
         "select_size": 5,
         "sorted_choices": true,
         "form_snippet": "multiple_select.html",
-        "display_snippet": "multiple_choice.html",
+        "display_snippet": "geoimpact_multiple_choice_url.html",
         "validators": "scheming_multiple_choice",
         "output_validators": "scheming_multiple_choice_output",
         "help_text": {

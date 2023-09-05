@@ -78,7 +78,7 @@
           "fr": "Catégories",
           "it": "Categorie"
       },
-      "preset": "custom_fluent_multi_select",
+      "preset": "geoimpact_fluent_multi_select_url",
       "choices": [
         {
           "value": "building",
@@ -153,7 +153,7 @@
           "fr": "Sous-catégories",
           "it": "Sottocategorie"
       },
-      "preset": "custom_fluent_multi_select",
+      "preset": "geoimpact_fluent_multi_select_url",
       "choices": [
         {
           "value": "identifiers",
@@ -264,7 +264,7 @@
           "fr": "Fournisseurs de données",
           "it": "Fornitori di dati"
       },
-      "preset": "custom_fluent_multi_select",
+      "preset": "geoimpact_fluent_multi_select_url",
       "choices": [
         {
           "value": "bfe",
@@ -273,7 +273,13 @@
               "de": "BFE",
               "fr": "OFEN",
               "it": "UFE"
-            }
+          },
+          "url": {
+            "en": "https://www.bfe.admin.ch/bfe/en/home.html",
+            "de": "https://www.bfe.admin.ch/bfe/de/home.html",
+            "fr": "https://www.bfe.admin.ch/bfe/fr/home.html",
+            "it": "https://www.bfe.admin.ch/bfe/it/home.html"
+          }
         },
         {
           "value": "bfs",
@@ -282,7 +288,43 @@
               "de": "BFS",
               "fr": "OFS",
               "it": "UST"
-            }
+          },
+          "url": {
+            "en": "https://www.bfs.admin.ch/bfs/en/home.html",
+            "de": "https://www.bfs.admin.ch/bfs/de/home.html",
+            "fr": "https://www.bfs.admin.ch/bfs/fr/home.html",
+            "it": "https://www.bfs.admin.ch/bfs/it/home.html"
+          }
+        },
+        {
+          "value": "swisstopo",
+          "label": {
+              "en": "swisstopo",
+              "de": "swisstopo",
+              "fr": "swisstopo",
+              "it": "swisstopo"
+          },
+          "url": {
+            "en": "https://www.swisstopo.admin.ch/en/home.html",
+            "de": "https://www.swisstopo.admin.ch/de/home.html",
+            "fr": "https://www.swisstopo.admin.ch/fr/home.html",
+            "it": "https://www.swisstopo.admin.ch/it/home.html"
+          }
+        },
+        {
+          "value": "av",
+          "label": {
+              "en": "Cadastral surveying CH/FL",
+              "de": "Amtliche Vermessung Schweiz/FL",
+              "fr": "Mensuration officielle CH/FL",
+              "it": "Misurazione ufficiale CH/FL"
+          },
+          "url": {
+            "en": "https://www.cadastre.ch/en/home.html",
+            "de": "https://www.cadastre.ch/de/home.html",
+            "fr": "https://www.cadastre.ch/fr/home.html",
+            "it": "https://www.cadastre.ch/it/home.html"
+          }
         }
       ]
     },
