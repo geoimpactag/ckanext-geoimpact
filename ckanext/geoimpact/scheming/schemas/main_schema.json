@@ -71,77 +71,269 @@
       }
     },
     {
-      "field_name": "categories",
+      "field_name": "data_providers",
       "label": {
-          "en": "Categories",
-          "de": "Kategorien",
-          "fr": "Catégories",
-          "it": "Categorie"
+          "en": "Data providers",
+          "de": "Datenlieferanten",
+          "fr": "Fournisseurs de données",
+          "it": "Fornitori di dati"
       },
       "preset": "geoimpact_fluent_multi_select_url",
       "choices": [
         {
-          "value": "building",
+          "value": "geoimpact_analytics",
           "label": {
-              "en": "Building",
-              "de": "Gebäude",
-              "fr": "Bâtiment",
-              "it": "Edificio"
-            }
+              "en": "geoimpact Analytics",
+              "de": "geoimpact Analytics",
+              "fr": "geoimpact Analytics",
+              "it": "geoimpact Analytics"
+          },
+          "url": {
+            "en": "https://www.swissenergyplanning.ch/news/categories/data-analytics-1",
+            "de": "https://www.swissenergyplanning.ch/news/categories/data-analytics-1",
+            "fr": "https://www.swissenergyplanning.ch/news/categories/data-analytics-1",
+            "it": "https://www.swissenergyplanning.ch/news/categories/data-analytics-1"
+          }
         },
         {
-          "value": "real_estate",
+          "value": "bfe",
           "label": {
-              "en": "Real estate",
-              "de": "Liegenschaft",
-              "fr": "Immobilier",
-              "it": "Immobiliare"
-            }
+              "en": "SFOE",
+              "de": "BFE",
+              "fr": "OFEN",
+              "it": "UFE"
+          },
+          "url": {
+            "en": "https://www.bfe.admin.ch/bfe/en/home.html",
+            "de": "https://www.bfe.admin.ch/bfe/de/home.html",
+            "fr": "https://www.bfe.admin.ch/bfe/fr/home.html",
+            "it": "https://www.bfe.admin.ch/bfe/it/home.html"
+          }
         },
         {
-          "value": "heat",
+          "value": "bfs",
           "label": {
-              "en": "Heat",
-              "de": "Wärme",
-              "fr": "Chaleur",
-              "it": "Calore"
-            }
+              "en": "FSO",
+              "de": "BFS",
+              "fr": "OFS",
+              "it": "UST"
+          },
+          "url": {
+            "en": "https://www.bfs.admin.ch/bfs/en/home.html",
+            "de": "https://www.bfs.admin.ch/bfs/de/home.html",
+            "fr": "https://www.bfs.admin.ch/bfs/fr/home.html",
+            "it": "https://www.bfs.admin.ch/bfs/it/home.html"
+          }
         },
         {
-          "value": "electricity",
+          "value": "ehra",
           "label": {
-              "en": "Electricity",
-              "de": "Strom",
-              "fr": "Électricité",
-              "it": "Elettricità"
-            }
+              "en": "Eidgenössisches Amt für das Handelsregister EHRA",
+              "de": "Eidgenössisches Amt für das Handelsregister EHRA",
+              "fr": "Office fédéral du registre du commerce OFRC",
+              "it": "Ufficio federale del registro di commercio UFRC"
+          },
+          "url": {
+            "en": "https://www.bj.admin.ch/bj/en/home/wirtschaft/handelsregister.html",
+            "de": "https://www.bj.admin.ch/bj/de/home/wirtschaft/handelsregister.html",
+            "fr": "https://www.bj.admin.ch/bj/fr/home/wirtschaft/handelsregister.html",
+            "it": "https://www.bj.admin.ch/bj/it/home/wirtschaft/handelsregister.html"
+          }
         },
         {
-          "value": "mobility",
+          "value": "bafu",
           "label": {
-              "en": "Mobility",
-              "de": "Mobilität",
-              "fr": "Mobilité",
-              "it": "Mobilità"
-            }
+              "en": "Federal Office for the Environment FOEN",
+              "de": "Bundesamt für Umwelt BAFU",
+              "fr": "Office fédéral de l'environnement OFEV",
+              "it": "Ufficio federale dell'ambiente UFAM"
+          },
+          "url": {
+            "en": "https://www.bafu.admin.ch/bafu/en/home.html",
+            "de": "https://www.bafu.admin.ch/bafu/de/home.html",
+            "fr": "https://www.bafu.admin.ch/bafu/fr/home.html",
+            "it": "https://www.bafu.admin.ch/bafu/it/home.html"
+          }
         },
         {
-          "value": "companies",
+          "value": "astra",
           "label": {
-              "en": "Companies",
-              "de": "Unternehmen",
-              "fr": "Entreprises",
-              "it": "Aziende"
-            }
+              "en": "Federal Roads Office FEDRO",
+              "de": "Bundesamt für Strassen ASTRA",
+              "fr": "Office fédéral des routes OUFROU",
+              "it": "Ufficio federale delle strade USTRA"
+          },
+          "url": {
+            "en": "https://www.astra.admin.ch/astra/en/home.html",
+            "de": "https://www.astra.admin.ch/astra/de/home.html",
+            "fr": "https://www.astra.admin.ch/astra/fr/home.html",
+            "it": "https://www.astra.admin.ch/astra/it/home.html"
+          }
         },
         {
-          "value": "persons",
+          "value": "swisstopo",
           "label": {
-              "en": "Persons",
-              "de": "Personen",
-              "fr": "Personnes",
-              "it": "Persone"
-            }
+              "en": "swisstopo",
+              "de": "swisstopo",
+              "fr": "swisstopo",
+              "it": "swisstopo"
+          },
+          "url": {
+            "en": "https://www.swisstopo.admin.ch/en/home.html",
+            "de": "https://www.swisstopo.admin.ch/de/home.html",
+            "fr": "https://www.swisstopo.admin.ch/fr/home.html",
+            "it": "https://www.swisstopo.admin.ch/it/home.html"
+          }
+        },
+        {
+          "value": "av",
+          "label": {
+              "en": "Cadastral surveying CH/FL",
+              "de": "Amtliche Vermessung Schweiz/FL",
+              "fr": "Mensuration officielle CH/FL",
+              "it": "Misurazione ufficiale CH/FL"
+          },
+          "url": {
+            "en": "https://www.cadastre.ch/en/av.html",
+            "de": "https://www.cadastre.ch/de/av.html",
+            "fr": "https://www.cadastre.ch/fr/av.html",
+            "it": "https://www.cadastre.ch/it/av.html"
+          }
+        },
+        {
+          "value": "pronovo",
+          "label": {
+              "en": "Pronovo",
+              "de": "Pronovo",
+              "fr": "Pronovo",
+              "it": "Pronovo"
+          },
+          "url": {
+            "en": "https://pronovo.ch/",
+            "de": "https://pronovo.ch/",
+            "fr": "https://pronovo.ch/fr/",
+            "it": "https://pronovo.ch/it/"
+          }
+        },
+        {
+          "value": "oereb",
+          "label": {
+              "en": "PLR Cadastre CH/FL",
+              "de": "ÖREB-Kataster Schweiz/FL",
+              "fr": "Cadastre RDPPF CH/FL",
+              "it": "Catasto RDPP CH/FL"
+          },
+          "url": {
+            "en": "https://www.cadastre.ch/en/oereb.html",
+            "de": "https://www.cadastre.ch/de/oereb.html",
+            "fr": "https://www.cadastre.ch/fr/oereb.html",
+            "it": "https://www.cadastre.ch/it/oereb.html"
+          }
+        },
+        {
+          "value": "docu_media",
+          "label": {
+              "en": "Docu Media Schweiz",
+              "de": "Docu Media Schweiz",
+              "fr": "Docu Media Suisse",
+              "it": "Docu Media Suisse"
+          },
+          "url": {
+            "en": "https://www.docu.ch/de/",
+            "de": "https://www.docu.ch/de/",
+            "fr": "https://www.docu.ch/fr/",
+            "it": "https://www.docu.ch/fr/"
+          }
+        },
+        {
+          "value": "kbdm",
+          "label": {
+              "en": "KünzlerBachmann",
+              "de": "KünzlerBachmann",
+              "fr": "KünzlerBachmann",
+              "it": "KünzlerBachmann"
+          },
+          "url": {
+            "en": "https://www.kueba.ch/en/holding/",
+            "de": "https://www.kueba.ch/holding/",
+            "fr": "https://www.kueba.ch/fr/holding/",
+            "it": "https://www.kueba.ch/fr/holding/"
+          }
+        },
+        {
+          "value": "elcom",
+          "label": {
+              "en": "ElCom",
+              "de": "ElCom",
+              "fr": "ElCom",
+              "it": "ElCom"
+          },
+          "url": {
+            "en": "https://www.elcom.admin.ch/elcom/en/home.html",
+            "de": "https://www.elcom.admin.ch/elcom/de/home.html",
+            "fr": "https://www.elcom.admin.ch/elcom/fr/home.html",
+            "it": "https://www.elcom.admin.ch/elcom/it/home.html"
+          }
+        },
+        {
+          "value": "vese",
+          "label": {
+              "en": "VESE",
+              "de": "VESE",
+              "fr": "VESE",
+              "it": "VESE"
+          },
+          "url": {
+            "en": "https://www.vese.ch/",
+            "de": "https://www.vese.ch/",
+            "fr": "https://www.vese.ch/fr/",
+            "it": "https://www.vese.ch/fr/"
+          }
+        },
+        {
+          "value": "osm",
+          "label": {
+              "en": "OpenStreetMap",
+              "de": "OpenStreetMap",
+              "fr": "OpenStreetMap",
+              "it": "OpenStreetMap"
+          },
+          "url": {
+            "en": "https://www.openstreetmap.org/",
+            "de": "https://www.openstreetmap.org/",
+            "fr": "https://www.openstreetmap.org/",
+            "it": "https://www.openstreetmap.org/"
+          }
+        },
+        {
+          "value": "solar_campus",
+          "label": {
+            "en": "Solar Campus",
+            "de": "Solar Campus",
+            "fr": "Solar Campus",
+            "it": "Solar Campus"
+          },
+          "url": {
+            "en": "https://www.solarcampus.ch/",
+            "de": "https://www.solarcampus.ch/",
+            "fr": "https://www.solarcampus.ch/",
+            "it": "https://www.solarcampus.ch/"
+          }
+        },
+        {
+          "value": "google",
+          "label": {
+              "en": "Google",
+              "de": "Google",
+              "fr": "Google",
+              "it": "Google"
+          },
+          "url": {
+            "en": "https://www.google.com/",
+            "de": "https://www.google.com/",
+            "fr": "https://www.google.com/",
+            "it": "https://www.google.com/"
+          }
         }
       ]
     },
