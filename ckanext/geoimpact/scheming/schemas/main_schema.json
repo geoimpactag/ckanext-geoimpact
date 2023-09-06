@@ -682,7 +682,7 @@
     {
       "field_name": "periodicity",
       "preset": "select",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Update interval",
           "de": "Aktualisierungsintervall",
