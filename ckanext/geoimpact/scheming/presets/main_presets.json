@@ -12,6 +12,39 @@
         "validators": "fluent_text",
         "output_validators": "fluent_text_output"
       }
+    },
+    {
+      "preset_name": "custom_fluent_tags",
+      "values": {
+        "form_snippet": "fluent_tags.html",
+        "display_snippet": "custom_fluent_tags.html",
+        "error_snippet": "fluent_text.html",
+        "validators": "fluent_tags",
+        "output_validators": "fluent_tags_output",
+        "form_attrs": {
+          "data-module": "autocomplete",
+          "data-module-tags": "",
+          "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?"
+        }
+      }
+    },
+    {
+      "preset_name": "geoimpact_fluent_multi_select_url",
+      "values": {
+        "form_include_blank_choice": true,
+        "select_size": 5,
+        "sorted_choices": true,
+        "form_snippet": "multiple_select.html",
+        "display_snippet": "geoimpact_multiple_choice_url.html",
+        "validators": "scheming_multiple_choice",
+        "output_validators": "scheming_multiple_choice_output",
+        "help_text": {
+          "en": "Select one or more categories by marking categories with Ctrl+click or Shift+click.",
+          "de": "Wähle eine oder mehrere Kategorien durch Markieren mit Strg+Klick oder Umschalt+Klick aus.",
+          "fr": "Select one or more categories by marking categories with Ctrl+click or Shift+click.",
+          "it": "Select one or more categories by marking categories with Ctrl+click or Shift+click."
+        }
+      }
     }
   ]
 }

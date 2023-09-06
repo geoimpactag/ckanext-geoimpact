@@ -7,7 +7,7 @@
     {
       "field_name": "title_translated",
       "preset": "fluent_core_translated",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Title",
           "de": "Titel",
@@ -39,7 +39,7 @@
     {
       "field_name": "short_description",
       "preset": "fluent_text_full",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Short description",
           "de": "Kurzbeschreibung",
@@ -51,7 +51,7 @@
       "field_name": "notes_translated",
       "preset": "fluent_core_translated",
       "form_snippet": "fluent_markdown.html",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Description",
           "de": "Beschreibung",
@@ -81,18 +81,173 @@
       }
     },
     {
-      "field_name": "keywords",
+      "field_name": "dataprovider",
       "preset": "fluent_tags",
       "label": {
-          "de": "Schlagworte (Fluent)",
-          "fr": "Mots-cl\u00e9s",
-          "it": "Parole chiave"
+          "en": "Dataprovider",
+          "de": "Datenprovider",
+          "fr": "provider",
+          "it": "provider"
       }
+    },
+    {
+      "field_name": "dataprovider2",
+      "preset": "custom_fluent_tags",
+      "label": {
+          "en": "Dataprovider2",
+          "de": "Datenprovider2",
+          "fr": "provider2",
+          "it": "provider2"
+      }
+    },
+    {
+      "field_name": "dataprovider3",
+      "label": {
+          "en": "Dataprovider3",
+          "de": "Datenprovider3",
+          "fr": "provider3",
+          "it": "provider3"
+      },
+      "form_snippet": "multiple_select.html",
+      "display_snippet": "geoimpact_multiple_choice_url.html",
+      "validators": "scheming_multiple_choice",
+      "output_validators": "scheming_multiple_choice_output",
+      "choices": [
+        {
+          "value": "bfe",
+          "label": {
+              "en": "SFOE",
+              "de": "BFE",
+              "fr": "OFEN",
+              "it": "UFE"
+          },
+          "url": {
+            "en": "https://www.bfe.admin.ch/bfe/en/home.html",
+            "de": "https://www.bfe.admin.ch/bfe/de/home.html",
+            "fr": "https://www.bfe.admin.ch/bfe/fr/home.html",
+            "it": "https://www.bfe.admin.ch/bfe/it/home.html"
+          }
+        },
+        {
+          "value": "bfs",
+          "label": {
+              "en": "FSO",
+              "de": "BFS",
+              "fr": "OFS",
+              "it": "UST"
+          },
+          "url": {
+            "en": "Url",
+            "de": "Url",
+            "fr": "Url",
+            "it": "Url"
+          }
+        },
+        {
+          "value": "nourl",
+          "label": {
+              "en": "nourl",
+              "de": "nourl",
+              "fr": "nourl",
+              "it": "nourl"
+          }
+        },
+        {
+          "value": "parturl",
+          "label": {
+              "en": "parturl",
+              "de": "parturl",
+              "fr": "parturl",
+              "it": "parturl"
+          },
+          "url": {
+            "en": "https://www.bfe.admin.ch/bfe/it/home.html"
+          }
+        }
+      ]
+    },
+    {
+      "field_name": "categories",
+      "label": {
+          "en": "Categories",
+          "de": "Kategorien",
+          "fr": "Catégories",
+          "it": "Categorie"
+      },
+      "form_snippet": "multiple_select.html",
+      "display_snippet": "multiple_choice.html",
+      "validators": "scheming_multiple_choice",
+      "output_validators": "scheming_multiple_choice_output",
+      "choices": [
+        {
+          "value": "building",
+          "label": {
+              "en": "Building",
+              "de": "Gebäude",
+              "fr": "Bâtiment",
+              "it": "Edificio"
+            }
+        },
+        {
+          "value": "real_estate",
+          "label": {
+              "en": "Real estate",
+              "de": "Liegenschaft",
+              "fr": "Immobilier",
+              "it": "Immobiliare"
+            }
+        },
+        {
+          "value": "heat",
+          "label": {
+              "en": "Heat",
+              "de": "Wärme",
+              "fr": "Chaleur",
+              "it": "Calore"
+            }
+        },
+        {
+          "value": "electricity",
+          "label": {
+              "en": "Electricity",
+              "de": "Strom",
+              "fr": "Électricité",
+              "it": "Elettricità"
+            }
+        },
+        {
+          "value": "mobility",
+          "label": {
+              "en": "Mobility",
+              "de": "Mobilität",
+              "fr": "Mobilité",
+              "it": "Mobilità"
+            }
+        },
+        {
+          "value": "companies",
+          "label": {
+              "en": "Companies",
+              "de": "Unternehmen",
+              "fr": "Entreprises",
+              "it": "Aziende"
+            }
+        },
+        {
+          "value": "persons",
+          "label": {
+              "en": "Persons",
+              "de": "Personen",
+              "fr": "Personnes",
+              "it": "Persone"
+            }
+        }
+      ]
     },
     {
       "field_name": "data_level",
       "preset": "fluent_text",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Data level",
           "de": "Datenebene",
@@ -103,7 +258,7 @@
     {
       "field_name": "data_periodicity",
       "preset": "select",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Update interval",
           "de": "Aktualisierungsintervall",
@@ -161,7 +316,7 @@
     {
       "field_name": "data_genesis",
       "preset": "select",
-      "required": true,
+      "required": false,
       "label": {
           "de": "Datengenese",
           "fr": "Genèse des données",

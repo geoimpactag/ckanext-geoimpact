@@ -1,5 +1,7 @@
 import ckan.plugins as p
 import ckan.lib.mailer as mailer
+# from ckan.common import CKANConfig
+# from ckan.plugins import IAuthFunctions, toolkit
 from ckan.common import _, CKANConfig
 
 from .patches.emails import send_reset_link, send_invite
@@ -11,6 +13,7 @@ from .utils.template_helpers import get_available_schemas, get_fluent_label_from
 
 class GeoimpactPlugin(p.SingletonPlugin):
     p.implements(p.IConfigurer, inherit=True)
+    p.implements(p.IFacets, inherit=True)
     p.implements(p.IAuthFunctions, inherit=True)
     p.implements(p.IActions, inherit=True)
     p.implements(p.ITemplateHelpers, inherit=True)
@@ -76,22 +79,10 @@ class GeoimpactPlugin(p.SingletonPlugin):
         return auth_functions
 
     # IFacets
-    def dataset_facets(self, facets_dict, package_type):
-        """
-        This function is called by ckan to get the dataset facets.
-        We overwrite the default dataset facets here
-        """
-        facets_dict['categories'] = _('Categories')
-        return self._facets(facets_dict)
-
-    def group_facets(self, facets_dict, group_type, package_type):
-        return self._facets(facets_dict)
-
-    def organization_facets(self, facets_dict, organization_type,
-                            package_type):
-        return self._facets(facets_dict)
-
     def _facets(self, facets_dict):
+        """
+        Remove "Groups", ... from facets, see: https://github.com/okfn/ckanext-hidegroups/blob/master/ckanext/hidegroups/plugin.py
+        """
         if 'groups' in facets_dict:
             del facets_dict['groups']
         if 'license_id' in facets_dict:
@@ -101,3 +92,26 @@ class GeoimpactPlugin(p.SingletonPlugin):
         if 'organization' in facets_dict:
             del facets_dict['organization']
         return facets_dict
+
+    def dataset_facets(self, facets_dict, package_type):
+        """
+        This function is called by ckan to get the dataset facets.
+        We overwrite the default dataset facets here
+        """
+        facets_dict['categories'] = _('Categories')
+        return self._facets(facets_dict)
+
+    def group_facets(self, facets_dict, group_type, package_type):
+        """
+        This function is called by ckan to get the group facets.
+        We overwrite the default dataset facets here
+        """
+        return self._facets(facets_dict)
+
+    def organization_facets(self, facets_dict, organization_type, package_type):
+        """
+        This function is called by ckan to get the organization facets.
+        We overwrite the default dataset facets here
+        """
+        return self._facets(facets_dict)
+
