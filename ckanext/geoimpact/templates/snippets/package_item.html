@@ -12,14 +12,13 @@ Example:
 #}
 {{ h.print_template_value('------------- HALLLOOOOO ------------------------------------', '') }}
 {{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', package.title_translated) }}
-{% if (('label' in package.title_translated) if 'title_translated' in package else False) %}
-    {{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', package.title_translated) }}
-    {% set title = h.scheming_language_text(package.title_translated.label) %}
+{% if 'title_translated' in package) %}
+    {% set title = h.scheming_language_text(package.title_translated) %}
 {% else %}
     {% set title = package.title or package.name %}
 {% endif %}
-{% if (('label' in package.short_notes) if 'short_notes' in package else False) %}
-    {% set notes = h.markdown_extract(h.scheming_language_text(package.short_notes.label), extract_length=180) %}
+{% if 'short_notes' in package %}
+    {% set notes = h.markdown_extract(h.scheming_language_text(package.short_notes), extract_length=180) %}
 {% else %}
     {% set notes = h.markdown_extract(package.notes, extract_length=180) %}
 {% endif %}
