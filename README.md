@@ -26,6 +26,10 @@ The utilities directory contains the core functionalities that the extension bri
 - **auth_functions.py:** Contains functions to override CKAN's default authorization checks.
 - **custom_actions.py:** Provides custom actions for listing organizations.
 - **template_helpers.py:** Contains helper functions used in Jinja2 templates.
+### Translations
+This section guides on how to manage translations in the geoimpact extension:
+- **Updating Translations:** After updating the `.pot` file, update the `.po` files for each language using the command `python setup.py update_catalog -l [lang_code]`.
+- **Compiling Translations:** Post updating the translations, compile them to generate the respective `.mo` files using the command `python setup.py compile_catalog -l [lang_code]`.
 ### Main
 - **plugins.py:** The main plugin file which declares the geoimpact extension and its functionalities.
 ### Presets
