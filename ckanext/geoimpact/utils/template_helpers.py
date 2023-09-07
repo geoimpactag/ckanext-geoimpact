@@ -196,7 +196,7 @@ def _get_schema_for_facet(facet):
 def get_translated_title(package_name):
     lang_code = p.toolkit.request.environ['CKAN_LANG'] or 'en'
 
-    package = p.toolkit.get_action('package_show')({'id': package_name})
+    package = p.toolkit.get_action('package_show')({'name_or_id': package_name})
 
     log.info('---- PACKAGE --------')
     log.info(package)
