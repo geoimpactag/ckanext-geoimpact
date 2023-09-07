@@ -1,63 +1,58 @@
 import json
 import os.path
 from flask import request
-from ckan import model
+from ckan.lib.helpers import get_facet_items_dict
 from ckan import plugins as p
 
-# Try importing yaml, and set a flag if successful
+# Initialize logging
+import logging
+
+log = logging.getLogger(__name__)
+
+# Try importing yaml
 try:
     import yaml
+
     YAML_AVAILABLE = True
 except ImportError:
     YAML_AVAILABLE = False
+    log.warning("YAML library not found, .yaml and .yml files will not be supported.")
+
+
+def _parse_schema_file(file_path):
+    """Parse schema file based on its extension."""
+    try:
+        with open(file_path, 'r') as file:
+            if file_path.endswith('.json'):
+                return json.load(file)
+            elif file_path.endswith(('.yaml', '.yml')) and YAML_AVAILABLE:
+                return yaml.safe_load(file)
+    except Exception as e:
+        log.error(f"Error reading or parsing file {file_path}: {str(e)}")
+    return None
 
 
 def _get_valid_schemas():
-    """
-    Returns a list of valid schemas
-    """
-    # Fetch the scheming.dataset_schemas configuration value
+    """Retrieve and parse valid schema files."""
     schemas_string = p.toolkit.config.get('scheming.dataset_schemas', '')
-
-    # Split the string by newlines or spaces to get individual schema paths
     schemas_list = [s.strip() for s in schemas_string.split() if s.strip()]
 
-    # Iterate over each schema path and parse the content
     valid_schemas = []
     for schema in schemas_list:
-        # Extracting the module and file path
         module_name, file_path = schema.split(':')
         module = __import__(module_name, fromlist=[''])
         file_full_path = os.path.join(os.path.dirname(module.__file__), file_path)
 
-        # Read and parse the file based on its extension
-        with open(file_full_path, 'r') as file:
-            if file_path.endswith('.json'):
-                parsed_content = json.load(file)
-            elif file_path.endswith('.yaml') or file_path.endswith('.yml'):
-                if not YAML_AVAILABLE:
-                    # If YAML is not available, log a warning and skip this schema
-                    p.toolkit.log.warning(f"Failed to parse {file_path} as YAML is not available.")
-                    continue
-                parsed_content = yaml.safe_load(file)
-            else:
-                # Skip if the file is neither JSON nor YAML
-                continue
-
-        # Check if the parsed content has the 'dataset_type' key
-        if "dataset_type" in parsed_content and isinstance(parsed_content["dataset_type"], str):
+        parsed_content = _parse_schema_file(file_full_path)
+        if parsed_content and "dataset_type" in parsed_content:
             valid_schemas.append(parsed_content)
 
     return valid_schemas
 
 
 def get_available_schemas():
-    """
-    Returns a list of available schemas
-    """
+    """Retrieve a list of available schemas with display names."""
     valid_schemas = _get_valid_schemas()
-
-    # Convert the list of valid schemas to a list of dictionaries with name and display_name.
     return [
         {
             "name": schema["dataset_type"],
@@ -65,6 +60,15 @@ def get_available_schemas():
         }
         for schema in valid_schemas
     ]
+
+
+def _get_choices_for_field(schemas, field_name):
+    """Retrieve all choices for a given field name across all schemas."""
+    for schema in schemas:
+        for field in schema.get('dataset_fields', []):
+            if field['field_name'] == field_name:
+                return field.get('choices', [])
+    return []
 
 
 def get_fluent_label_from_schema(field_name, value):
@@ -81,62 +85,89 @@ def get_fluent_label_from_schema(field_name, value):
     # Ensure values is a list, even if it's a single string
     values = value if isinstance(value, list) else [value]
 
-    result_labels = []
-
+    all_choices = _get_choices_for_field(schemas, field_name)
+    labels = []
     for v in values:
-        label_found = False
-        for schema in schemas:
-            for field in schema.get('dataset_fields', []):
-                if field['field_name'] == field_name:
-                    for choice in field.get('choices', []):
-                        if choice['value'] == v:
-                            result_labels.append(choice['label'].get(lang_code, v))
-                            label_found = True
-                            break  # exit the inner loop once label is found
-                    if label_found:
-                        break  # exit the outer loop once label is found
+        for choice in all_choices:
+            if choice['value'] == v:
+                labels.append(choice['label'].get(lang_code, v))
+                break
+        else:
+            labels.append(v)  # Use the value if no label is found
 
-        # If label is not found for this value, append the value itself
-        if not label_found:
-            result_labels.append(v)
-
-    return set(result_labels)
-
-
-def get_fluent_value_from_label(field_name, label):
-    lang_code = p.toolkit.request.environ['CKAN_LANG']
-    schemas = _get_valid_schemas()
-
-    for schema in schemas:
-        for field in schema.get('dataset_fields', []):
-            if field['field_name'] == field_name:
-                for choice in field.get('choices', []):
-                    if choice['label'].get(lang_code) == label:
-                        return choice['value']
-
-    return None
+    return set(labels)
 
 
 def group_facet_items_by_label(items):
-
-    # Get the current categories from the URL
-    current_categories = request.args.getlist('categories')
-    current_labels = [get_fluent_label_from_schema('categories', category) for category in current_categories]
-    # Flatten the list of lists into a single list
+    current_data_providers = request.args.getlist('data_providers')
+    current_labels = [get_fluent_label_from_schema('data_providers', data_provider) for data_provider in
+                      current_data_providers]
     current_labels = [label for sublist in current_labels for label in sublist]
 
     grouped = {}
     for item in items:
-        labels = get_fluent_label_from_schema('categories', item['name'])
+        labels = get_fluent_label_from_schema('data_providers', item['name'])
         for label in labels:
-            if label in grouped:
-                grouped[label]['count'] += item['count']
-            else:
-                # Check if label is currently active
-                is_active = label in current_labels
-                grouped[label] = {
-                    'name': label,
-                    'count': item['count'],
-                    'active': is_active
-                }
+            grouped.setdefault(label, {'name': label, 'count': 0, 'active': label in current_labels})
+            grouped[label]['count'] += item['count']
+
     return list(grouped.values())
+
+
+def group_choices_facet(facet, items, dataset_field):
+    lang_code = p.toolkit.request.environ['CKAN_LANG'] or 'en'
+    current_state_from_url = request.args.getlist(facet)  # list of strings to handle is_active
+    choices = dataset_field.get('choices', [])
+
+    grouped = {}
+    for item in items:
+        names = item['name']
+        if isinstance(names, str) and names.startswith('[') and names.endswith(']'):
+            try:
+                names = json.loads(names)
+            except json.JSONDecodeError:
+                names = [names]
+        else:
+            names = [names]
+
+        for name in names:
+            for choice in choices:
+                if choice['value'] == name:
+                    label = choice['label'].get(lang_code, name)
+                    grouped.setdefault(label, {'name': name, 'display_name': label, 'count': 0,
+                                               'active': name in current_state_from_url})
+                    grouped[label]['count'] += item['count']
+                    break
+
+    return list(grouped.values())
+
+
+def custom_get_facet_items_dict(facet, search_facets=None, limit=None, exclude_active=False):
+    items = get_facet_items_dict(facet, search_facets, limit, exclude_active)
+    schema = _get_schema_for_facet(facet)
+    if not schema:
+        return items
+
+    dataset_field = next((field for field in schema.get('dataset_fields', []) if field['field_name'] == facet), None)
+    if not dataset_field:
+        return items
+
+    # this handles the case when schema has defined coices array
+    if "label" in dataset_field and isinstance(dataset_field["label"], dict) and dataset_field.get('choices', []):
+        return group_choices_facet(facet, items, dataset_field)
+
+    # this handles the case when schema is just translated text field
+    if "label" in dataset_field and isinstance(dataset_field["label"], dict):
+        return group_facet_items_by_label(items)
+
+    return items
+
+
+def _get_schema_for_facet(facet):
+    """Retrieve the schema file for a given facet."""
+    schemas = _get_valid_schemas()
+    for schema in schemas:
+        for field in schema.get('dataset_fields', []):
+            if field['field_name'] == facet:
+                return schema
+    return None
