@@ -158,7 +158,7 @@ msgid ""
 "decision-making bases for sustainable decisions on a daily basis. We make"
 " these accessible with information technology. The people at geoimpact "
 "come from the fields of energy, IT and geoinformation."
-msgstr "geoimpact rende gli edifici e l'energia digitali. Come leader di mercato per i dati e i modelli su edifici ed energia in Svizzera, ci occupiamo quotidianamente delle basi per prendere decisioni sostenibili. Rendiamo queste informazioni accessibili tramite la tecnologia dell'informazione. Le persone che lavorano presso geoimpact provengono dai settori dell'energia, dell'IT e della geoinformazione."
+msgstr "geoimpact digitalizza edificio ed energia. In qualità di leader di mercato per i dati e i modelli relativi agli edifici e all'energia in Svizzera, ci impegniamo quotidianamente per fornire basi decisionali per scelte sostenibili. Rendiamo queste informazioni accessibili attraverso IT d'avanguardia. Le persone che danno vita alla geoimpact AG provengono dai settori dell'energia, dell'IT e delle geoinformazioni."
 
 #: ckanext/geoimpact/templates/snippets/add_dataset.html:4
 msgid "Add Dataset"
