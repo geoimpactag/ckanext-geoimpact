@@ -1,6 +1,7 @@
 import logging
 import ckan.plugins as p
 import ckan.lib.mailer as mailer
+from ckan.lib.plugins import DefaultTranslation
 from ckan.common import _, CKANConfig
 
 from .patches.emails import send_reset_link, send_invite
@@ -17,7 +18,8 @@ from .utils.template_helpers import (
 log = logging.getLogger(__name__)
 
 
-class GeoimpactPlugin(p.SingletonPlugin):
+class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
+    p.implements(p.ITranslation)
     p.implements(p.IConfigurer, inherit=True)
     p.implements(p.IFacets, inherit=True)
     p.implements(p.IAuthFunctions, inherit=True)
@@ -55,6 +57,7 @@ class GeoimpactPlugin(p.SingletonPlugin):
             'get_fluent_label_from_schema': get_fluent_label_from_schema,
             'group_facet_items_by_label': group_facet_items_by_label,
             'custom_get_facet_items_dict': custom_get_facet_items_dict,
+            'get_site_title': lambda: p.toolkit.config.get('ckan.site_title', ''),
         }
 
     # IPackageController

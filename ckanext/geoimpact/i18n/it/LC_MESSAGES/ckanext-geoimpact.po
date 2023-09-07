@@ -1,0 +1,183 @@
+# Italian translations for ckanext-geoimpact.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the ckanext-geoimpact
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-geoimpact 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-09-07 14:26+0000\n"
+"PO-Revision-Date: 2023-09-07 13:03+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: it\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ckanext/geoimpact/plugins.py:106
+msgid "Data Providers"
+msgstr "Fornitori di dati"
+
+#: ckanext/geoimpact/plugins.py:107
+msgid "Data Level"
+msgstr "Livello dati"
+
+#: ckanext/geoimpact/patches/emails.py:13
+msgid "No recipient email address available!"
+msgstr ""
+
+#: ckanext/geoimpact/patches/emails.py:56
+msgid "organization"
+msgstr "organizzazione"
+
+#: ckanext/geoimpact/patches/emails.py:57
+msgid "group"
+msgstr "gruppo"
+
+#: ckanext/geoimpact/templates/footer.html:9
+msgid "About {0}"
+msgstr ""
+
+#: ckanext/geoimpact/templates/footer.html:17
+msgid ""
+"<strong>Powered by</strong> <a class=\"hide-text ckan-footer-logo\" "
+"href=\"http://ckan.org\">CKAN</a>"
+msgstr ""
+
+#: ckanext/geoimpact/templates/header.html:11
+msgid "Datasets"
+msgstr ""
+
+#: ckanext/geoimpact/templates/header.html:13
+#, fuzzy
+msgid "Organizations"
+msgstr "organizzazione"
+
+#: ckanext/geoimpact/templates/header.html:14
+msgid "About"
+msgstr ""
+
+#: ckanext/geoimpact/templates/emails/invite_user.html:48
+#, python-format
+msgid ""
+"<div class=\"header\"> %(site_title)s - Invitation </div> <h2>Hello, "
+"%(user_name)s!</h2> <p>We're pleased to invite you to %(site_title)s.</p>"
+" <h3>Account Details:</h3> <ul> <li> Username: %(user_name)s (You can "
+"modify this later.) </li> <li> Group: %(group_title)s </li> <li> Type: "
+"%(group_type)s </li> <li> Role: %(role_name)s </li> </ul> <p>To activate "
+"your account, click the link below:</p> <div class=\"button-div\"> <a "
+"href=\"%(reset_link)s\">Set Password</a> </div> <p>Wishing you a "
+"wonderful day!</p> <p>geoimpact AG, Schulhausweg 7, 4571 Lueterkofen, "
+"Switzerland</p> <div class=\"footer\"> <a "
+"href=\"https://www.swissenergyplanning.ch/blog\" class=\"footer-"
+"link\">Blog</a> <a href=\"https://www.swissenergyplanning.ch/\" class"
+"=\"footer-link\">Website</a> <a "
+"href=\"https://www.swissenergyplanning.ch/kontakt\" class=\"footer-"
+"link\">Contact</a> <a href=\"https://www.swissenergyplanning.ch/sep-"
+"datenschutz\" class=\"footer-link\">Privacy</a> </div>"
+msgstr ""
+"<div class=\"header\"> %(site_title)s - Invito </div> <h2>Ciao, "
+"%(user_name)s!</h2> <p>Siamo lieti di invitarti su %(site_title)s.</p> "
+"<h3>Dettagli account:</h3> <ul> <li> Nome utente: %(user_name)s (Puoi "
+"modificarlo in seguito.) </li> <li> Gruppo: %(group_title)s </li> <li> "
+"Tipo: %(group_type)s </li> <li> Ruolo: %(role_name)s </li> </ul> <p>Per "
+"attivare il tuo account, clicca sul link qui sotto:</p> <div class"
+"=\"button-div\"> <a href=\"%(reset_link)s\">Imposta password</a> </div> "
+"<p>Ti auguriamo una giornata meravigliosa!</p> <p>geoimpact AG, "
+"Schulhausweg 7, 4571 Lutercofen, Svizzera</p> <div class=\"footer\"> <a "
+"href=\"https://www.swissenergyplanning.ch/blog\" class=\"footer-"
+"link\">Blog</a> <a href=\"https://www.swissenergyplanning.ch/\" class"
+"=\"footer-link\">Sito web</a> <a "
+"href=\"https://www.swissenergyplanning.ch/kontakt\" class=\"footer-"
+"link\">Contatto</a> <a href=\"https://www.swissenergyplanning.ch/sep-"
+"datenschutz\" class=\"footer-link\">Privacy</a> </div>"
+
+#: ckanext/geoimpact/templates/emails/reset_password.html:48
+#, python-format
+msgid ""
+"<div class=\"header\"> %(site_title)s - Password Reset </div> <h2>Hello, "
+"%(user_name)s!</h2> <p>If you requested a password reset, click the link "
+"below:</p> <div class=\"button-div\"> <a href=\"%(reset_link)s\">Reset "
+"Password</a> </div> <p>If you didn't request a password reset, you can "
+"safely ignore this email.</p> <p>Wishing you a wonderful day!</p> "
+"<p>geoimpact AG, Schulhausweg 7, 4571 Lueterkofen, Switzerland</p> <div "
+"class=\"footer\"> <a href=\"https://www.swissenergyplanning.ch/blog\" "
+"class=\"footer-link\">Blog</a> <a "
+"href=\"https://www.swissenergyplanning.ch/\" class=\"footer-"
+"link\">Website</a> <a href=\"https://www.swissenergyplanning.ch/kontakt\""
+" class=\"footer-link\">Contact</a> <a "
+"href=\"https://www.swissenergyplanning.ch/sep-datenschutz\" class"
+"=\"footer-link\">Privacy</a> </div>"
+msgstr ""
+"<div class=\"header\"> %(site_title)s - Reset della password </div> "
+"<h2>Ciao, %(user_name)s!</h2> <p>Se hai richiesto un reset della "
+"password, clicca sul link qui sotto:</p> <div class=\"button-div\"> <a "
+"href=\"%(reset_link)s\">Resetta la password</a> </div> <p>Se non hai "
+"richiesto un reset della password, puoi ignorare tranquillamente questa "
+"email.</p> <p>Ti auguriamo una giornata meravigliosa!</p> <p>geoimpact "
+"AG, Schulhausweg 7, 4571 Lutercofen, Svizzera</p> <div class=\"footer\"> "
+"<a href=\"https://www.swissenergyplanning.ch/blog\" class=\"footer-"
+"link\">Blog</a> <a href=\"https://www.swissenergyplanning.ch/\" class"
+"=\"footer-link\">Sito web</a> <a "
+"href=\"https://www.swissenergyplanning.ch/kontakt\" class=\"footer-"
+"link\">Contatto</a> <a href=\"https://www.swissenergyplanning.ch/sep-"
+"datenschutz\" class=\"footer-link\">Privacy</a> </div>"
+
+#: ckanext/geoimpact/templates/home/layout3.html:15
+#, python-format
+msgid ""
+"<h2>%(site_title)s</h2> <p>What kind of data and models on buildings and "
+"energy are you looking for?</p> <p>Here at %(site_title)s you will find "
+"hundreds of data points that are available for addresses, plots, and "
+"infrastructure in Switzerland.</p> <p>Browse easily with search terms and"
+" tags above or via the \"Datasets\" tab in the menu.</p> <p>If you have "
+"any questions, we are available at <a href=\"tel:+41415600985\">+41 41 "
+"560 09 85</a>, <a "
+"href=\"mailto:hallo@geoimpact.ch\">hallo@geoimpact.ch</a> or <a "
+"href=\"https://www.geoimpact.ch/kontakt\">CONTACT | geoimpact AG | "
+"Shaping the energy future</a>.</p>"
+msgstr ""
+"<h2>%(site_title)s</h2> <p>Stai cercando dati e modelli circa il tema energia "
+"o relativi agli edifici?</p> <p>Qui nel %(site_title)s, troverai centinaia di"
+" dati disponibili su edifici, parcelle e tutta l'infrastruttura "
+"Svizzera.</p> <p>Puoi facilmente navigarli utilizzando parole chiave e tag nella barra di"
+" ricerca in alto o tramite la voce \"Dati\" nel menu.</p> <p>Per domande o ulteriori informazioni, siamo "
+"a tua disposizione al numero <a href=\"tel:+41415600985\">+41 41 560 09 85</a>, all'indirizzo email <a "
+"href=\"mailto:hallo@geoimpact.ch\">hallo@geoimpact.ch</a> o sul sito web <a "
+"href=\"https://www.geoimpact.ch/kontakt\">https://www.geoimpact.ch/kontakt</a>.</p>"
+
+#: ckanext/geoimpact/templates/home/snippets/about_text.html:1
+msgid ""
+"geoimpact makes buildings and energy digital. As the market leader for "
+"data and models on buildings and energy in Switzerland, we take care of "
+"decision-making bases for sustainable decisions on a daily basis. We make"
+" these accessible with information technology. The people at geoimpact "
+"come from the fields of energy, IT and geoinformation."
+msgstr "geoimpact rende gli edifici e l'energia digitali. Come leader di mercato per i dati e i modelli su edifici ed energia in Svizzera, ci occupiamo quotidianamente delle basi per prendere decisioni sostenibili. Rendiamo queste informazioni accessibili tramite la tecnologia dell'informazione. Le persone che lavorano presso geoimpact provengono dai settori dell'energia, dell'IT e della geoinformazione."
+
+#: ckanext/geoimpact/templates/snippets/add_dataset.html:4
+msgid "Add Dataset"
+msgstr ""
+
+#: ckanext/geoimpact/templates/snippets/facet_list.html:38
+msgid "Show More {facet_type}"
+msgstr ""
+
+#: ckanext/geoimpact/templates/snippets/facet_list.html:41
+msgid "Show Only Popular {facet_type}"
+msgstr ""
+
+#: ckanext/geoimpact/templates/snippets/facet_list.html:45
+msgid "There are no {facet_type} that match this search"
+msgstr ""
+
+#: ckanext/geoimpact/utils/auth_functions.py:45
+#, python-format
+msgid "User %s not authorized to read group %s"
+msgstr "L'utente %s non è autorizzato a leggere il gruppo %s"
+
