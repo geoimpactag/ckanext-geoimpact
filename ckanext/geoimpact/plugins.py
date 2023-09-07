@@ -12,7 +12,7 @@ from .utils.template_helpers import (
     get_available_schemas,
     get_fluent_label_from_schema,
     group_facet_items_by_label,
-    get_translated_title
+    # get_translated_title
 )
 
 log = logging.getLogger(__name__)
@@ -60,7 +60,7 @@ class GeoimpactPlugin(p.SingletonPlugin):
             'get_fluent_label_from_schema': get_fluent_label_from_schema,
             'group_facet_items_by_label': group_facet_items_by_label,
             'custom_get_facet_items_dict': custom_get_facet_items_dict,
-            'get_translated_title': get_translated_title,
+            # 'get_translated_title': get_translated_title,
             'print_template_value': self.print_template_value,
         }
 
