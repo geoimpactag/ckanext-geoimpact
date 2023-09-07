@@ -14,8 +14,8 @@ Example:
 {% set notes = h.markdown_extract(package.notes, extract_length=180) %}
 
 {{ h.print_template_value('------------- HALLLOOOOO ------------------------------------', '') }}
-{{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', package.name) }}
-{{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', package.notes) }}
+{{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', title) }}
+{{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', notes) }}
 
 {% block package_item %}
   <li class="{{ item_class or "dataset-item" }}">
@@ -35,6 +35,8 @@ Example:
     <a href="{{ h.url_for('%s.read' % package.type, id=package.name) }}">
       {{title|truncate(80)}}
     </a>
+                {{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', h.url_for('%s.read' % package.type, id=package.name)) }}
+                {{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', title) }}
             {% endblock %}
             {% block heading_meta %}
               {% if package.get('state', '').startswith('draft') %}
