@@ -31,6 +31,7 @@ class GeoimpactPlugin(p.SingletonPlugin):
             'get_fluent_label_from_schema': get_fluent_label_from_schema,
             'get_fluent_value_from_label': get_fluent_value_from_label,
             'group_facet_items_by_label': group_facet_items_by_label,
+            'print_template_value': lambda x: log('Template Var: ', x),
         }
 
     # IActions
