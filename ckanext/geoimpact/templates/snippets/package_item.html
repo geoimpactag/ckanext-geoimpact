@@ -15,8 +15,8 @@ Example:
 {% else %}
     {% set title = package.title or package.name %}
 {% endif %}
-{% if (h.scheming_language_text(package.short_notes)|length > 0 if 'short_notes' in package else False) %}
-    {% set notes = h.markdown_extract(h.scheming_language_text(package.short_notes), extract_length=180) %}
+{% if (h.scheming_language_text(package.notes_translated)|length > 0 if 'notes_translated' in package else False) %}
+    {% set notes = h.markdown_extract(h.scheming_language_text(package.notes_translated), extract_length=180) %}
 {% else %}
     {% set notes = h.markdown_extract(package.notes, extract_length=180) %}
 {% endif %}
