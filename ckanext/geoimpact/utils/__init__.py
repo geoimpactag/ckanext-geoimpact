@@ -4,15 +4,37 @@ from ckan import authz, model
 log = logging.getLogger(__name__)
 
 
-def _requester_is_admin(context):
+def _requester_is_sysadmin(context):
     """
-    Check if the requester of an operation is an admin.
+    Check if the requester of an operation is a sysadmin.
 
     Args:
     - context (dict): A dictionary containing contextual information for the request.
 
     Returns:
-    - bool: True if the requester is an admin, False otherwise.
+    - bool: True if the requester is a sysadmin, False otherwise.
+    """
+    try:
+        # Retrieve the user from the context.
+        user = context.get('auth_user_obj')
+        if not user:
+            return False
+        # Return the sysadmin attribute of the user object
+        return user.sysadmin
+    except Exception as e:
+        log.error(f"Error checking if requester is sysadmin: {e}")
+        return False
+    
+
+def _requester_is_admin(context):
+    """
+    Check if the requester of an operation is a admin.
+
+    Args:
+    - context (dict): A dictionary containing contextual information for the request.
+
+    Returns:
+    - bool: True if the requester is a admin, False otherwise.
     """
     try:
         # Retrieve the user from the context.

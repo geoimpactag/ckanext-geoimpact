@@ -1,7 +1,7 @@
 import logging
 import ckan.plugins as p
 from ckan.logic.action.get import organization_list as original_organization_list
-from . import _requester_is_admin
+from . import _requester_is_sysadmin
 
 log = logging.getLogger(__name__)
 
@@ -14,7 +14,7 @@ def organization_list(context, data_dict):
     """
     try:
         # If the requester is an admin, return the original list of organizations.
-        if _requester_is_admin(context):
+        if _requester_is_sysadmin(context):
             return original_organization_list(context, data_dict)
 
         # For non-admin users, only return organizations they are part of.
