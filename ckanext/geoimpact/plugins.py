@@ -7,9 +7,10 @@ from .patches.emails import send_reset_link, send_invite
 from .utils.auth_functions import organization_show, user_list, user_show, group_show
 from .utils.custom_actions import organization_list
 from .utils.template_helpers import (
+    _get_valid_schemas,
+    custom_get_facet_items_dict,
     get_available_schemas,
     get_fluent_label_from_schema,
-    get_fluent_value_from_label,
     group_facet_items_by_label
 )
 
@@ -52,16 +53,32 @@ class GeoimpactPlugin(p.SingletonPlugin):
         return {
             'get_available_schemas': get_available_schemas,
             'get_fluent_label_from_schema': get_fluent_label_from_schema,
-            'get_fluent_value_from_label': get_fluent_value_from_label,
             'group_facet_items_by_label': group_facet_items_by_label,
+            'custom_get_facet_items_dict': custom_get_facet_items_dict,
         }
 
     # IPackageController
     def before_dataset_search(self, search_params):
         try:
             filter_query = search_params.get('fq', '')
-            if filter_query and 'categories:' in filter_query:
-                search_params['fq'] = search_params['fq'].replace('categories:"', 'categories:*"').replace('"', '"*')
+
+            # Get the valid schemas
+            schemas = _get_valid_schemas()
+
+            # Identify fields that allow multiple selections
+            multi_value_fields = []
+            for schema in schemas:
+                for field in schema.get('dataset_fields', []):
+                    if "choices" in field and isinstance(field["choices"], list) and len(field["choices"]) > 1:
+                        multi_value_fields.append(field['field_name'])
+
+            # Check if filter_query contains any of the multi_value_fields
+            for field in multi_value_fields:
+                if f"{field}:" in filter_query:
+                    log.info(f"Original search params for {field}: {search_params['fq']}")
+                    search_params['fq'] = search_params['fq'].replace(f'{field}:"', f'{field}:*"')
+                    log.info(f"Modified search params for {field}: {search_params['fq']}")
+
             return search_params
         except Exception as e:
             log.error(f"Error in before_dataset_search: {e}")
@@ -83,7 +100,8 @@ class GeoimpactPlugin(p.SingletonPlugin):
         return facets_dict
 
     def dataset_facets(self, facets_dict, package_type):
-        facets_dict['categories'] = _('Categories')
+        facets_dict['data_providers'] = _('Data Providers')
+        facets_dict['data_level'] = _('Data Level')
         return self._clean_facets(facets_dict)
 
     def group_facets(self, facets_dict, group_type, package_type):

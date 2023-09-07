@@ -1,16 +1,18 @@
 import json
 import os.path
 from flask import request
-from ckan import model
+from ckan.lib.helpers import get_facet_items_dict
 from ckan import plugins as p
 
 # Initialize logging
 import logging
+
 log = logging.getLogger(__name__)
 
 # Try importing yaml
 try:
     import yaml
+
     YAML_AVAILABLE = True
 except ImportError:
     YAML_AVAILABLE = False
@@ -96,30 +98,76 @@ def get_fluent_label_from_schema(field_name, value):
     return set(labels)
 
 
-def get_fluent_value_from_label(field_name, label):
-    lang_code = p.toolkit.request.environ['CKAN_LANG']
-    schemas = _get_valid_schemas()
-
-    for schema in schemas:
-        for field in schema.get('dataset_fields', []):
-            if field['field_name'] == field_name:
-                for choice in field.get('choices', []):
-                    if choice['label'].get(lang_code) == label:
-                        return choice['value']
-
-    return None
-
-
 def group_facet_items_by_label(items):
-    current_categories = request.args.getlist('categories')
-    current_labels = [get_fluent_label_from_schema('categories', category) for category in current_categories]
+    current_data_providers = request.args.getlist('data_providers')
+    current_labels = [get_fluent_label_from_schema('data_providers', data_provider) for data_provider in
+                      current_data_providers]
     current_labels = [label for sublist in current_labels for label in sublist]
 
     grouped = {}
     for item in items:
-        labels = get_fluent_label_from_schema('categories', item['name'])
+        labels = get_fluent_label_from_schema('data_providers', item['name'])
         for label in labels:
             grouped.setdefault(label, {'name': label, 'count': 0, 'active': label in current_labels})
             grouped[label]['count'] += item['count']
 
     return list(grouped.values())
+
+
+def group_choices_facet(facet, items, dataset_field):
+    lang_code = p.toolkit.request.environ['CKAN_LANG'] or 'en'
+    current_state_from_url = request.args.getlist(facet)  # list of strings to handle is_active
+    choices = dataset_field.get('choices', [])
+
+    grouped = {}
+    for item in items:
+        names = item['name']
+        if isinstance(names, str) and names.startswith('[') and names.endswith(']'):
+            try:
+                names = json.loads(names)
+            except json.JSONDecodeError:
+                names = [names]
+        else:
+            names = [names]
+
+        for name in names:
+            for choice in choices:
+                if choice['value'] == name:
+                    label = choice['label'].get(lang_code, name)
+                    grouped.setdefault(label, {'name': name, 'display_name': label, 'count': 0,
+                                               'active': name in current_state_from_url})
+                    grouped[label]['count'] += item['count']
+                    break
+
+    return list(grouped.values())
+
+
+def custom_get_facet_items_dict(facet, search_facets=None, limit=None, exclude_active=False):
+    items = get_facet_items_dict(facet, search_facets, limit, exclude_active)
+    schema = _get_schema_for_facet(facet)
+    if not schema:
+        return items
+
+    dataset_field = next((field for field in schema.get('dataset_fields', []) if field['field_name'] == facet), None)
+    if not dataset_field:
+        return items
+
+    # this handles the case when schema has defined coices array
+    if "label" in dataset_field and isinstance(dataset_field["label"], dict) and dataset_field.get('choices', []):
+        return group_choices_facet(facet, items, dataset_field)
+
+    # this handles the case when schema is just translated text field
+    if "label" in dataset_field and isinstance(dataset_field["label"], dict):
+        return group_facet_items_by_label(items)
+
+    return items
+
+
+def _get_schema_for_facet(facet):
+    """Retrieve the schema file for a given facet."""
+    schemas = _get_valid_schemas()
+    for schema in schemas:
+        for field in schema.get('dataset_fields', []):
+            if field['field_name'] == facet:
+                return schema
+    return None
