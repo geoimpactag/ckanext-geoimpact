@@ -11,7 +11,6 @@ Example:
 
 #}
 {% if (h.scheming_language_text(package.title_translated)|length > 0 if 'title_translated' in package else False) %}
-    {{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', package.title_translated) }}
     {% set title = h.scheming_language_text(package.title_translated) %}
 {% else %}
     {% set title = package.title or package.name %}
