@@ -56,6 +56,7 @@ class GeoimpactPlugin(p.SingletonPlugin):
             'group_facet_items_by_label': group_facet_items_by_label,
             'custom_get_facet_items_dict': custom_get_facet_items_dict,
             'print_template_value': lambda x: log.error('Template Var: ', x),
+            'print_template_type': lambda x: log.error('Template Var: ', type(x)),
         }
 
     # IPackageController
