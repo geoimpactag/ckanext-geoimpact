@@ -1,0 +1,26 @@
+{% set site_title = h.get_site_title() %}
+
+<div role="main" class="hero">
+  <div class="container">
+    {% block search %}
+      {% snippet 'home/snippets/search.html' %}
+    {% endblock %}
+  </div>
+</div>
+<div role="main" class="module-feeds">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="module-promotion card box">
+        {% trans %}
+          <h2>{{ site_title }}</h2>
+          <p>What kind of data and models on buildings and energy are you looking for?</p>
+          <p>Here at {{ site_title }} you will find hundreds of data points that are available for addresses, plots, and infrastructure in Switzerland.</p>
+          <p>Browse easily with search terms and tags above or via the "Datasets" tab in the menu.</p>
+          <p>If you have any questions, we are available at <a href="tel:+41415600985">+41 41 560 09 85</a>, <a href="mailto:hallo@geoimpact.ch">hallo@geoimpact.ch</a> or <a href="https://www.geoimpact.ch/kontakt">CONTACT | geoimpact AG | Shaping the energy future</a>.</p>
+        {% endtrans %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

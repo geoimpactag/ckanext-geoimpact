@@ -26,6 +26,8 @@ setup(
     entry_points='''
         [ckan.plugins]
         geoimpact=ckanext.geoimpact.plugins:GeoimpactPlugin
+        [babel.extractors]
+        ckan = ckan.lib.extract:extract_ckan
     ''',
     message_extractors={
         'ckanext': [
