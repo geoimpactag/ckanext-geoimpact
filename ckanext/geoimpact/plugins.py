@@ -49,14 +49,17 @@ class GeoimpactPlugin(p.SingletonPlugin):
         return {'organization_list': organization_list}
 
     # ITemplateHelpers
+    def print_template_value(self, message, value):
+        log.info(f"{message}: {value}")
+
+    # ITemplateHelpers
     def get_helpers(self):
         return {
             'get_available_schemas': get_available_schemas,
             'get_fluent_label_from_schema': get_fluent_label_from_schema,
             'group_facet_items_by_label': group_facet_items_by_label,
             'custom_get_facet_items_dict': custom_get_facet_items_dict,
-            'print_template_value': lambda x: log.error('Template Var: ', x),
-            'print_template_type': lambda x: log.error('Template Var: ', type(x)),
+            'print_template_value': self.print_template_value,
         }
 
     # IPackageController
