@@ -3,6 +3,7 @@ import os.path
 from flask import request
 from ckan.lib.helpers import get_facet_items_dict
 from ckan import plugins as p
+# from ckan import logic
 
 # Initialize logging
 import logging
@@ -171,3 +172,39 @@ def _get_schema_for_facet(facet):
             if field['field_name'] == facet:
                 return schema
     return None
+
+
+# def get_package_by_name(context, package_name):
+#     try:
+#         # Get the package details using the package_show action
+#         package_dict = logic.get_action('package_show')(context, {'id': package_name})
+#
+#         return package_dict
+#     except logic.NotFound:
+#         # Handle package not found error
+#         print(f"Package with name {package_name} not found.")
+#         return None
+#     except logic.ValidationError as e:
+#         # Handle validation errors
+#         print(f"Validation error: {e.error_dict}")
+#         return None
+#     except Exception as e:
+#         # Handle other exceptions
+#         print(f"An error occurred: {e}")
+#         return None
+
+def get_translated_title(package_name):
+    lang_code = p.toolkit.request.environ['CKAN_LANG'] or 'en'
+
+    package = p.toolkit.get_action('package_show')({'id': package_name})
+
+    log.info('---- PACKAGE --------')
+    log.info(package)
+
+    return
+
+
+def get_translated_short_description():
+    lang_code = p.toolkit.request.environ['CKAN_LANG'] or 'en'
+    return
+

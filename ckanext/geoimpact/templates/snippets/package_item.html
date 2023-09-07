@@ -14,8 +14,10 @@ Example:
 {% set notes = h.markdown_extract(package.notes, extract_length=180) %}
 
 {{ h.print_template_value('------------- HALLLOOOOO ------------------------------------', '') }}
+{{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', package.title) }}
 {{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', title) }}
 {{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', notes) }}
+{{ h.get_translated_title(package.name) }}
 
 {% block package_item %}
   <li class="{{ item_class or "dataset-item" }}">
