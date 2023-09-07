@@ -10,7 +10,10 @@ Example:
   {% snippet 'snippets/package_item.html', package=c.datasets[0] %}
 
 #}
+{{ h.print_template_value('------------- HALLLOOOOO ------------------------------------', '') }}
+{{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', package.title_translated) }}
 {% if ('label' in package.title_translated if 'title_translated' in package else False) %}
+    {{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', package.title_translated) }}
     {% set title = h.scheming_language_text(package.title_translated.label) %}
 {% else %}
     {% set title = package.title or package.name %}
@@ -21,7 +24,6 @@ Example:
     {% set notes = h.markdown_extract(package.notes, extract_length=180) %}
 {% endif %}
 
-{{ h.print_template_value('------------- HALLLOOOOO ------------------------------------', '') }}
 {{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', package.title) }}
 {{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', title) }}
 {{ h.print_template_value('[DEBUGGIN MESSAGE] package_item: ', notes) }}
