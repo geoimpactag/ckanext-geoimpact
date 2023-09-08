@@ -51,7 +51,7 @@ msgstr ""
 
 #: ckanext/geoimpact/templates/header.html:11
 msgid "Datasets"
-msgstr ""
+msgstr "Dati"
 
 #: ckanext/geoimpact/templates/header.html:13
 #, fuzzy
