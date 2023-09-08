@@ -51,7 +51,7 @@ msgstr ""
 
 #: ckanext/geoimpact/templates/header.html:11
 msgid "Datasets"
-msgstr "Dati"
+msgstr ""
 
 #: ckanext/geoimpact/templates/header.html:13
 #, fuzzy
@@ -146,7 +146,7 @@ msgstr ""
 "o relativi agli edifici?</p> <p>Qui nel %(site_title)s, troverai centinaia di"
 " dati disponibili su edifici, parcelle e tutta l'infrastruttura "
 "Svizzera.</p> <p>Puoi facilmente navigarli utilizzando parole chiave e tag nella barra di"
-" ricerca in alto o tramite la voce \"Dati\" nel menu.</p> <p>Per domande o ulteriori informazioni, siamo "
+" ricerca in alto o tramite la voce \"Dataset\" nel menu.</p> <p>Per domande o ulteriori informazioni, siamo "
 "a tua disposizione al numero <a href=\"tel:+41415600985\">+41 41 560 09 85</a>, all'indirizzo email <a "
 "href=\"mailto:hallo@geoimpact.ch\">hallo@geoimpact.ch</a> o sul sito web <a "
 "href=\"https://www.geoimpact.ch/kontakt\">https://www.geoimpact.ch/kontakt</a>.</p>"
