@@ -33,7 +33,6 @@
       "values": {
         "form_include_blank_choice": true,
         "select_size": 5,
-        "sorted_choices": true,
         "form_snippet": "multiple_select.html",
         "display_snippet": "geoimpact_multiple_choice_url.html",
         "validators": "scheming_multiple_choice",
