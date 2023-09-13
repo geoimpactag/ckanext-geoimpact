@@ -1,6 +1,6 @@
 {
   "scheming_version": 1,
-  "dataset_type": "geoimpact_test",
+  "dataset_type": "geoimpact-test",
   "about_url": "http://github.com/open-data/ckanext-fluent",
   "form_languages": ["en", "de", "fr", "it"],
   "dataset_fields": [
