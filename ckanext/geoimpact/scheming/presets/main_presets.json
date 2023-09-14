@@ -6,7 +6,7 @@
     {
       "preset_name": "fluent_text_full",
       "values": {
-        "form_snippet": "fluent_text_full.html",
+        "form_snippet": "geoimpact_fluent_text_full.html",
         "display_snippet": "fluent_text.html",
         "error_snippet": "fluent_text.html",
         "validators": "fluent_text",
