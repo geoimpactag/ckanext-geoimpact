@@ -38,8 +38,7 @@
     },
     {
       "field_name": "short_notes",
-      "preset": "fluent_text",
-      "form_snippet": "geoimpact_fluent_text_full.html",
+      "preset": "geoimpact_fluent_text_full",
       "required": false,
       "label": {
           "en": "Short description",
@@ -1018,19 +1017,27 @@
           "de": "SEP API Dokumentation",
           "fr": "Documentation de l'API SEP",
           "it": "Documentazione API SEP"
+      },
+     "help_text": {
+        "en": "One or multiple link(s) to the SEP API Doku.",
+        "de": "Ein oder mehrere Link(s) zur SEP API Doku.",
       }
     },
     {
-      "field_name": "external_documentations",
-      "preset": "fluent_text",
-      "form_snippet": "geoimpact_fluent_text_full.html",
+      "field_name": "external_documentation",
+      "preset": "multiple_text",
+      "display_snippet": "geoimpact_multiple_link.html",
       "label": {
-          "en": "External data documentations",
-          "de": "Externe Datendokumentationen",
-          "fr": "Documentations de données externes",
-          "it": "Documentazioni di dati esterni"
+          "en": "External data documentation",
+          "de": "Externe Datendokumentation",
+          "fr": "Documentation de données externe",
+          "it": "Documentazione di dati esterna"
+      },
+     "help_text": {
+        "en": "One or multiple link(s) to the external data documentations.",
+        "de": "Ein oder mehrere Link(s) zu externen Datendokumentationen.",
       }
-    },
+   },
     {
       "field_name": "example_values",
       "label": {
