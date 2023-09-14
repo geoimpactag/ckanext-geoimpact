@@ -1,5 +1,7 @@
 {% import 'macros/form.html' as form %}
 
+{{ h.log_data(field.classes) }}
+
 {%- for lang in h.fluent_form_languages(field, entity_type, object_type, schema) -%}
   {% call form.input(
     field.field_name + '-' + lang,
