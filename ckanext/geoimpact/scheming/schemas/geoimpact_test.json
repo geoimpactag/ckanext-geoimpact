@@ -39,6 +39,7 @@
     {
       "field_name": "short_notes",
       "preset": "fluent_text_full",
+      "classes": ["control-full"],
       "required": false,
       "label": {
           "en": "Short description",
@@ -1021,7 +1022,7 @@
     },
     {
       "field_name": "external_documentations",
-      "preset": "fluent_text_full",
+      "preset": "fluent_text",
       "classes": ["control-full"],
       "label": {
           "en": "External data documentations",
