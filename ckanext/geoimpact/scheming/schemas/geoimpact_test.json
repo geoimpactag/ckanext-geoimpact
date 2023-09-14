@@ -1020,7 +1020,7 @@
       },
      "help_text": {
         "en": "One or multiple link(s) to the SEP API Doku.",
-        "de": "Ein oder mehrere Link(s) zur SEP API Doku.",
+        "de": "Ein oder mehrere Link(s) zur SEP API Doku."
       }
     },
     {
@@ -1035,7 +1035,7 @@
       },
      "help_text": {
         "en": "One or multiple link(s) to the external data documentations.",
-        "de": "Ein oder mehrere Link(s) zu externen Datendokumentationen.",
+        "de": "Ein oder mehrere Link(s) zu externen Datendokumentationen."
       }
    },
     {
