@@ -1,11 +1,11 @@
 {%- set values = data[field.field_name] -%}
 
 {%- if values|length == 1 -%}
-    <a href="{{ element }}" target="_blank">{{ element|truncate(60) }}</a>
+    <a href="{{ values[0] }}" target="_blank">{{ values[0]|truncate(50) }}</a>
 {%- else -%}
     <ul>
     {%- for element in values -%}
-      <li><a href="{{ element }}" target="_blank">{{ element|truncate(60) }}</a></li>
+      <li><a href="{{ element }}" target="_blank">{{ element|truncate(50) }}</a></li>
     {%- endfor -%}
     </ul>
 {%- endif -%}
