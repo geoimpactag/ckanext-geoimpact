@@ -1011,7 +1011,7 @@
     {
       "field_name": "sep_api_documentation",
       "form_snippet": "multiple_text.html",
-      "display_snippet": "link.html",
+      "display_snippet": "geoimpact_multiple_link.html",
       "label": {
           "en": "SEP API documentation",
           "de": "SEP API Dokumentation",
