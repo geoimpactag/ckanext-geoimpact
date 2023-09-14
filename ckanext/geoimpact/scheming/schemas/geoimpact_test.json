@@ -1021,7 +1021,7 @@
     },
     {
       "field_name": "external_documentations",
-      "preset": "fluent_text_full",
+      "preset": "fluent_text",
       "label": {
           "en": "External data documentations",
           "de": "Externe Datendokumentationen",
