@@ -1,9 +1,7 @@
 {%- set values = data[field.field_name] -%}
 {%- set choices = [] -%}
 
-
-{% call h.log_data('---- VALUES ----', values) %}
-{% endcall %}
+{% h.log_data('---- VALUES ----', values) %}
 
 {{ data[field.field_name] }}
 

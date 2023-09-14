@@ -52,7 +52,6 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
 
     def _log_data(self, text, data):
         log.error(f"{text}: {data}")
-        print(f"{text}: {data}")
 
 
     # ITemplateHelpers
