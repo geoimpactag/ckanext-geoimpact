@@ -50,6 +50,10 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
     def get_actions(self):
         return {'organization_list': organization_list}
 
+    def _log_data(self, text, data):
+        log.info(f"{text}: {data}")
+
+
     # ITemplateHelpers
     def get_helpers(self):
         return {
@@ -57,6 +61,7 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
             'get_fluent_label_from_schema': get_fluent_label_from_schema,
             'group_facet_items_by_label': group_facet_items_by_label,
             'custom_get_facet_items_dict': custom_get_facet_items_dict,
+            'log_data': self._log_data,
             'get_site_title': lambda: p.toolkit.config.get('ckan.site_title', ''),
         }
 
