@@ -586,10 +586,10 @@
       "field_name": "data_level",
       "preset": "geoimpact_fluent_multi_select_url",
       "label": {
-          "en": "Data level",
-          "de": "Datenebene",
-          "fr": "Niveau des donn\u00E9es",
-          "it": "Livello dei dati"
+          "en": "Data levels",
+          "de": "Datenebenen",
+          "fr": "Niveaux des donn\u00E9es",
+          "it": "Livelli dei dati"
       },
       "choices": [
         {
