@@ -51,7 +51,8 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
         return {'organization_list': organization_list}
 
     def _log_data(self, text, data):
-        log.info(f"{text}: {data}")
+        log.error(f"{text}: {data}")
+        print(f"{text}: {data}")
 
 
     # ITemplateHelpers

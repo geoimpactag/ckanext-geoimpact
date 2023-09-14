@@ -4,32 +4,34 @@
 
 h.log_data('---- VALUES ----', values)
 
-{%- for choice in h.scheming_field_choices(field) -%}
-    {%- if choice.value in values -%}
-      {%- do choices.append({
-        'label': h.scheming_language_text(choice.label),
-        'url': h.scheming_language_text(choice.url)
-      }) -%}
-    {%- endif -%}
-{%- endfor -%}
+{{ data[field.field_name] }}
 
-{%- if choices|length == 1 -%}
-    {%- if choices[0].url != '' and choices[0].url != choices[0].label -%}
-        <a href="{{ choices[0]['url'] }}" target="_blank">{{ choices[0]['label'] }}</a>
-    {%- else -%}
-        {{ choices[0]['label'] }}
-    {%- endif -%}
-{%- else -%}
-    {%- if field.get('sorted_choices') -%}
-        {%- set choices = choices|sort(attribute='label') -%}
-    {%- endif -%}
-    <ul>
-    {%- for choice in choices -%}
-        {%- if choice.url != '' and choice.url != choice.label -%}
-            <li><a href="{{ choice['url'] }}" target="_blank">{{ choice['label'] }}</a></li>
-        {%- else -%}
-            <li>{{ choice['label'] }}</li>
-        {%- endif -%}
-    {%- endfor -%}
-    </ul>
-{%- endif -%}
+{#{%- for choice in h.scheming_field_choices(field) -%}#}
+{#    {%- if choice.value in values -%}#}
+{#      {%- do choices.append({#}
+{#        'label': h.scheming_language_text(choice.label),#}
+{#        'url': h.scheming_language_text(choice.url)#}
+{#      }) -%}#}
+{#    {%- endif -%}#}
+{#{%- endfor -%}#}
+{##}
+{#{%- if choices|length == 1 -%}#}
+{#    {%- if choices[0].url != '' and choices[0].url != choices[0].label -%}#}
+{#        <a href="{{ choices[0]['url'] }}" target="_blank">{{ choices[0]['label'] }}</a>#}
+{#    {%- else -%}#}
+{#        {{ choices[0]['label'] }}#}
+{#    {%- endif -%}#}
+{#{%- else -%}#}
+{#    {%- if field.get('sorted_choices') -%}#}
+{#        {%- set choices = choices|sort(attribute='label') -%}#}
+{#    {%- endif -%}#}
+{#    <ul>#}
+{#    {%- for choice in choices -%}#}
+{#        {%- if choice.url != '' and choice.url != choice.label -%}#}
+{#            <li><a href="{{ choice['url'] }}" target="_blank">{{ choice['label'] }}</a></li>#}
+{#        {%- else -%}#}
+{#            <li>{{ choice['label'] }}</li>#}
+{#        {%- endif -%}#}
+{#    {%- endfor -%}#}
+{#    </ul>#}
+{#{%- endif -%}#}
