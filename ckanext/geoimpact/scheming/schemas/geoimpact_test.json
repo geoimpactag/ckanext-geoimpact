@@ -1010,10 +1010,8 @@
     },
     {
       "field_name": "sep_api_documentation",
-      "form_snippet": "multiple_text.html",
-      "display_snippet": "multiple_text.html",
-      "validators": "scheming_multiple_text",
-      "output_validators": "scheming_load_json",
+      "preset": "multiple_text",
+      "display_snippet": "geoimpact_multiple_link.html",
       "label": {
           "en": "SEP API documentation",
           "de": "SEP API Dokumentation",
