@@ -2,7 +2,8 @@
 {%- set choices = [] -%}
 
 
-h.log_data('---- VALUES ----', values)
+{% call h.log_data('---- VALUES ----', values) %}
+{% endcall %}
 
 {{ data[field.field_name] }}
 
