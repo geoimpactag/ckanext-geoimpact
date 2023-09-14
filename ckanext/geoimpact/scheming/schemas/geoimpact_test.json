@@ -585,7 +585,6 @@
     {
       "field_name": "data_level",
       "preset": "geoimpact_fluent_multi_select_url",
-      "required": false,
       "label": {
           "en": "Data level",
           "de": "Datenebene",

@@ -1,13 +1,13 @@
 {
   "scheming_version": 1,
-  "dataset_type": "dataset",
+  "dataset_type": "geoimpact-test",
   "about_url": "http://github.com/open-data/ckanext-fluent",
   "form_languages": ["en", "de", "fr", "it"],
   "dataset_fields": [
     {
       "field_name": "title_translated",
       "preset": "fluent_core_translated",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Title",
           "de": "Titel",
@@ -79,9 +79,10 @@
           "it": "Fornitori di dati"
       },
       "preset": "geoimpact_fluent_multi_select_url",
+      "sorted_choices": true,
       "choices": [
         {
-          "value": "geoimpact_analytics",
+          "value": "geoimpact",
           "label": {
               "en": "geoimpact Analytics",
               "de": "geoimpact Analytics",
@@ -96,12 +97,21 @@
           }
         },
         {
+          "value": "tbd_manually",
+          "label": {
+              "en": "--- TBD ---",
+              "de": "--- TBD ---",
+              "fr": "--- TBD ---",
+              "it": "--- TBD ---"
+          }
+        },
+        {
           "value": "bfe",
           "label": {
-              "en": "SFOE",
-              "de": "BFE",
-              "fr": "OFEN",
-              "it": "UFE"
+              "en": "Swiss Federal Office of Energy SFOE",
+              "de": "Bundesamt für Energie BFE",
+              "fr": "Office fédéral de l'énergie OFEN",
+              "it": "Ufficio federale dell'energia UFE"
           },
           "url": {
             "en": "https://www.bfe.admin.ch/bfe/en/home.html",
@@ -113,10 +123,10 @@
         {
           "value": "bfs",
           "label": {
-              "en": "FSO",
-              "de": "BFS",
-              "fr": "OFS",
-              "it": "UST"
+              "en": "Federal Statistical Office FSO",
+              "de": "Bundesamt für Statistik BFS",
+              "fr": "Office fédéral de la statistique OFS",
+              "it": "Ufficio federale di statistica UST"
           },
           "url": {
             "en": "https://www.bfs.admin.ch/bfs/en/home.html",
@@ -171,12 +181,27 @@
           }
         },
         {
+          "value": "are",
+          "label": {
+              "en": "Federal Office for Spatial Development ARE",
+              "de": "Bundesamt für Raumentwicklung ARE",
+              "fr": "Office fédéral du développement territorial ARE",
+              "it": "Ufficio federale dello sviluppo territoriale ARE"
+          },
+          "url": {
+            "en": "https://www.are.admin.ch/are/en/home.html",
+            "de": "https://www.are.admin.ch/are/de/home.html",
+            "fr": "https://www.are.admin.ch/are/fr/home.html",
+            "it": "https://www.are.admin.ch/are/it/home.html"
+          }
+        },
+        {
           "value": "swisstopo",
           "label": {
-              "en": "swisstopo",
-              "de": "swisstopo",
-              "fr": "swisstopo",
-              "it": "swisstopo"
+              "en": "Federal Office of Topography swisstopo",
+              "de": "Bundesamt für Landestopografie swisstopo",
+              "fr": "Office fédéral de topographie swisstopo",
+              "it": "Ufficio federale di topografia swisstopo"
           },
           "url": {
             "en": "https://www.swisstopo.admin.ch/en/home.html",
@@ -188,10 +213,10 @@
         {
           "value": "av",
           "label": {
-              "en": "Cadastral surveying CH/FL",
-              "de": "Amtliche Vermessung Schweiz/FL",
-              "fr": "Mensuration officielle CH/FL",
-              "it": "Misurazione ufficiale CH/FL"
+              "en": "Cadastral surveying Switzerland / FL",
+              "de": "Amtliche Vermessung Schweiz / FL",
+              "fr": "Mensuration Officielle Suisse / FL",
+              "it": "Misurazione Ufficiale Svizzera / FL"
           },
           "url": {
             "en": "https://www.cadastre.ch/en/av.html",
@@ -233,10 +258,10 @@
         {
           "value": "docu_media",
           "label": {
-              "en": "Docu Media Schweiz",
-              "de": "Docu Media Schweiz",
-              "fr": "Docu Media Suisse",
-              "it": "Docu Media Suisse"
+              "en": "Docu Media Schweiz GmbH",
+              "de": "Docu Media Schweiz GmbH",
+              "fr": "Docu Media Suisse Sàrl",
+              "it": "Docu Media Schweiz GmbH"
           },
           "url": {
             "en": "https://www.docu.ch/de/",
@@ -248,10 +273,10 @@
         {
           "value": "kbdm",
           "label": {
-              "en": "KünzlerBachmann",
-              "de": "KünzlerBachmann",
-              "fr": "KünzlerBachmann",
-              "it": "KünzlerBachmann"
+              "en": "KünzlerBachmann Directmarketing",
+              "de": "KünzlerBachmann Directmarketing",
+              "fr": "KünzlerBachmann Directmarketing",
+              "it": "KünzlerBachmann Directmarketing"
           },
           "url": {
             "en": "https://www.kueba.ch/en/holding/",
@@ -263,10 +288,10 @@
         {
           "value": "elcom",
           "label": {
-              "en": "ElCom",
-              "de": "ElCom",
-              "fr": "ElCom",
-              "it": "ElCom"
+              "en": "Federal Electricity Commission ElCom",
+              "de": "Eidgenössische Elektrizitätskommission ElCom",
+              "fr": "Commission fédérale de l’électricité ElCom",
+              "it": "Commissione federale dell'energia elettrica ElCom"
           },
           "url": {
             "en": "https://www.elcom.admin.ch/elcom/en/home.html",
@@ -278,10 +303,10 @@
         {
           "value": "vese",
           "label": {
-              "en": "VESE",
-              "de": "VESE",
-              "fr": "VESE",
-              "it": "VESE"
+              "en": "VESE / pvtarif.ch",
+              "de": "VESE / pvtarif.ch",
+              "fr": "VESE / pvtarif.ch",
+              "it": "VESE / pvtarif.ch"
           },
           "url": {
             "en": "https://www.vese.ch/",
@@ -308,10 +333,10 @@
         {
           "value": "solar_campus",
           "label": {
-            "en": "Solar Campus",
-            "de": "Solar Campus",
-            "fr": "Solar Campus",
-            "it": "Solar Campus"
+            "en": "Solar Campus GmbH",
+            "de": "Solar Campus GmbH",
+            "fr": "Solar Campus GmbH",
+            "it": "Solar Campus GmbH"
           },
           "url": {
             "en": "https://www.solarcampus.ch/",
@@ -334,6 +359,216 @@
             "fr": "https://www.google.com/",
             "it": "https://www.google.com/"
           }
+        },
+        {
+          "value": "ag_afu",
+          "label": {
+              "en": "Abteilung für Umwelt des Kantons Aargau (AfU)",
+              "de": "Abteilung für Umwelt des Kantons Aargau (AfU)",
+              "fr": "Abteilung für Umwelt des Kantons Aargau (AfU)",
+              "it": "Abteilung für Umwelt des Kantons Aargau (AfU)"
+          },
+          "url": {
+            "en": "http://www.ag.ch/afu",
+            "de": "http://www.ag.ch/afu",
+            "fr": "http://www.ag.ch/afu",
+            "it": "http://www.ag.ch/afu"
+          }
+        },
+        {
+          "value": "zh_awel",
+          "label": {
+              "en": "Amt für Abfall, Wasser, Energie und Luft des Kantons Zürich (AWEL)",
+              "de": "Amt für Abfall, Wasser, Energie und Luft des Kantons Zürich (AWEL)",
+              "fr": "Amt für Abfall, Wasser, Energie und Luft des Kantons Zürich (AWEL)",
+              "it": "Amt für Abfall, Wasser, Energie und Luft des Kantons Zürich (AWEL)"
+          },
+          "url": {
+            "en": "https://www.zh.ch/de/baudirektion/amt-fuer-abfall-wasser-energie-luft.html",
+            "de": "https://www.zh.ch/de/baudirektion/amt-fuer-abfall-wasser-energie-luft.html",
+            "fr": "https://www.zh.ch/de/baudirektion/amt-fuer-abfall-wasser-energie-luft.html",
+            "it": "https://www.zh.ch/de/baudirektion/amt-fuer-abfall-wasser-energie-luft.html"
+          }
+        },
+        {
+          "value": "be_ak",
+          "label": {
+              "en": "Amt für Kultur des Kantons Bern (AK)",
+              "de": "Amt für Kultur des Kantons Bern (AK)",
+              "fr": "Office de la culture du canton de Berne (OC)",
+              "it": "Amt für Kultur des Kantons Bern (AK)"
+          },
+          "url": {
+            "en": "https://www.kultur.bkd.be.ch/de/start/ueber-uns/amt-fuer-kultur.html",
+            "de": "https://www.kultur.bkd.be.ch/de/start/ueber-uns/amt-fuer-kultur.html",
+            "fr": "https://www.kultur.bkd.be.ch/de/start/ueber-uns/amt-fuer-kultur.html",
+            "it": "https://www.kultur.bkd.be.ch/de/start/ueber-uns/amt-fuer-kultur.html"
+          }
+        },
+        {
+          "value": "be_awa",
+          "label": {
+              "en": "Amt für Wasser und Abfall des Kantons Bern (AWA)",
+              "de": "Amt für Wasser und Abfall des Kantons Bern (AWA)",
+              "fr": "Office des eaux et des déchets du canton de Berne (OED)",
+              "it": "Amt für Wasser und Abfall des Kantons Bern (AWA)"
+          },
+          "url": {
+            "en": "https://www.bvd.be.ch/de/start/ueber-uns/amt-fuer-wasser-und-abfall.html",
+            "de": "https://www.bvd.be.ch/de/start/ueber-uns/amt-fuer-wasser-und-abfall.html",
+            "fr": "https://www.bvd.be.ch/de/start/ueber-uns/amt-fuer-wasser-und-abfall.html",
+            "it": "https://www.bvd.be.ch/de/start/ueber-uns/amt-fuer-wasser-und-abfall.html"
+          }
+        },
+        {
+          "value": "sg_awe",
+          "label": {
+              "en": "Amt für Wasser und Energie des Kantons St. Gallen (AWE)",
+              "de": "Amt für Wasser und Energie des Kantons St. Gallen (AWE)",
+              "fr": "Amt für Wasser und Energie des Kantons St. Gallen (AWE)",
+              "it": "Amt für Wasser und Energie des Kantons St. Gallen (AWE)"
+          },
+          "url": {
+            "en": "https://www.sg.ch/politik-verwaltung/departemente-und-staatskanzlei/bau--und-umweltdepartement/amt-fuer-wasser-und-energie.html",
+            "de": "https://www.sg.ch/politik-verwaltung/departemente-und-staatskanzlei/bau--und-umweltdepartement/amt-fuer-wasser-und-energie.html",
+            "fr": "https://www.sg.ch/politik-verwaltung/departemente-und-staatskanzlei/bau--und-umweltdepartement/amt-fuer-wasser-und-energie.html",
+            "it": "https://www.sg.ch/politik-verwaltung/departemente-und-staatskanzlei/bau--und-umweltdepartement/amt-fuer-wasser-und-energie.html"
+          }
+        },
+        {
+          "value": "vs_duw",
+          "label": {
+              "en": "Dienststelle für Umwelt (DUW), Kanton Wallis",
+              "de": "Dienststelle für Umwelt (DUW), Kanton Wallis",
+              "fr": "Service de l'environnement (SEN), Canton du Valais",
+              "it": "Dienststelle für Umwelt (DUW), Kanton Wallis"
+          },
+          "url": {
+            "en": "https://www.vs.ch/web/sen",
+            "de": "https://www.vs.ch/web/sen",
+            "fr": "https://www.vs.ch/web/sen",
+            "it": "https://www.vs.ch/web/sen"
+          }
+        },
+        {
+          "value": "so_afu",
+          "label": {
+              "en": "Amt für Umwelt des Kantons Solothurn (AFU)",
+              "de": "Amt für Umwelt des Kantons Solothurn (AFU)",
+              "fr": "Amt für Umwelt des Kantons Solothurn (AFU)",
+              "it": "Amt für Umwelt des Kantons Solothurn (AFU)"
+          },
+          "url": {
+            "en": "https://so.ch/verwaltung/bau-und-justizdepartement/amt-fuer-umwelt/",
+            "de": "https://so.ch/verwaltung/bau-und-justizdepartement/amt-fuer-umwelt/",
+            "fr": "https://so.ch/verwaltung/bau-und-justizdepartement/amt-fuer-umwelt/",
+            "it": "https://so.ch/verwaltung/bau-und-justizdepartement/amt-fuer-umwelt/"
+          }
+        },
+        {
+          "value": "tg_afu",
+          "label": {
+              "en": "Amt für Umwelt (AfU) des Kantons Thurgau",
+              "de": "Amt für Umwelt (AfU) des Kantons Thurgau",
+              "fr": "Amt für Umwelt (AfU) des Kantons Thurgau",
+              "it": "Amt für Umwelt (AfU) des Kantons Thurgau"
+          },
+          "url": {
+            "en": "https://umwelt.tg.ch/",
+            "de": "https://umwelt.tg.ch/",
+            "fr": "https://umwelt.tg.ch/",
+            "it": "https://umwelt.tg.ch/"
+          }
+        },
+        {
+          "value": "bl_aue",
+          "label": {
+              "en": "Amt für Umweltschutz und Energie (AUE) des Kantons Basel-Landschaft",
+              "de": "Amt für Umweltschutz und Energie (AUE) des Kantons Basel-Landschaft",
+              "fr": "Amt für Umweltschutz und Energie (AUE) des Kantons Basel-Landschaft",
+              "it": "Amt für Umweltschutz und Energie (AUE) des Kantons Basel-Landschaft"
+          },
+          "url": {
+            "en": "https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/umweltschutz-energie",
+            "de": "https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/umweltschutz-energie",
+            "fr": "https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/umweltschutz-energie",
+            "it": "https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/umweltschutz-energie"
+          }
+        },
+        {
+          "value": "fr_afu",
+          "label": {
+              "en": "Amt für Umwelt (AfU) des Kantons Freiburg",
+              "de": "Amt für Umwelt (AfU) des Kantons Freiburg",
+              "fr": "Service de l’environnement (SEn), Etat de Fribourg",
+              "it": "Amt für Umwelt (AfU) des Kantons Freiburg"
+          },
+          "url": {
+            "en": "https://www.fr.ch/dime/sen",
+            "de": "https://www.fr.ch/dime/sen",
+            "fr": "https://www.fr.ch/dime/sen",
+            "it": "https://www.fr.ch/dime/sen"
+          }
+        },
+        {
+          "value": "ge_ocev",
+          "label": {
+              "en": "Office cantonal de l'environnement (OCEV), Etat de Genève",
+              "de": "Office cantonal de l'environnement (OCEV), Etat de Genève",
+              "fr": "Office cantonal de l'environnement (OCEV), Etat de Genève",
+              "it": "Office cantonal de l'environnement (OCEV), Etat de Genève"
+          },
+          "url": {
+            "en": "https://www.ge.ch/organisation/office-cantonal-environnement-ocev",
+            "de": "https://www.ge.ch/organisation/office-cantonal-environnement-ocev",
+            "fr": "https://www.ge.ch/organisation/office-cantonal-environnement-ocev",
+            "it": "https://www.ge.ch/organisation/office-cantonal-environnement-ocev"
+          }
+        },
+        {
+          "value": "ge_ops",
+          "label": {
+              "en": "Office du patrimoine et des sites (OPS), Etat de Genève",
+              "de": "Office du patrimoine et des sites (OPS), Etat de Genève",
+              "fr": "Office du patrimoine et des sites (OPS), Etat de Genève",
+              "it": "Office du patrimoine et des sites (OPS), Etat de Genève"
+          },
+          "url": {
+            "en": "https://www.ge.ch/organisation/office-du-patrimoine-sites-ops",
+            "de": "https://www.ge.ch/organisation/office-du-patrimoine-sites-ops",
+            "fr": "https://www.ge.ch/organisation/office-du-patrimoine-sites-ops",
+            "it": "https://www.ge.ch/organisation/office-du-patrimoine-sites-ops"
+          }
+        },
+        {
+          "value": "hades",
+          "label": {
+              "en": "Hydrologischer Atlas der Schweiz",
+              "de": "Hydrologischer Atlas der Schweiz",
+              "fr": "Atlas hydrologique de la Suisse",
+              "it": "Atlante idrologico della Svizzera"
+          },
+          "url": {
+            "en": "https://hydromaps.ch/#en/8/46.830/8.193/bl_hds/NULL",
+            "de": "https://hydromaps.ch/#de/8/46.830/8.193/bl_hds/NULL",
+            "fr": "https://hydromaps.ch/#fr/8/46.830/8.193/bl_hds/NULL",
+            "it": "https://hydromaps.ch/#it/8/46.830/8.193/bl_hds/NULL"
+          }
+        },
+        {
+          "value": "ju_env",
+          "label": {
+              "en": "Office de l'environnement (ENV), Canton du Jura",
+              "de": "Office de l'environnement (ENV), Canton du Jura",
+              "fr": "Office de l'environnement (ENV), Canton du Jura",
+              "it": "Office de l'environnement (ENV), Canton du Jura"
+          },
+          "url": {
+            "en": "https://www.jura.ch/env",
+            "de": "https://www.jura.ch/env",
+            "fr": "https://www.jura.ch/env",
+            "it": "https://www.jura.ch/env"
+          }
         }
       ]
     },
@@ -349,8 +584,7 @@
     },
     {
       "field_name": "data_level",
-      "preset": "select",
-      "required": true,
+      "preset": "geoimpact_fluent_multi_select_url",
       "label": {
           "en": "Data level",
           "de": "Datenebene",
@@ -361,11 +595,17 @@
         {
           "value": "address",
           "label": {
-              "en": "Entrance",
-              "de": "Eingang",
-              "fr": "Entr\u00E9e",
-              "it": "Ingresso"
-            }
+              "en": "Building entrance",
+              "de": "Gebäudeeingang",
+              "fr": "Entrée de bâtiment",
+              "it": "Entrata dell'edificio"
+          },
+          "url": {
+              "en": "https://www.housing-stat.ch/de/help/42.html#beschreibung_der_entitat_gebaudeeingang",
+              "de": "https://www.housing-stat.ch/de/help/42.html#beschreibung_der_entitat_gebaudeeingang",
+              "fr": "https://www.housing-stat.ch/fr/help/42.html#description_de_lentite_entree_de_batiment",
+              "it": "https://www.housing-stat.ch/it/help/42.html#descrizione_dellentita_entrata_delledificio"
+          }
         },
         {
           "value": "ewid",
@@ -373,8 +613,14 @@
               "en": "Flat",
               "de": "Wohnung",
               "fr": "Logement",
-              "it": "Piatto"
-            }
+              "it": "Abitazione"
+            },
+          "url": {
+              "en": "https://www.housing-stat.ch/de/help/42.html#beschreibung_der_entitat_wohnung",
+              "de": "https://www.housing-stat.ch/de/help/42.html#beschreibung_der_entitat_wohnung",
+              "fr": "https://www.housing-stat.ch/fr/help/42.html#description_de_lentite_logement",
+              "it": "https://www.housing-stat.ch/it/help/42.html#descrizione_dellentita_abitazione"
+          }
         },
         {
           "value": "egid",
@@ -383,7 +629,13 @@
             "de": "Geb\u00E4ude",
             "fr": "B\u00E2timent",
             "it": "Edificio"
-            }
+          },
+          "url": {
+              "en": "https://www.housing-stat.ch/de/help/42.html#beschreibung_der_entitat_gebaude",
+              "de": "https://www.housing-stat.ch/de/help/42.html#beschreibung_der_entitat_gebaude",
+              "fr": "https://www.housing-stat.ch/fr/help/42.html#description_de_lentite_batiment",
+              "it": "https://www.housing-stat.ch/it/help/42.html#descrizione_dellentita_edificio"
+          }
         },
         {
           "value": "building",
@@ -409,7 +661,13 @@
             "en": "Parcel",
             "de": "Parzelle",
             "fr": "Parcelle",
-            "it": "Terreno"
+            "it": "Particelle"
+          },
+          "url": {
+            "en": "https://www.housing-stat.ch/de/help/42.html#grundstucke",
+            "de": "https://www.housing-stat.ch/de/help/42.html#grundstucke",
+            "fr": "https://www.housing-stat.ch/fr/help/42.html#bienfonds_et_immeubles",
+            "it": "https://www.housing-stat.ch/it/help/42.html#fondi_o_immobili"
           }
         },
         {
@@ -433,19 +691,16 @@
         {
           "value": "municipality",
           "label": {
-            "en": "Municipality",
+            "en": "Commune",
             "de": "Gemeinde",
-            "fr": "Municipalit\u00E9",
+            "fr": "Commune",
             "it": "Comune"
-          }
-        },
-        {
-          "value": "zipcode",
-          "label": {
-            "en": "Zip Code",
-            "de": "Postleitzahl",
-            "fr": "Code Postal",
-            "it": "Codice Postale"
+          },
+          "url": {
+            "en": "https://www.bfs.admin.ch/bfs/en/home/basics/swiss-official-commune-register.html",
+            "de": "https://www.bfs.admin.ch/bfs/de/home/grundlagen/agvch.html",
+            "fr": "https://www.bfs.admin.ch/bfs/fr/home/bases-statistiques/repertoire-officiel-communes-suisse.html",
+            "it": "https://www.bfs.admin.ch/bfs/it/home/basi-statistiche/elenco-ufficiale-comuni-svizzera.html"
           }
         },
         {
@@ -671,18 +926,9 @@
       ]
     },
     {
-      "field_name": "example_values",
-      "label": {
-          "en": "Example values",
-          "de": "Beispielwerte",
-          "fr": "Exemples de valeurs",
-          "it": "Valori di esempio"
-      }
-    },
-    {
       "field_name": "periodicity",
       "preset": "select",
-      "required": false,
+      "required": true,
       "label": {
           "en": "Update interval",
           "de": "Aktualisierungsintervall",
@@ -691,12 +937,21 @@
       },
       "choices": [
         {
+          "value": "daily",
+          "label": {
+              "en": "daily",
+              "de": "täglich",
+              "fr": "journalier",
+              "it": "giornaliero"
+            }
+        },
+        {
           "value": "weekly",
           "label": {
               "en": "weekly",
               "de": "wöchentlich",
               "fr": "hebdomadaire",
-              "it": "invariato"
+              "it": "settimanale"
             }
         },
         {
@@ -736,6 +991,120 @@
             }
         }
       ]
+    },
+    {
+      "field_name": "data_processing",
+      "preset": "select",
+      "label": {
+          "en": "Data processing",
+          "de": "Datenverarbeitung",
+          "fr": "Traitement des données",
+          "it": "Elaborazione dei dati"
+      },
+      "choices": [
+          {
+            "value": "unmodified",
+            "label": {
+                "en": "unmodified",
+                "de": "unverändert",
+                "fr": "inchangé",
+                "it": "immutato"
+            }
+          },
+          {
+            "value": "processed",
+            "label": {
+                "en": "processed",
+                "de": "verarbeitet",
+                "fr": "transformé",
+                "it": "elaborato"
+            }
+          },
+          {
+            "value": "modeled",
+            "label": {
+                "en": "modeled",
+                "de": "modelliert",
+                "fr": "modélisé",
+                "it": "modellato"
+            }
+          }
+      ]
+    },
+    {
+      "field_name": "sep_api_documentation",
+      "preset": "multiple_text",
+      "display_snippet": "geoimpact_multiple_link.html",
+      "label": {
+          "en": "SEP API documentation",
+          "de": "SEP API Dokumentation",
+          "fr": "Documentation de l'API SEP",
+          "it": "Documentazione API SEP"
+      },
+     "help_text": {
+        "en": "One or multiple link(s) to the SEP API Doku.",
+        "de": "Ein oder mehrere Link(s) zur SEP API Doku."
+      }
+    },
+    {
+      "field_name": "external_documentation",
+      "preset": "multiple_text",
+      "display_snippet": "geoimpact_multiple_link.html",
+      "label": {
+          "en": "External data documentation",
+          "de": "Externe Datendokumentation",
+          "fr": "Documentation de données externe",
+          "it": "Documentazione di dati esterna"
+      },
+     "help_text": {
+        "en": "One or multiple link(s) to the external data documentations.",
+        "de": "Ein oder mehrere Link(s) zu externen Datendokumentationen."
+      }
+   },
+    {
+      "field_name": "example_values",
+      "label": {
+          "en": "Example values",
+          "de": "Beispielwerte",
+          "fr": "Exemples de valeurs",
+          "it": "Valori di esempio"
+      }
+    },
+    {
+      "field_name": "stats_count",
+      "label": {
+          "en": "Number of values related to (smallest) data level",
+          "de": "Anzahl Werte bezogen auf (kleinste) Datenebene",
+          "fr": "Nombre de valeurs par rapport au (plus petit) niveau de données",
+          "it": "Numero di valori relativi al livello di dati (più piccolo)"
+      }
+    },
+    {
+      "field_name": "stats_coverage",
+      "label": {
+          "en": "Coverage [%] related to (smallest) data level",
+          "de": "Abdeckung [%] bezogen auf (kleinste) Datenebene",
+          "fr": "Couverture [%] par rapport au (plus petit) niveau de données",
+          "it": "Copertina [%] relativi al livello di dati (più piccolo)"
+      }
+    },
+    {
+      "field_name": "stats_count_not_0",
+      "label": {
+          "en": "Number of values without 0 related to (smallest) data level",
+          "de": "Anzahl Werte ohne 0 bezogen auf (kleinste) Datenebene",
+          "fr": "Nombre de valeurs sans 0 par rapport au (plus petit) niveau de données",
+          "it": "Numero di valori senza 0 relativi al livello di dati (più piccolo)"
+      }
+    },
+    {
+      "field_name": "stats_coverage_not_0",
+      "label": {
+          "en": "Coverage without 0 [%] related to (smallest) data level",
+          "de": "Abdeckung ohne 0 [%] bezogen auf (kleinste) Datenebene",
+          "fr": "Couverture sans 0 [%] par rapport au (plus petit) niveau de données",
+          "it": "Copertina senza 0 [%] relativi al livello di dati (più piccolo)"
+      }
     }
   ],
   "resource_fields": [
