@@ -97,6 +97,15 @@
           }
         },
         {
+          "value": "tbd_manually",
+          "label": {
+              "en": "--- TBD ---",
+              "de": "--- TBD ---",
+              "fr": "--- TBD ---",
+              "it": "--- TBD ---"
+          }
+        },
+        {
           "value": "bfe",
           "label": {
               "en": "Swiss Federal Office of Energy SFOE",
@@ -172,6 +181,21 @@
           }
         },
         {
+          "value": "are",
+          "label": {
+              "en": "Federal Office for Spatial Development ARE",
+              "de": "Bundesamt für Raumentwicklung ARE",
+              "fr": "Office fédéral du développement territorial ARE",
+              "it": "Ufficio federale dello sviluppo territoriale ARE"
+          },
+          "url": {
+            "en": "https://www.are.admin.ch/are/en/home.html",
+            "de": "https://www.are.admin.ch/are/de/home.html",
+            "fr": "https://www.are.admin.ch/are/fr/home.html",
+            "it": "https://www.are.admin.ch/are/it/home.html"
+          }
+        },
+        {
           "value": "swisstopo",
           "label": {
               "en": "Federal Office of Topography swisstopo",
@@ -234,10 +258,10 @@
         {
           "value": "docu_media",
           "label": {
-              "en": "Docu Media Schweiz",
-              "de": "Docu Media Schweiz",
-              "fr": "Docu Media Suisse",
-              "it": "Docu Media Suisse"
+              "en": "Docu Media Schweiz GmbH",
+              "de": "Docu Media Schweiz GmbH",
+              "fr": "Docu Media Suisse Sàrl",
+              "it": "Docu Media Schweiz GmbH"
           },
           "url": {
             "en": "https://www.docu.ch/de/",
@@ -249,10 +273,10 @@
         {
           "value": "kbdm",
           "label": {
-              "en": "KünzlerBachmann",
-              "de": "KünzlerBachmann",
-              "fr": "KünzlerBachmann",
-              "it": "KünzlerBachmann"
+              "en": "KünzlerBachmann Directmarketing",
+              "de": "KünzlerBachmann Directmarketing",
+              "fr": "KünzlerBachmann Directmarketing",
+              "it": "KünzlerBachmann Directmarketing"
           },
           "url": {
             "en": "https://www.kueba.ch/en/holding/",
@@ -264,10 +288,10 @@
         {
           "value": "elcom",
           "label": {
-              "en": "ElCom",
-              "de": "ElCom",
-              "fr": "ElCom",
-              "it": "ElCom"
+              "en": "Federal Electricity Commission ElCom",
+              "de": "Eidgenössische Elektrizitätskommission ElCom",
+              "fr": "Commission fédérale de l’électricité ElCom",
+              "it": "Commissione federale dell'energia elettrica ElCom"
           },
           "url": {
             "en": "https://www.elcom.admin.ch/elcom/en/home.html",
@@ -279,10 +303,10 @@
         {
           "value": "vese",
           "label": {
-              "en": "VESE",
-              "de": "VESE",
-              "fr": "VESE",
-              "it": "VESE"
+              "en": "VESE / pvtarif.ch",
+              "de": "VESE / pvtarif.ch",
+              "fr": "VESE / pvtarif.ch",
+              "it": "VESE / pvtarif.ch"
           },
           "url": {
             "en": "https://www.vese.ch/",
@@ -309,10 +333,10 @@
         {
           "value": "solar_campus",
           "label": {
-            "en": "Solar Campus",
-            "de": "Solar Campus",
-            "fr": "Solar Campus",
-            "it": "Solar Campus"
+            "en": "Solar Campus GmbH",
+            "de": "Solar Campus GmbH",
+            "fr": "Solar Campus GmbH",
+            "it": "Solar Campus GmbH"
           },
           "url": {
             "en": "https://www.solarcampus.ch/",
@@ -674,10 +698,10 @@
             "it": "Comune"
           },
           "url": {
-            "en": "https://www.housing-stat.ch/de/help/42.html#gemeinden",
-            "de": "https://www.housing-stat.ch/de/help/42.html#gemeinden",
-            "fr": "https://www.housing-stat.ch/fr/help/42.html#communes",
-            "it": "https://www.housing-stat.ch/it/help/42.html#comuni"
+            "en": "https://www.bfs.admin.ch/bfs/en/home/basics/swiss-official-commune-register.html",
+            "de": "https://www.bfs.admin.ch/bfs/de/home/grundlagen/agvch.html",
+            "fr": "https://www.bfs.admin.ch/bfs/fr/home/bases-statistiques/repertoire-officiel-communes-suisse.html",
+            "it": "https://www.bfs.admin.ch/bfs/it/home/basi-statistiche/elenco-ufficiale-comuni-svizzera.html"
           }
         },
         {
@@ -1045,6 +1069,42 @@
           "de": "Beispielwerte",
           "fr": "Exemples de valeurs",
           "it": "Valori di esempio"
+      }
+    },
+    {
+      "field_name": "stats_count",
+      "label": {
+          "en": "Number of values related to (smallest) data level",
+          "de": "Anzahl Werte bezogen auf (kleinste) Datenebene",
+          "fr": "Nombre de valeurs par rapport au (plus petit) niveau de données",
+          "it": "Numero di valori relativi al livello di dati (più piccolo)"
+      }
+    },
+    {
+      "field_name": "stats_coverage",
+      "label": {
+          "en": "Coverage [%] related to (smallest) data level",
+          "de": "Abdeckung [%] bezogen auf (kleinste) Datenebene",
+          "fr": "Couverture [%] par rapport au (plus petit) niveau de données",
+          "it": "Copertina [%] relativi al livello di dati (più piccolo)"
+      }
+    },
+    {
+      "field_name": "stats_count_not_0",
+      "label": {
+          "en": "Number of values without 0 related to (smallest) data level",
+          "de": "Anzahl Werte ohne 0 bezogen auf (kleinste) Datenebene",
+          "fr": "Nombre de valeurs sans 0 par rapport au (plus petit) niveau de données",
+          "it": "Numero di valori senza 0 relativi al livello di dati (più piccolo)"
+      }
+    },
+    {
+      "field_name": "stats_coverage_not_0",
+      "label": {
+          "en": "Coverage without 0 [%] related to (smallest) data level",
+          "de": "Abdeckung ohne 0 [%] bezogen auf (kleinste) Datenebene",
+          "fr": "Couverture sans 0 [%] par rapport au (plus petit) niveau de données",
+          "it": "Copertina senza 0 [%] relativi al livello di dati (più piccolo)"
       }
     }
   ],
