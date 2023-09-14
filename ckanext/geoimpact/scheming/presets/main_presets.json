@@ -4,7 +4,7 @@
   "about_url": "http://github.com/open-data/ckanext-fluent",
   "presets": [
     {
-      "preset_name": "fluent_text_full",
+      "preset_name": "geoimpact_fluent_text_full",
       "values": {
         "form_snippet": "geoimpact_fluent_text_full.html",
         "display_snippet": "fluent_text.html",
