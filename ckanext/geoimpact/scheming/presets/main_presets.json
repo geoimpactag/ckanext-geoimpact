@@ -4,9 +4,9 @@
   "about_url": "http://github.com/open-data/ckanext-fluent",
   "presets": [
     {
-      "preset_name": "fluent_text_full",
+      "preset_name": "geoimpact_fluent_text_full",
       "values": {
-        "form_snippet": "fluent_text_full.html",
+        "form_snippet": "geoimpact_fluent_text_full.html",
         "display_snippet": "fluent_text.html",
         "error_snippet": "fluent_text.html",
         "validators": "fluent_text",
@@ -32,8 +32,7 @@
       "preset_name": "geoimpact_fluent_multi_select_url",
       "values": {
         "form_include_blank_choice": true,
-        "select_size": 5,
-        "sorted_choices": true,
+        "select_size": 15,
         "form_snippet": "multiple_select.html",
         "display_snippet": "geoimpact_multiple_choice_url.html",
         "validators": "scheming_multiple_choice",
