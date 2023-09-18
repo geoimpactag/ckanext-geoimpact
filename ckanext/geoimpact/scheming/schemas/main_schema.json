@@ -8,6 +8,7 @@
       "field_name": "title_translated",
       "preset": "fluent_core_translated",
       "required": false,
+      "validation": "unicode_safe",
       "label": {
           "en": "Title",
           "de": "Titel",
@@ -40,6 +41,7 @@
       "field_name": "short_notes",
       "preset": "geoimpact_fluent_text_full",
       "required": false,
+      "validation": "unicode_safe",
       "label": {
           "en": "Short description",
           "de": "Kurzbeschreibung",
@@ -52,6 +54,7 @@
       "preset": "fluent_core_translated",
       "form_snippet": "fluent_markdown.html",
       "required": false,
+      "validation": "unicode_safe",
       "label": {
           "en": "Description",
           "de": "Beschreibung",
