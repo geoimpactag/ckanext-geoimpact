@@ -569,6 +569,21 @@
             "fr": "https://www.jura.ch/env",
             "it": "https://www.jura.ch/env"
           }
+        },
+        {
+          "value": "senozon",
+          "label": {
+              "en": "Senozon AG",
+              "de": "Senozon AG",
+              "fr": "Senozon AG",
+              "it": "Senozon AG"
+          },
+          "url": {
+            "en": "https://senozon.com/",
+            "de": "https://senozon.com/",
+            "fr": "https://senozon.com/",
+            "it": "https://senozon.com/"
+          }
         }
       ]
     },
