@@ -39,7 +39,7 @@
     {
       "field_name": "short_notes",
       "preset": "geoimpact_fluent_text_full",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Short description",
           "de": "Kurzbeschreibung",
@@ -51,7 +51,7 @@
       "field_name": "notes_translated",
       "preset": "fluent_core_translated",
       "form_snippet": "fluent_markdown.html",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Description",
           "de": "Beschreibung",
@@ -717,7 +717,7 @@
     {
       "field_name": "unit",
       "preset": "select",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Unit of measure",
           "de": "Masseinheit",
@@ -928,7 +928,7 @@
     {
       "field_name": "periodicity",
       "preset": "select",
-      "required": true,
+      "required": false,
       "label": {
           "en": "Update interval",
           "de": "Aktualisierungsintervall",
