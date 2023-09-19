@@ -67,6 +67,7 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
 
     # IPackageController
     def before_dataset_search(self, search_params):
+        search_params['defType'] = 'edismax'
         try:
             filter_query = search_params.get('fq', '')
 
