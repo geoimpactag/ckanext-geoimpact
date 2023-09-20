@@ -13,6 +13,10 @@
           "de": "Titel",
           "fr": "Titre",
           "it": "Titolo"
+      },
+      "help_text": {
+          "en": "The title should describe an attribute as precisely and understandably as possible. \n - It follows the following convention: attribute label <more precise description> <(data source)>.\n - The attribute label should directly describe the attribute.\n - If necessary for a better understanding, a more precise description can be added, e.g. electricity demand BUILDING or year of construction BUILDING, in order to distinguish them from electricity demand COMMUNE or year of construction of the boiler.\n - Also, for a better understanding, the data source can be added in brackets at the end, e.g. building area (GWR) to distinguish it from building area (geoimpact Analytics).",
+          "de": "Der Titel soll ein Attribut möglist genau und verständlich beschreiben. \n - Er folgt folgender Konvention: Attributbezeichnung <genauere Beschreibung> <(Datenquelle)>\n - Die Attributbezeichnung sollte direkt das Attribut beschreiben.\n - Falls für ein besseres Verständnis nötig, kann eine genauere Beschreibung angefügt werden, z.B. Strombedarf GEBÄUDE oder Baujahr GEBÄUDE, um diese von Strombedarf GEMEINDE resp. Baujahr des Heizkessels abzugrenzen.\n - Ebenfalls kann für ein besseres Verständnis die Datenquelle in Klammern am Schluss angefügt werden, z.B. Gebäudefläche (GWR) um diese von Gebäudefläche (geoimpact Analytics) abzugrenzen."
       }
     },
     {
@@ -79,6 +83,10 @@
           "it": "Fornitori di dati"
       },
       "preset": "geoimpact_fluent_multi_select_url",
+      "help_text": {
+          "en": "Select one or more categories by marking them with Ctrl+click or Shift+click. \n - If possible, all data providers will be listed.\n - ML models: list providers of input data, but do not list providers of training data.\n - As soon as we make a calculation always also \"geoimpact Analytics\" as provider.",
+          "de": "Wähle eine oder mehrere Kategorien durch Markieren mit Strg+Klick oder Umschalt+Klick aus. \n - Wenn möglich werden alle Datenprovider aufgeführt.\n - ML-Modelle: Provider von Inputdaten aufführen, aber Provider von Trainingsdaten nicht aufführen.\n - Sobald wir eine Berechnung vornehmen immer auch \"geoimpact Analytics\" als Provider."
+      },
       "sorted_choices": true,
       "choices": [
         {
@@ -606,6 +614,10 @@
           "fr": "Niveaux des donn\u00E9es",
           "it": "Livelli dei dati"
       },
+      "help_text": {
+          "en": "Select one or more categories by marking them with Ctrl+click or Shift+click. An attribute can be assigned to one or more levels. Attributes are assigned to multiple data levels if they are offered aggregated to different data levels in SEP based on the same source data, but NOT if they are only linked to it in SEP.",
+          "de": "Wähle eine oder mehrere Kategorien durch Markieren mit Strg+Klick oder Umschalt+Klick aus. Ein Attribut kannt einer oder mehreren Ebenen zugewiesen werden. Attribute werden mehreren Datenebenen zugewiesen, wenn sie in SEP auf Basis derselben Ausgangsdaten auf verschiedene Datenebenen aggregiert angeboten werden, hingegen NICHT, wenn sie in SEP nur damit verknüpft werden."
+      },
       "choices": [
         {
           "value": "address",
@@ -941,7 +953,7 @@
       ]
     },
     {
-      "field_name": "periodicity",
+      "field_name": "update_interval",
       "preset": "select",
       "required": false,
       "label": {
@@ -1016,6 +1028,10 @@
           "fr": "Traitement des données",
           "it": "Elaborazione dei dati"
       },
+      "help_text": {
+          "en": "Data processing by geoimpact:\n - Unchanged: Data is taken directly from data provider and used at original level, e.g. building attributes from GWR at building level, modeled heat demand from Tachion/Sunroof.\n - Processed: Data is aggregated, filtered, geometrically blended, classified or otherwise processed by geoimpact, e.g. linking building zones or geothermal zones to addresses/parcels, aggregating number of dwellings.\n - Modeled: A new attribute is modeled from existing attributes, e.g. heat demand, energy reference area.",
+          "de": "Datenverarbeitung durch geoimpact:\n - Unverändert: Daten werden direkt vom Datenlieferanten übernommen und auf der Originalebene verwendet, z.B. Gebäudeattribute aus dem GWR auf Ebene Gebäude, modellierter Wärmebedarf von Tachion/Sonnendach.\n - Verarbeitet: Daten werden von geoimpact aggregiert, gefiltert, geometrisch verschnitten, klassifiziert oder sonst irgendwie verarbeitet, z.B. Verknüpfung von Bauzonen oder Erdsondenzonen mit Adressen/Parzellen, Aggregation von Anzahl Wohnungen.\n - Modelliert: Ein neues Attribut wird aus bestehenden Attributen modelliert, zB Wärmebedarf, Energiebezugsfläche."
+      },
       "choices": [
           {
             "value": "unmodified",
@@ -1088,37 +1104,28 @@
     {
       "field_name": "stats_count",
       "label": {
-          "en": "Number of values related to (smallest) data level",
-          "de": "Anzahl Werte bezogen auf (kleinste) Datenebene",
-          "fr": "Nombre de valeurs par rapport au (plus petit) niveau de données",
-          "it": "Numero di valori relativi al livello di dati (più piccolo)"
+          "en": "Number of values",
+          "de": "Anzahl Werte",
+          "fr": "Nombre de valeurs",
+          "it": "Numero di valori"
       }
     },
     {
       "field_name": "stats_coverage",
       "label": {
-          "en": "Coverage [%] related to (smallest) data level",
-          "de": "Abdeckung [%] bezogen auf (kleinste) Datenebene",
-          "fr": "Couverture [%] par rapport au (plus petit) niveau de données",
-          "it": "Copertina [%] relativi al livello di dati (più piccolo)"
+          "en": "Coverage [%]",
+          "de": "Abdeckung [%]",
+          "fr": "Couverture [%]",
+          "it": "Copertina [%]"
       }
     },
     {
       "field_name": "stats_count_not_0",
       "label": {
-          "en": "Number of values without 0 related to (smallest) data level",
-          "de": "Anzahl Werte ohne 0 bezogen auf (kleinste) Datenebene",
-          "fr": "Nombre de valeurs sans 0 par rapport au (plus petit) niveau de données",
-          "it": "Numero di valori senza 0 relativi al livello di dati (più piccolo)"
-      }
-    },
-    {
-      "field_name": "stats_coverage_not_0",
-      "label": {
-          "en": "Coverage without 0 [%] related to (smallest) data level",
-          "de": "Abdeckung ohne 0 [%] bezogen auf (kleinste) Datenebene",
-          "fr": "Couverture sans 0 [%] par rapport au (plus petit) niveau de données",
-          "it": "Copertina senza 0 [%] relativi al livello di dati (più piccolo)"
+          "en": "Number of values greater than 0",
+          "de": "Anzahl Werte grösser 0",
+          "fr": "Nombre de valeurs supérieur à 0",
+          "it": "Numero di valori maggiori di 0"
       }
     }
   ],
