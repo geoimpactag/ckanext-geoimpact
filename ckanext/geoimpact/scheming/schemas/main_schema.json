@@ -1091,37 +1091,28 @@
     {
       "field_name": "stats_count",
       "label": {
-          "en": "Number of values related to (smallest) data level",
-          "de": "Anzahl Werte bezogen auf (kleinste) Datenebene",
-          "fr": "Nombre de valeurs par rapport au (plus petit) niveau de données",
-          "it": "Numero di valori relativi al livello di dati (più piccolo)"
+          "en": "Number of values",
+          "de": "Anzahl Werte",
+          "fr": "Nombre de valeurs",
+          "it": "Numero di valori"
       }
     },
     {
       "field_name": "stats_coverage",
       "label": {
-          "en": "Coverage [%] related to (smallest) data level",
-          "de": "Abdeckung [%] bezogen auf (kleinste) Datenebene",
-          "fr": "Couverture [%] par rapport au (plus petit) niveau de données",
-          "it": "Copertina [%] relativi al livello di dati (più piccolo)"
+          "en": "Coverage [%]",
+          "de": "Abdeckung [%]",
+          "fr": "Couverture [%]",
+          "it": "Copertina [%]"
       }
     },
     {
       "field_name": "stats_count_not_0",
       "label": {
-          "en": "Number of values without 0 related to (smallest) data level",
-          "de": "Anzahl Werte ohne 0 bezogen auf (kleinste) Datenebene",
-          "fr": "Nombre de valeurs sans 0 par rapport au (plus petit) niveau de données",
-          "it": "Numero di valori senza 0 relativi al livello di dati (più piccolo)"
-      }
-    },
-    {
-      "field_name": "stats_coverage_not_0",
-      "label": {
-          "en": "Coverage without 0 [%] related to (smallest) data level",
-          "de": "Abdeckung ohne 0 [%] bezogen auf (kleinste) Datenebene",
-          "fr": "Couverture sans 0 [%] par rapport au (plus petit) niveau de données",
-          "it": "Copertina senza 0 [%] relativi al livello di dati (più piccolo)"
+          "en": "Number of values greater than 0",
+          "de": "Anzahl Werte grösser 0",
+          "fr": "Nombre de valeurs supérieur à 0",
+          "it": "Numero di valori maggiori di 0"
       }
     }
   ],
