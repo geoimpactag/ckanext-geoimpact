@@ -953,7 +953,7 @@
       ]
     },
     {
-      "field_name": "periodicity",
+      "field_name": "update_interval",
       "preset": "select",
       "required": false,
       "label": {
