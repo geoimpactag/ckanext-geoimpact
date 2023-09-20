@@ -69,6 +69,11 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
     def before_dataset_search(self, search_params):
         search_params['defType'] = 'edismax'
         try:
+            # Append wildcard '*' to the query string
+            query_string = search_params.get('q', '')
+            if query_string and not any(char in query_string for char in ':*"~'):
+                search_params['q'] = f"{query_string.strip()}*"
+                
             filter_query = search_params.get('fq', '')
 
             # Get the valid schemas
@@ -84,9 +89,7 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
             # Check if filter_query contains any of the multi_value_fields
             for field in multi_value_fields:
                 if f"{field}:" in filter_query:
-                    log.info(f"Original search params for {field}: {search_params['fq']}")
                     search_params['fq'] = search_params['fq'].replace(f'{field}:"', f'{field}:*"')
-                    log.info(f"Modified search params for {field}: {search_params['fq']}")
 
             return search_params
         except Exception as e:
