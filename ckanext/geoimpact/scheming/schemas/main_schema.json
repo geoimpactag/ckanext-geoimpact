@@ -596,16 +596,6 @@
       ]
     },
     {
-      "field_name": "tag_string",
-      "preset": "tag_string_autocomplete",
-      "label": {
-          "en": "Tags",
-          "de": "Schlagworte (Standard)",
-          "fr": "Mots-cl\u00e9s",
-          "it": "Parole chiave"
-      }
-    },
-    {
       "field_name": "data_level",
       "preset": "geoimpact_fluent_multi_select_url",
       "label": {
@@ -951,6 +941,92 @@
             }
           }
       ]
+    },
+    {
+      "field_name": "functional_tags",
+      "label": {
+          "en": "Data providers",
+          "de": "Datenlieferanten",
+          "fr": "Fournisseurs de données",
+          "it": "Fornitori di dati"
+      },
+      "preset": "geoimpact_fluent_multi_select_url",
+      "sorted_choices": true,
+      "choices": [
+        {
+          "value": "market_sense_api",
+          "label": {
+              "en": "MarketSense API",
+              "de": "MarketSense API",
+              "fr": "MarketSense API",
+              "it": "MarketSense API"
+          }
+        },
+        {
+          "value": "market_sense_filter",
+          "label": {
+              "en": "MarketSense filter",
+              "de": "MarketSense filter",
+              "fr": "MarketSense filter",
+              "it": "MarketSense filter"
+          }
+        },
+        {
+          "value": "market_sense_export",
+          "label": {
+              "en": "MarketSense export",
+              "de": "MarketSense export",
+              "fr": "MarketSense export",
+              "it": "MarketSense export"
+          }
+        },
+        {
+          "value": "add_on_kbdm",
+          "label": {
+              "en": "add-on KBDM",
+              "de": "add-on KBDM",
+              "fr": "add-on KBDM",
+              "it": "add-on KBDM"
+          }
+        },
+        {
+          "value": "add_on_docu_media",
+          "label": {
+              "en": "add-on Docu Media",
+              "de": "add-on Docu Media",
+              "fr": "add-on Docu Media",
+              "it": "add-on Docu Media"
+          }
+        },
+        {
+          "value": "add_on_energy_simulation",
+          "label": {
+              "en": "add-on energy simulation",
+              "de": "add-on energy simulation",
+              "fr": "add-on energy simulation",
+              "it": "add-on energy simulation"
+          }
+        },
+        {
+          "value": "historized_data",
+          "label": {
+              "en": "historized data",
+              "de": "historized data",
+              "fr": "historized data",
+              "it": "historized data"
+          }
+        }
+      ]
+    },
+    {
+      "field_name": "tag_string",
+      "preset": "tag_string_autocomplete",
+      "label": {
+          "en": "Tags",
+          "de": "Schlagworte (Standard)",
+          "fr": "Mots-cl\u00e9s",
+          "it": "Parole chiave"
+      }
     },
     {
       "field_name": "update_interval",
