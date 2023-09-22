@@ -146,21 +146,21 @@ def custom_get_facet_items_dict(facet, search_facets=None, limit=None, exclude_a
     items = get_facet_items_dict(facet, search_facets, limit, exclude_active)
     schema = _get_schema_for_facet(facet)
     if not schema:
-        return items
+        return sorted(items, key=lambda x: x['name'].lower())
 
     dataset_field = next((field for field in schema.get('dataset_fields', []) if field['field_name'] == facet), None)
     if not dataset_field:
-        return items
+        return sorted(items, key=lambda x: x['name'].lower())
 
     # this handles the case when schema has defined coices array
     if "label" in dataset_field and isinstance(dataset_field["label"], dict) and dataset_field.get('choices', []):
-        return group_choices_facet(facet, items, dataset_field)
+        return sorted(group_choices_facet(facet, items, dataset_field), key=lambda x: x['display_name'].lower())
 
     # this handles the case when schema is just translated text field
     if "label" in dataset_field and isinstance(dataset_field["label"], dict):
-        return group_facet_items_by_label(items)
+        return sorted(group_facet_items_by_label(items), key=lambda x: x['name'].lower())
 
-    return items
+    return sorted(items, key=lambda x: x['name'].lower())
 
 
 def _get_schema_for_facet(facet):
