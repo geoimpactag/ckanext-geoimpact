@@ -90,6 +90,15 @@
       "sorted_choices": true,
       "choices": [
         {
+          "value": "empty_string",
+          "label": {
+              "en": "",
+              "de": "",
+              "fr": "",
+              "it": ""
+          }
+        },
+        {
           "value": "geoimpact",
           "label": {
               "en": "geoimpact Analytics",
@@ -610,6 +619,15 @@
       },
       "choices": [
         {
+          "value": "empty_string",
+          "label": {
+              "en": "",
+              "de": "",
+              "fr": "",
+              "it": ""
+          }
+        },
+        {
           "value": "address",
           "label": {
               "en": "Building entrance",
@@ -954,6 +972,15 @@
       "sorted_choices": true,
       "choices": [
         {
+          "value": "empty_string",
+          "label": {
+              "en": "",
+              "de": "",
+              "fr": "",
+              "it": ""
+          }
+        },
+        {
           "value": "market_sense_api",
           "label": {
               "en": "MarketSense API",
@@ -1109,33 +1136,33 @@
           "de": "Datenverarbeitung durch geoimpact:\n - Unverändert: Daten werden direkt vom Datenlieferanten übernommen und auf der Originalebene verwendet, z.B. Gebäudeattribute aus dem GWR auf Ebene Gebäude, modellierter Wärmebedarf von Tachion/Sonnendach.\n - Verarbeitet: Daten werden von geoimpact aggregiert, gefiltert, geometrisch verschnitten, klassifiziert oder sonst irgendwie verarbeitet, z.B. Verknüpfung von Bauzonen oder Erdsondenzonen mit Adressen/Parzellen, Aggregation von Anzahl Wohnungen.\n - Modelliert: Ein neues Attribut wird aus bestehenden Attributen modelliert, zB Wärmebedarf, Energiebezugsfläche."
       },
       "choices": [
-          {
-            "value": "unmodified",
-            "label": {
-                "en": "unmodified",
-                "de": "unverändert",
-                "fr": "inchangé",
-                "it": "immutato"
-            }
-          },
-          {
-            "value": "processed",
-            "label": {
-                "en": "processed",
-                "de": "verarbeitet",
-                "fr": "transformé",
-                "it": "elaborato"
-            }
-          },
-          {
-            "value": "modeled",
-            "label": {
-                "en": "modeled",
-                "de": "modelliert",
-                "fr": "modélisé",
-                "it": "modellato"
-            }
+        {
+          "value": "unmodified",
+          "label": {
+              "en": "unmodified",
+              "de": "unverändert",
+              "fr": "inchangé",
+              "it": "immutato"
           }
+        },
+        {
+          "value": "processed",
+          "label": {
+              "en": "processed",
+              "de": "verarbeitet",
+              "fr": "transformé",
+              "it": "elaborato"
+          }
+        },
+        {
+          "value": "modeled",
+          "label": {
+              "en": "modeled",
+              "de": "modelliert",
+              "fr": "modélisé",
+              "it": "modellato"
+          }
+        }
       ]
     },
     {
