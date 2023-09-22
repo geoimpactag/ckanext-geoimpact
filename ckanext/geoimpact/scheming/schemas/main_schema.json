@@ -981,7 +981,7 @@
           }
         },
         {
-          "value": "market_sense_api",
+          "value": "MarketSense API",
           "label": {
               "en": "MarketSense API",
               "de": "MarketSense API",
@@ -990,7 +990,7 @@
           }
         },
         {
-          "value": "market_sense_filter",
+          "value": "MarketSense filter",
           "label": {
               "en": "MarketSense filter",
               "de": "MarketSense filter",
@@ -999,7 +999,7 @@
           }
         },
         {
-          "value": "market_sense_export",
+          "value": "MarketSense export",
           "label": {
               "en": "MarketSense export",
               "de": "MarketSense export",
@@ -1008,7 +1008,7 @@
           }
         },
         {
-          "value": "add_on_kbdm",
+          "value": "add-on KBDM",
           "label": {
               "en": "add-on KBDM",
               "de": "add-on KBDM",
@@ -1017,7 +1017,7 @@
           }
         },
         {
-          "value": "add_on_docu_media",
+          "value": "add-on Docu Media",
           "label": {
               "en": "add-on Docu Media",
               "de": "add-on Docu Media",
@@ -1026,7 +1026,7 @@
           }
         },
         {
-          "value": "add_on_energy_simulation",
+          "value": "add-on energy simulation",
           "label": {
               "en": "add-on energy simulation",
               "de": "add-on energy simulation",
@@ -1035,7 +1035,7 @@
           }
         },
         {
-          "value": "historized_data",
+          "value": "historized data",
           "label": {
               "en": "historized data",
               "de": "historized data",
