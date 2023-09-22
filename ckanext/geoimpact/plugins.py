@@ -42,7 +42,6 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
         return {
             'user_list': user_list,
             'user_show': user_show,
-            'group_show': group_show,
             'organization_show': organization_show,
         }
 
@@ -96,31 +95,10 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
             log.error(f"Error in before_dataset_search: {e}")
             return search_params
 
-    # IFacets
-    def _facets(self, facets_dict):
-        """
-        Remove "Groups", ... from facets, see: https://github.com/okfn/ckanext-hidegroups/blob/master/ckanext/hidegroups/plugin.py
-        """
-        if 'groups' in facets_dict:
-            del facets_dict['groups']
-        if 'license_id' in facets_dict:
-            del facets_dict['license_id']
-        if 'res_format' in facets_dict:
-            del facets_dict['res_format']
-        if 'organization' in facets_dict:
-            del facets_dict['organization']
-        return facets_dict
-
     def dataset_facets(self, facets_dict, package_type):
         facets_dict['data_providers'] = _('Data Providers')
         facets_dict['data_level'] = _('Data Level')
         facets_dict['functional_tags'] = _('Functional tags')
-        return self._clean_facets(facets_dict)
-
-    def group_facets(self, facets_dict, group_type, package_type):
-        return self._facets(facets_dict)
-
-    def organization_facets(self, facets_dict, organization_type, package_type):
         return self._clean_facets(facets_dict)
 
     def _clean_facets(self, facets_dict):
