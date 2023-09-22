@@ -22,7 +22,7 @@ def organization_list(context, data_dict):
         if not user:
             return []
 
-        user_orgs = p.toolkit.get_action('organization_list_for_user')({'user': user.id, 'include_dataset_count': True})
+        user_orgs = p.toolkit.get_action('organization_list_for_user')(context, {'include_dataset_count': True})
         return user_orgs
 
     except Exception as e:
