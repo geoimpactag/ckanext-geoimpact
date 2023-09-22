@@ -18,12 +18,12 @@
                 {% for item in items %}
                     {% set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) %}
                     {% set label = label_function(item) if label_function else item.display_name %}
-                    {% set label_truncated = label|truncate(40) %}
+                    {% set label_truncated = label|truncate(60) %}
                     {% set count = count_label(item['count']) if count_label else ('%d' % item['count']) %}
                     <li class="nav-item {% if item.active %} active{% endif %}">
-                        <a href="{{ href }}" title="{{ label if label != label_truncated else '' }}">
+                        <a href="{{ href }}" title="{{ label if label != label_truncated else '' }}" style="display: flex; align-items: center;">
                             <span class="item-label">{{ label_truncated }}</span>
-                            <span class="hidden separator"> - </span>
+                            <span class="hidden separator" style="margin-left: auto;">&nbsp;</span>
                             <span class="item-count badge">{{ count }}</span>
                             {% if item.active %}<span class="facet-close">x</span>{% endif %}
                         </a>
