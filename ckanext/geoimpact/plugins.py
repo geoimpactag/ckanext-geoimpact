@@ -114,6 +114,7 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
     def dataset_facets(self, facets_dict, package_type):
         facets_dict['data_providers'] = _('Data Providers')
         facets_dict['data_level'] = _('Data Level')
+        facets_dict['functional_tags'] = _('Functional tags')
         return self._clean_facets(facets_dict)
 
     def group_facets(self, facets_dict, group_type, package_type):
