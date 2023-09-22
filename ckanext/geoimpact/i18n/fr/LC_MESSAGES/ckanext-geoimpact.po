@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-geoimpact 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-09-07 14:26+0000\n"
+"POT-Creation-Date: 2023-09-22 08:29+0000\n"
 "PO-Revision-Date: 2023-09-07 13:03+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -19,17 +19,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-#: ckanext/geoimpact/plugins.py:106
+#: ckanext/geoimpact/plugins.py:115
 msgid "Data Providers"
 msgstr "Fournisseurs de données"
 
-#: ckanext/geoimpact/plugins.py:107
+#: ckanext/geoimpact/plugins.py:116
 msgid "Data Level"
 msgstr "Niveau des données"
 
+#: ckanext/geoimpact/plugins.py:117
+msgid "Functional tags"
+msgstr "Tags fonctionnels"
+
 #: ckanext/geoimpact/patches/emails.py:13
 msgid "No recipient email address available!"
-msgstr ""
+msgstr "Aucune adresse électronique de destinataire n'est disponible !"
 
 #: ckanext/geoimpact/patches/emails.py:56
 msgid "organization"
@@ -60,6 +64,70 @@ msgstr "organisation"
 
 #: ckanext/geoimpact/templates/header.html:14
 msgid "About"
+msgstr ""
+
+#: ckanext/geoimpact/templates/admin/config.html:15
+msgid "Site Title"
+msgstr ""
+
+#: ckanext/geoimpact/templates/admin/config.html:17
+msgid "Custom Stylesheet"
+msgstr ""
+
+#: ckanext/geoimpact/templates/admin/config.html:19
+msgid "Site Tag Line"
+msgstr ""
+
+#: ckanext/geoimpact/templates/admin/config.html:24
+msgid "Site logo"
+msgstr ""
+
+#: ckanext/geoimpact/templates/admin/config.html:26
+msgid "Custom CSS"
+msgstr ""
+
+#: ckanext/geoimpact/templates/admin/config.html:26
+msgid "Customisable css inserted into the page header"
+msgstr ""
+
+#: ckanext/geoimpact/templates/admin/config.html:28
+msgid "Homepage"
+msgstr ""
+
+#: ckanext/geoimpact/templates/admin/config.html:31
+msgid "Are you sure you want to reset the config?"
+msgstr ""
+
+#: ckanext/geoimpact/templates/admin/config.html:31
+msgid "Reset"
+msgstr ""
+
+#: ckanext/geoimpact/templates/admin/config.html:32
+msgid "Update Config"
+msgstr ""
+
+#: ckanext/geoimpact/templates/admin/config.html:41
+msgid "CKAN config options"
+msgstr ""
+
+#: ckanext/geoimpact/templates/admin/config.html:48
+#, python-format
+msgid ""
+"<p><strong>Site Title:</strong> This is the title of this CKAN instance "
+"It appears in various places throughout CKAN.</p> <p><strong>Custom "
+"Stylesheet:</strong> Define an alternative main CSS file.</p> "
+"<p><strong>Site Tag Logo:</strong> This is the logo that appears in the "
+"header of all the CKAN instance templates.</p> <p><strong>About:</strong>"
+" This text will appear on this CKAN instances <a "
+"href=\"%(about_url)s\">about page</a>.</p> <p><strong>Intro "
+"Text:</strong> This text will appear on this CKAN instances <a "
+"href=\"%(home_url)s\">home page</a> as a welcome to visitors.</p> "
+"<p><strong>Custom CSS:</strong> This is a block of CSS that appears in "
+"<code>&lt;head&gt;</code> tag of every page. If you wish to customize the"
+" templates more fully we recommend <a href=\"%(docs_url)s\" "
+"target=\"_blank\" rel=\"noreferrer\">reading the documentation</a>.</p> "
+"<p><strong>Homepage:</strong> This is for choosing a predefined layout "
+"for the modules that appear on your homepage.</p>"
 msgstr ""
 
 #: ckanext/geoimpact/templates/emails/invite_user.html:48
@@ -163,7 +231,13 @@ msgid ""
 "decision-making bases for sustainable decisions on a daily basis. We make"
 " these accessible with information technology. The people at geoimpact "
 "come from the fields of energy, IT and geoinformation."
-msgstr "geoimpact rend les bâtiments et l'énergie numériques. En tant que leader du marché pour les données et les modèles sur les bâtiments et l'énergie en Suisse, nous nous occupons quotidiennement des bases de décision pour des décisions durables. Nous les rendons accessibles grâce à la technologie de l'information. Les personnes chez geoimpact viennent des domaines de l'énergie, de l'IT et de la géoinformation."
+msgstr ""
+"geoimpact rend les bâtiments et l'énergie numériques. En tant que leader "
+"du marché pour les données et les modèles sur les bâtiments et l'énergie "
+"en Suisse, nous nous occupons quotidiennement des bases de décision pour "
+"des décisions durables. Nous les rendons accessibles grâce à la "
+"technologie de l'information. Les personnes chez geoimpact viennent des "
+"domaines de l'énergie, de l'IT et de la géoinformation."
 
 #: ckanext/geoimpact/templates/snippets/add_dataset.html:4
 msgid "Add Dataset"
@@ -181,7 +255,23 @@ msgstr ""
 msgid "There are no {facet_type} that match this search"
 msgstr ""
 
-#: ckanext/geoimpact/utils/auth_functions.py:45
+#: ckanext/geoimpact/templates/snippets/package_item.html:35
+msgid "Private"
+msgstr ""
+
+#: ckanext/geoimpact/templates/snippets/package_item.html:46
+msgid "Draft"
+msgstr ""
+
+#: ckanext/geoimpact/templates/snippets/package_item.html:48
+msgid "Deleted"
+msgstr ""
+
+#: ckanext/geoimpact/templates/snippets/package_item.html:58
+msgid "There is no description for this dataset"
+msgstr ""
+
+#: ckanext/geoimpact/utils/auth_functions.py:84
 #, python-format
 msgid "User %s not authorized to read group %s"
 msgstr "L'utilisateur %s n'est pas autorisé à lire le groupe %s"
