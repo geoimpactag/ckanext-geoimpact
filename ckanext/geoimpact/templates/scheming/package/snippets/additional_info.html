@@ -1,5 +1,11 @@
 {% extends "package/snippets/additional_info.html" %}
 
+{% comment %}
+    NOTE: ckanext-scheming plugin don't allow overwriting of its additional_info.html
+    'notes_translated' could not be excluded by overwriting the template
+    so it is excluded by overwriting the template in ckanext-scheming plugin itself
+{% endcomment %}
+
 {%- set exclude_fields = [
     'id',
     'title',
