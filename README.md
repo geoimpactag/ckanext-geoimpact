@@ -56,6 +56,7 @@ The utilities directory contains the core functionalities that the extension bri
 
 ### Translations
 This section guides on how to manage translations in the geoimpact extension:
+- **Extracting new translation strings:** If you have added new translation strings, you need to extract them to the `*.pot` file. You can do this by running `python setup.py extract_messages`. For more information about extracting the string, see [Extract strings](https://docs.ckan.org/en/2.10/extensions/translating-extensions.html?highlight=extract_messages#extract-strings).
 - **Updating Translations:** After updating the `.pot` file, update the `.po` files for each language using the command `python setup.py update_catalog -l [lang_code]`.
 - **Compiling Translations:** Post updating the translations, compile them to generate the respective `.mo` files using the command `python setup.py compile_catalog -l [lang_code]`.
 
