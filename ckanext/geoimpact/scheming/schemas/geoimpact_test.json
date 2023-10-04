@@ -71,6 +71,91 @@
       }
     },
     {
+      "field_name": "functional_tags",
+      "label": {
+        "en": "Usability",
+        "de": "Nutzbarkeit",
+        "fr": "Utilisabilit\u00E9",
+        "it": "Usabilit\u00E0"
+      },
+      "preset": "geoimpact_fluent_multi_select_url",
+      "sorted_choices": true,
+      "choices": [
+        {
+          "value": "empty_string",
+          "label": {
+            "en": "",
+            "de": "",
+            "fr": "",
+            "it": ""
+          }
+        },
+        {
+          "value": "MarketSense API",
+          "label": {
+            "en": "MarketSense API",
+            "de": "MarketSense API",
+            "fr": "MarketSense API",
+            "it": "MarketSense API"
+          }
+        },
+        {
+          "value": "MarketSense filter",
+          "label": {
+            "en": "MarketSense filter",
+            "de": "MarketSense filter",
+            "fr": "MarketSense filter",
+            "it": "MarketSense filter"
+          }
+        },
+        {
+          "value": "MarketSense export",
+          "label": {
+            "en": "MarketSense export",
+            "de": "MarketSense export",
+            "fr": "MarketSense export",
+            "it": "MarketSense export"
+          }
+        },
+        {
+          "value": "add-on KBDM",
+          "label": {
+            "en": "add-on KBDM",
+            "de": "add-on KBDM",
+            "fr": "add-on KBDM",
+            "it": "add-on KBDM"
+          }
+        },
+        {
+          "value": "add-on Docu Media",
+          "label": {
+            "en": "add-on Docu Media",
+            "de": "add-on Docu Media",
+            "fr": "add-on Docu Media",
+            "it": "add-on Docu Media"
+          }
+        },
+        {
+          "value": "add-on energy simulation",
+          "label": {
+            "en": "add-on energy simulation",
+            "de": "add-on energy simulation",
+            "fr": "add-on energy simulation",
+            "it": "add-on energy simulation"
+          }
+        },
+        {
+          "value": "historized data",
+          "label": {
+            "en": "historized data",
+            "de": "historized data",
+            "fr": "historized data",
+            "it": "historized data"
+          }
+        }
+      ]
+    },
+    {
       "field_name": "data_providers",
       "label": {
           "en": "Data providers",
