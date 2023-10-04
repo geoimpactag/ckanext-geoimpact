@@ -961,12 +961,12 @@
       ]
     },
     {
-      "field_name": "utility",
+      "field_name": "asdf",
       "label": {
-        "en": "Utility",
-        "de": "Nutzung",
-        "fr": "Utilite",
-        "it": "Utility"
+        "en": "asdfen",
+        "de": "asdfde",
+        "fr": "asdffr",
+        "it": "asdfit"
       },
       "preset": "geoimpact_fluent_multi_select_url",
       "sorted_choices": true,
