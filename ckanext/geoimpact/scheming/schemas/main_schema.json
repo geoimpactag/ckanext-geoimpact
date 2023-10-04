@@ -963,10 +963,10 @@
     {
       "field_name": "functional_tags",
       "label": {
-          "en": "Usability",
-          "de": "Nutzbarkeit",
-          "fr": "Utilisabilite",
-          "it": "Usabilita"
+          "en": "Functional tags",
+          "de": "Funktionelle Tags",
+          "fr": "Tags fonctionnels",
+          "it": "Tags funzionali"
       },
       "preset": "geoimpact_fluent_multi_select_url",
       "sorted_choices": true,
