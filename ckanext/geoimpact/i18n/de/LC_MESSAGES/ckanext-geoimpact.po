@@ -32,7 +32,6 @@ msgid "Functional tags"
 msgstr "Funktionelle Tags"
 
 #: ckanext/geoimpact/plugins.py:101
-#, python-format
 msgid "asdfen"
 msgstr "asdfde"
 
