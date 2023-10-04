@@ -961,12 +961,12 @@
       ]
     },
     {
-      "field_name": "asdf",
+      "field_name": "Utility",
       "label": {
-        "en": "asdfen",
-        "de": "asdfde",
-        "fr": "asdffr",
-        "it": "asdfit"
+        "en": "utility (en)",
+        "de": "utility (de)",
+        "fr": "utility (fr)",
+        "it": "utility (it)"
       },
       "preset": "geoimpact_fluent_multi_select_url",
       "sorted_choices": true,
@@ -1048,10 +1048,10 @@
     {
       "field_name": "functional_tags",
       "label": {
-          "en": "Functional tags",
-          "de": "Funktionelle Tags",
-          "fr": "Tags fonctionnels",
-          "it": "Tags funzionali"
+          "en": "Functional tags (en)",
+          "de": "Funktionelle Tags (de)",
+          "fr": "Tags fonctionnels (fr)",
+          "it": "Tags funzionali (it)"
       },
       "preset": "geoimpact_fluent_multi_select_url",
       "sorted_choices": true,

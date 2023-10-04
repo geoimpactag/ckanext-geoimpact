@@ -32,8 +32,8 @@ msgid "Functional tags"
 msgstr "Tags funzionali (it)"
 
 #: ckanext/geoimpact/plugins.py:101
-msgid "asdfen"
-msgstr "asdfit"
+msgid "Utility"
+msgstr "Utility"
 
 #: ckanext/geoimpact/patches/emails.py:13
 msgid "No recipient email address available!"
