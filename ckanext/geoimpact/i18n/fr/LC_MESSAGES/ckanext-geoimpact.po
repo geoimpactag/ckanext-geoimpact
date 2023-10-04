@@ -29,7 +29,7 @@ msgstr "Niveau des données"
 
 #: ckanext/geoimpact/plugins.py:117
 msgid "Usability"
-msgstr "Utilisabilité"
+msgstr "Utilisabilite"
 
 #: ckanext/geoimpact/patches/emails.py:13
 msgid "No recipient email address available!"
