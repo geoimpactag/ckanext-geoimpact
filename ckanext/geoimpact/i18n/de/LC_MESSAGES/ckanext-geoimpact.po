@@ -31,6 +31,10 @@ msgstr "Datenebene"
 msgid "Functional tags"
 msgstr "Funktionelle Tags"
 
+#: ckanext/geoimpact/plugins.py:118
+msgid "Utility"
+msgstr "Nutzung"
+
 #: ckanext/geoimpact/patches/emails.py:13
 msgid "No recipient email address available!"
 msgstr "Keine Empfänger-E-Mail-Adresse verfügbar!"
