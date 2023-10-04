@@ -28,8 +28,8 @@ msgid "Data Level"
 msgstr "Livello dati"
 
 #: ckanext/geoimpact/plugins.py:117
-msgid "Functional tags"
-msgstr "Tags funzionali"
+msgid "Usability"
+msgstr "Usabilità"
 
 #: ckanext/geoimpact/patches/emails.py:13
 msgid "No recipient email address available!"
