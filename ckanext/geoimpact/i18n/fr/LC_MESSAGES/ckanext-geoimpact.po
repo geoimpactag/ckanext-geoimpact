@@ -29,7 +29,7 @@ msgstr "Niveau des données"
 
 #: ckanext/geoimpact/plugins.py:117
 msgid "Functional tags"
-msgstr "Tags fonctionnels"
+msgstr "Tags fonctionnels (fr)"
 
 #: ckanext/geoimpact/plugins.py:101
 msgid "asdfen"

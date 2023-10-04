@@ -29,7 +29,7 @@ msgstr "Datenebene"
 
 #: ckanext/geoimpact/plugins.py:117
 msgid "Functional tags"
-msgstr "Funktionelle Tags"
+msgstr "Funktionelle Tags (de)"
 
 #: ckanext/geoimpact/plugins.py:101
 msgid "asdfen"
