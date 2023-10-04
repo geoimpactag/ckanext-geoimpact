@@ -21,7 +21,7 @@ msgstr ""
 
 #: ckanext/geoimpact/plugins.py:101
 msgid "Usability"
-msgstr "Usabilit\u00E0"
+msgstr "Usabilità"
 
 #: ckanext/geoimpact/plugins.py:115
 msgid "Data Providers"
