@@ -20,8 +20,8 @@ msgstr ""
 "Generated-By: Babel 2.10.3\n"
 
 #: ckanext/geoimpact/plugins.py:101
-msgid "Utility"
-msgstr "Utility (it)"
+msgid "Usability"
+msgstr "Usabilit\u00E0"
 
 #: ckanext/geoimpact/plugins.py:115
 msgid "Data Providers"
