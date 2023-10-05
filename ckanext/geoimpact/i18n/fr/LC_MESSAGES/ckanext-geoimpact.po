@@ -19,6 +19,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
+#: ckanext/geoimpact/plugins.py:101
+msgid "Usability"
+msgstr "Utilisabilité"
+
 #: ckanext/geoimpact/plugins.py:115
 msgid "Data Providers"
 msgstr "Fournisseurs de données"
@@ -26,10 +30,6 @@ msgstr "Fournisseurs de données"
 #: ckanext/geoimpact/plugins.py:116
 msgid "Data Level"
 msgstr "Niveau des données"
-
-#: ckanext/geoimpact/plugins.py:117
-msgid "Functional tags"
-msgstr "Tags fonctionnels"
 
 #: ckanext/geoimpact/patches/emails.py:13
 msgid "No recipient email address available!"
