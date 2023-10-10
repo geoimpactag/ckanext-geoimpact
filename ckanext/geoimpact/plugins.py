@@ -68,10 +68,12 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
     def before_dataset_search(self, search_params):
         search_params['defType'] = 'edismax'
         try:
-            # Append wildcard '*' to the query string
+            # Append wildcard '*' to each word in the query string
             query_string = search_params.get('q', '')
             if query_string and not any(char in query_string for char in ':*"~'):
-                search_params['q'] = f"{query_string.strip()}*"
+                words = query_string.split()
+                wildcard_query = ' '.join(f"{word}*" for word in words)
+                search_params['q'] = wildcard_query.strip()
                 
             filter_query = search_params.get('fq', '')
 
