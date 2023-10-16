@@ -38,10 +38,10 @@
         "validators": "scheming_multiple_choice",
         "output_validators": "scheming_multiple_choice_output",
         "help_text": {
-          "en": "Select one or more categories by marking categories with Ctrl+click or Shift+click.",
-          "de": "Wähle eine oder mehrere Kategorien durch Markieren mit Strg+Klick oder Umschalt+Klick aus.",
-          "fr": "Select one or more categories by marking categories with Ctrl+click or Shift+click.",
-          "it": "Select one or more categories by marking categories with Ctrl+click or Shift+click."
+          "en": "To select one or more categories, click on them while holding down the Ctrl key. To deselect an already selected category, click it again while holding down the Ctrl key.",
+          "de": "Um eine oder mehrere Kategorien auszuw\u00E4hlen, klicke sie an, w\u00E4hrend du die Strg-Taste gedr\u00FCckt h\u00E4ltst. Um eine bereits ausgew\u00E4hlte Kategorie abzuw\u00E4hlen, klicke sie erneut bei gedr\u00FCckter Strg-Taste an.",
+          "fr": "Pour s\u00E9lectionner une ou plusieurs cat\u00E9gories, clique dessus tout en maintenant la touche Ctrl enfonc\u00E9e. Pour d\u00E9s\u00E9lectionner une cat\u00E9gorie d\u00E9j\u00E0 s\u00E9lectionn\u00E9e, clique \u00E0 nouveau dessus tout en maintenant la touche Ctrl enfonc\u00E9e.",
+          "it": "Per selezionare una o pi\u00F9 categorie, fare clic su di esse tenendo premuto il tasto Ctrl. Per deselezionare una categoria gi\u00E0 selezionata, fare nuovamente clic su di essa tenendo premuto il tasto Ctrl."
         }
       }
     }
