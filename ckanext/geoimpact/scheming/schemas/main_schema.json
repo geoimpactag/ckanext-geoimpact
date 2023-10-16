@@ -15,8 +15,9 @@
           "it": "Titolo"
       },
       "help_text": {
-          "en": "The title should describe an attribute as precisely and understandably as possible. \n - It follows the following convention: attribute label <more precise description> <(data source)>.\n - The attribute label should directly describe the attribute.\n - If necessary for a better understanding, a more precise description can be added, e.g. electricity demand BUILDING or year of construction BUILDING, in order to distinguish them from electricity demand COMMUNE or year of construction of the boiler.\n - Also, for a better understanding, the data source can be added in brackets at the end, e.g. building area (GWR) to distinguish it from building area (geoimpact Analytics).",
-          "de": "Der Titel soll ein Attribut möglist genau und verständlich beschreiben. \n - Er folgt folgender Konvention: Attributbezeichnung <genauere Beschreibung> <(Datenquelle)>\n - Die Attributbezeichnung sollte direkt das Attribut beschreiben.\n - Falls für ein besseres Verständnis nötig, kann eine genauere Beschreibung angefügt werden, z.B. Strombedarf GEBÄUDE oder Baujahr GEBÄUDE, um diese von Strombedarf GEMEINDE resp. Baujahr des Heizkessels abzugrenzen.\n - Ebenfalls kann für ein besseres Verständnis die Datenquelle in Klammern am Schluss angefügt werden, z.B. Gebäudefläche (GWR) um diese von Gebäudefläche (geoimpact Analytics) abzugrenzen."
+          "en": "The title should describe an attribute as precisely and understandably as possible. - It follows the following convention: Attribute name <more precise description> (<data source>) - The attribute name should directly describe the attribute. - If necessary for better understanding, a more precise description can be added, e.g. \"electricity demand building\" or \"year of construction building\" to distinguish them from \"electricity demand municipality\" or \"year of construction boiler\" respectively. - Also, for a better understanding, the data source can be added in brackets at the end, e.g. building area (GWR) to distinguish it from building area (geoimpact Analytics).",
+          "de": "Der Titel soll ein Attribut m\u00F6glichst genau und verst\u00E4ndlich beschreiben. - Er folgt folgender Konvention: Attributbezeichnung <genauere Beschreibung> (<Datenquelle>) - Die Attributbezeichnung sollte direkt das Attribut beschreiben. - Falls f\u00FCr ein besseres Verst\u00E4ndnis n\u00F6tig, kann eine genauere Beschreibung angef\u00FCgt werden, z.B. \"Strombedarf Geb\u00E4ude\" oder \"Baujahr Geb\u00E4ude\", um diese von \"Strombedarf Gemeinde\" resp. \"Baujahr des Heizkessels\" abzugrenzen. - Ebenfalls kann f\u00FCr ein besseres Verst\u00E4ndnis die Datenquelle in Klammern am Schluss angef\u00FCgt werden, z.B. Geb\u00E4udefl\u00E4che (GWR) um diese von Geb\u00E4udefl\u00E4che (geoimpact Analytics) abzugrenzen.",
+          "fr": "Le titre doit d\u00E9crire un attribut de mani\u00E8re aussi pr\u00E9cise et compr\u00E9hensible que possible. - Il suit la convention suivante : d\u00E9signation de l'attribut <description plus pr\u00E9cise> (<source de donn\u00E9es>) - La d\u00E9signation de l'attribut doit d\u00E9crire directement l'attribut. - Si cela est n\u00E9cessaire pour une meilleure compr\u00E9hension, une description plus pr\u00E9cise peut être ajout\u00E9e, par exemple \"Besoin en \u00E9lectricit\u00E9 du b\u00E2timent\" ou \"Ann\u00E9e de construction du b\u00E2timent\", afin de les distinguer de \"Besoin en \u00E9lectricit\u00E9 de la commune\" ou \"Ann\u00E9e de construction de la chaudi\u00E8re\". - De même, pour une meilleure compr\u00E9hension, la source des donn\u00E9es peut être ajout\u00E9e entre parenth\u00E8ses \u00E0 la fin, p. ex. surface du b\u00E2timent (GWR) pour la distinguer de la surface du b\u00E2timent (geoimpact Analytics)."
       }
     },
     {
@@ -24,8 +25,8 @@
       "preset": "title",
       "label": {
           "en": "ID for this record",
-          "de": "ID für diesen Eintrag",
-          "fr": "ID pour cette entrée",
+          "de": "ID f\u00FCr diesen Eintrag",
+          "fr": "ID pour cette entr\u00E9e",
           "it": "ID di questa voce"
       }
     },
@@ -35,7 +36,7 @@
       "label": {
           "en": "URL for this record",
           "de": "URL zu diesem Eintrag",
-          "fr": "URL de cette entrée",
+          "fr": "URL de cette entr\u00E9e",
           "it": "URL a questa voce"
       },
       "form_placeholder": "my_dataset_id"
@@ -47,7 +48,7 @@
       "label": {
           "en": "Short description",
           "de": "Kurzbeschreibung",
-          "fr": "Brève description",
+          "fr": "Br\u00E8ve description",
           "it": "Breve descrizione"
       }
     },
@@ -70,7 +71,7 @@
       "label": {
           "en": "Provide in organization",
           "de": "Bereitstellen in Organisation",
-          "fr": "Mise à disposition dans l'organisation",
+          "fr": "Mise \u00E0 disposition dans l'organisation",
           "it": "Fornite nell'organizzazione"
       }
     },
@@ -79,25 +80,17 @@
       "label": {
           "en": "Data providers",
           "de": "Datenlieferanten",
-          "fr": "Fournisseurs de données",
+          "fr": "Fournisseurs de donn\u00E9es",
           "it": "Fornitori di dati"
       },
       "preset": "geoimpact_fluent_multi_select_url",
       "help_text": {
-          "en": "Select one or more categories by marking them with Ctrl+click or Shift+click. \n - If possible, all data providers will be listed.\n - ML models: list providers of input data, but do not list providers of training data.\n - As soon as we make a calculation always also \"geoimpact Analytics\" as provider.",
-          "de": "Wähle eine oder mehrere Kategorien durch Markieren mit Strg+Klick oder Umschalt+Klick aus. \n - Wenn möglich werden alle Datenprovider aufgeführt.\n - ML-Modelle: Provider von Inputdaten aufführen, aber Provider von Trainingsdaten nicht aufführen.\n - Sobald wir eine Berechnung vornehmen immer auch \"geoimpact Analytics\" als Provider."
+          "en": "To select one or more categories, click on them while holding down the Ctrl key. To deselect an already selected category, click it again while holding down the Ctrl key. - If possible, all data providers will be listed. - ML models: list providers of input data, but do not list providers of training data. - As soon as we perform a calculation, always list \"geoimpact Analytics\" as a provider.",
+          "de": "Um eine oder mehrere Kategorien auszuw\u00E4hlen, klicke sie an, w\u00E4hrend du die Strg-Taste gedr\u00FCckt h\u00E4ltst. Um eine bereits ausgew\u00E4hlte Kategorie abzuw\u00E4hlen, klicke sie erneut bei gedr\u00FCckter Strg-Taste an. - Wenn m\u00F6glich werden alle Datenprovider aufgef\u00FChrt. - ML-Modelle: Provider von Inputdaten auff\u00FChren, aber Provider von Trainingsdaten nicht auff\u00FChren. - Sobald wir eine Berechnung vornehmen immer auch \"geoimpact Analytics\" als Provider auff\u00FChren.",
+          "fr": "Pour s\u00E9lectionner une ou plusieurs cat\u00E9gories, clique dessus tout en maintenant la touche Ctrl enfonc\u00E9e. Pour d\u00E9s\u00E9lectionner une cat\u00E9gorie d\u00E9j\u00E0 s\u00E9lectionn\u00E9e, clique \u00E0 nouveau dessus tout en maintenant la touche Ctrl enfonc\u00E9e. - Si possible, tous les fournisseurs de donn\u00E9es sont list\u00E9s. - Mod\u00E8les ML : mentionner les fournisseurs de donn\u00E9es d'entr\u00E9e, mais ne pas mentionner les fournisseurs de donn\u00E9es d'entraînement. - D\u00E8s que nous effectuons un calcul, toujours mentionner \"geoimpact Analytics\" comme fournisseur."
       },
       "sorted_choices": true,
       "choices": [
-        {
-          "value": "empty_string",
-          "label": {
-              "en": "",
-              "de": "",
-              "fr": "",
-              "it": ""
-          }
-        },
         {
           "value": "geoimpact",
           "label": {
@@ -126,8 +119,8 @@
           "value": "bfe",
           "label": {
               "en": "Swiss Federal Office of Energy SFOE",
-              "de": "Bundesamt für Energie BFE",
-              "fr": "Office fédéral de l'énergie OFEN",
+              "de": "Bundesamt f\u00FCr Energie BFE",
+              "fr": "Office f\u00E9d\u00E9ral de l'\u00E9nergie OFEN",
               "it": "Ufficio federale dell'energia UFE"
           },
           "url": {
@@ -141,8 +134,8 @@
           "value": "bfs",
           "label": {
               "en": "Federal Statistical Office FSO",
-              "de": "Bundesamt für Statistik BFS",
-              "fr": "Office fédéral de la statistique OFS",
+              "de": "Bundesamt f\u00FCr Statistik BFS",
+              "fr": "Office f\u00E9d\u00E9ral de la statistique OFS",
               "it": "Ufficio federale di statistica UST"
           },
           "url": {
@@ -155,9 +148,9 @@
         {
           "value": "ehra",
           "label": {
-              "en": "Eidgenössisches Amt für das Handelsregister EHRA",
-              "de": "Eidgenössisches Amt für das Handelsregister EHRA",
-              "fr": "Office fédéral du registre du commerce OFRC",
+              "en": "Eidgen\u00F6ssisches Amt f\u00FCr das Handelsregister EHRA",
+              "de": "Eidgen\u00F6ssisches Amt f\u00FCr das Handelsregister EHRA",
+              "fr": "Office f\u00E9d\u00E9ral du registre du commerce OFRC",
               "it": "Ufficio federale del registro di commercio UFRC"
           },
           "url": {
@@ -171,8 +164,8 @@
           "value": "bafu",
           "label": {
               "en": "Federal Office for the Environment FOEN",
-              "de": "Bundesamt für Umwelt BAFU",
-              "fr": "Office fédéral de l'environnement OFEV",
+              "de": "Bundesamt f\u00FCr Umwelt BAFU",
+              "fr": "Office f\u00E9d\u00E9ral de l'environnement OFEV",
               "it": "Ufficio federale dell'ambiente UFAM"
           },
           "url": {
@@ -186,8 +179,8 @@
           "value": "astra",
           "label": {
               "en": "Federal Roads Office FEDRO",
-              "de": "Bundesamt für Strassen ASTRA",
-              "fr": "Office fédéral des routes OUFROU",
+              "de": "Bundesamt f\u00FCr Strassen ASTRA",
+              "fr": "Office f\u00E9d\u00E9ral des routes OUFROU",
               "it": "Ufficio federale delle strade USTRA"
           },
           "url": {
@@ -201,8 +194,8 @@
           "value": "are",
           "label": {
               "en": "Federal Office for Spatial Development ARE",
-              "de": "Bundesamt für Raumentwicklung ARE",
-              "fr": "Office fédéral du développement territorial ARE",
+              "de": "Bundesamt f\u00FCr Raumentwicklung ARE",
+              "fr": "Office f\u00E9d\u00E9ral du d\u00E9veloppement territorial ARE",
               "it": "Ufficio federale dello sviluppo territoriale ARE"
           },
           "url": {
@@ -216,8 +209,8 @@
           "value": "swisstopo",
           "label": {
               "en": "Federal Office of Topography swisstopo",
-              "de": "Bundesamt für Landestopografie swisstopo",
-              "fr": "Office fédéral de topographie swisstopo",
+              "de": "Bundesamt f\u00FCr Landestopografie swisstopo",
+              "fr": "Office f\u00E9d\u00E9ral de topographie swisstopo",
               "it": "Ufficio federale di topografia swisstopo"
           },
           "url": {
@@ -261,7 +254,7 @@
           "value": "oereb",
           "label": {
               "en": "PLR Cadastre CH/FL",
-              "de": "ÖREB-Kataster Schweiz/FL",
+              "de": "\u00F6REB-Kataster Schweiz/FL",
               "fr": "Cadastre RDPPF CH/FL",
               "it": "Catasto RDPP CH/FL"
           },
@@ -277,7 +270,7 @@
           "label": {
               "en": "Docu Media Schweiz GmbH",
               "de": "Docu Media Schweiz GmbH",
-              "fr": "Docu Media Suisse Sàrl",
+              "fr": "Docu Media Suisse S\u00E0rl",
               "it": "Docu Media Schweiz GmbH"
           },
           "url": {
@@ -290,10 +283,10 @@
         {
           "value": "kbdm",
           "label": {
-              "en": "KünzlerBachmann Directmarketing",
-              "de": "KünzlerBachmann Directmarketing",
-              "fr": "KünzlerBachmann Directmarketing",
-              "it": "KünzlerBachmann Directmarketing"
+              "en": "K\u00FCnzlerBachmann Directmarketing",
+              "de": "K\u00FCnzlerBachmann Directmarketing",
+              "fr": "K\u00FCnzlerBachmann Directmarketing",
+              "it": "K\u00FCnzlerBachmann Directmarketing"
           },
           "url": {
             "en": "https://www.kueba.ch/en/holding/",
@@ -306,8 +299,8 @@
           "value": "elcom",
           "label": {
               "en": "Federal Electricity Commission ElCom",
-              "de": "Eidgenössische Elektrizitätskommission ElCom",
-              "fr": "Commission fédérale de l’électricité ElCom",
+              "de": "Eidgen\u00F6ssische Elektrizit\u00E4tskommission ElCom",
+              "fr": "Commission f\u00E9d\u00E9rale de l’\u00E9lectricit\u00E9 ElCom",
               "it": "Commissione federale dell'energia elettrica ElCom"
           },
           "url": {
@@ -380,10 +373,10 @@
         {
           "value": "ag_afu",
           "label": {
-              "en": "Abteilung für Umwelt des Kantons Aargau (AfU)",
-              "de": "Abteilung für Umwelt des Kantons Aargau (AfU)",
-              "fr": "Abteilung für Umwelt des Kantons Aargau (AfU)",
-              "it": "Abteilung für Umwelt des Kantons Aargau (AfU)"
+              "en": "Abteilung f\u00FCr Umwelt des Kantons Aargau (AfU)",
+              "de": "Abteilung f\u00FCr Umwelt des Kantons Aargau (AfU)",
+              "fr": "Abteilung f\u00FCr Umwelt des Kantons Aargau (AfU)",
+              "it": "Abteilung f\u00FCr Umwelt des Kantons Aargau (AfU)"
           },
           "url": {
             "en": "http://www.ag.ch/afu",
@@ -395,10 +388,10 @@
         {
           "value": "zh_awel",
           "label": {
-              "en": "Amt für Abfall, Wasser, Energie und Luft des Kantons Zürich (AWEL)",
-              "de": "Amt für Abfall, Wasser, Energie und Luft des Kantons Zürich (AWEL)",
-              "fr": "Amt für Abfall, Wasser, Energie und Luft des Kantons Zürich (AWEL)",
-              "it": "Amt für Abfall, Wasser, Energie und Luft des Kantons Zürich (AWEL)"
+              "en": "Amt f\u00FCr Abfall, Wasser, Energie und Luft des Kantons Z\u00FCrich (AWEL)",
+              "de": "Amt f\u00FCr Abfall, Wasser, Energie und Luft des Kantons Z\u00FCrich (AWEL)",
+              "fr": "Amt f\u00FCr Abfall, Wasser, Energie und Luft des Kantons Z\u00FCrich (AWEL)",
+              "it": "Amt f\u00FCr Abfall, Wasser, Energie und Luft des Kantons Z\u00FCrich (AWEL)"
           },
           "url": {
             "en": "https://www.zh.ch/de/baudirektion/amt-fuer-abfall-wasser-energie-luft.html",
@@ -410,10 +403,10 @@
         {
           "value": "be_ak",
           "label": {
-              "en": "Amt für Kultur des Kantons Bern (AK)",
-              "de": "Amt für Kultur des Kantons Bern (AK)",
+              "en": "Amt f\u00FCr Kultur des Kantons Bern (AK)",
+              "de": "Amt f\u00FCr Kultur des Kantons Bern (AK)",
               "fr": "Office de la culture du canton de Berne (OC)",
-              "it": "Amt für Kultur des Kantons Bern (AK)"
+              "it": "Amt f\u00FCr Kultur des Kantons Bern (AK)"
           },
           "url": {
             "en": "https://www.kultur.bkd.be.ch/de/start/ueber-uns/amt-fuer-kultur.html",
@@ -425,10 +418,10 @@
         {
           "value": "be_awa",
           "label": {
-              "en": "Amt für Wasser und Abfall des Kantons Bern (AWA)",
-              "de": "Amt für Wasser und Abfall des Kantons Bern (AWA)",
-              "fr": "Office des eaux et des déchets du canton de Berne (OED)",
-              "it": "Amt für Wasser und Abfall des Kantons Bern (AWA)"
+              "en": "Amt f\u00FCr Wasser und Abfall des Kantons Bern (AWA)",
+              "de": "Amt f\u00FCr Wasser und Abfall des Kantons Bern (AWA)",
+              "fr": "Office des eaux et des d\u00E9chets du canton de Berne (OED)",
+              "it": "Amt f\u00FCr Wasser und Abfall des Kantons Bern (AWA)"
           },
           "url": {
             "en": "https://www.bvd.be.ch/de/start/ueber-uns/amt-fuer-wasser-und-abfall.html",
@@ -440,10 +433,10 @@
         {
           "value": "sg_awe",
           "label": {
-              "en": "Amt für Wasser und Energie des Kantons St. Gallen (AWE)",
-              "de": "Amt für Wasser und Energie des Kantons St. Gallen (AWE)",
-              "fr": "Amt für Wasser und Energie des Kantons St. Gallen (AWE)",
-              "it": "Amt für Wasser und Energie des Kantons St. Gallen (AWE)"
+              "en": "Amt f\u00FCr Wasser und Energie des Kantons St. Gallen (AWE)",
+              "de": "Amt f\u00FCr Wasser und Energie des Kantons St. Gallen (AWE)",
+              "fr": "Amt f\u00FCr Wasser und Energie des Kantons St. Gallen (AWE)",
+              "it": "Amt f\u00FCr Wasser und Energie des Kantons St. Gallen (AWE)"
           },
           "url": {
             "en": "https://www.sg.ch/politik-verwaltung/departemente-und-staatskanzlei/bau--und-umweltdepartement/amt-fuer-wasser-und-energie.html",
@@ -455,10 +448,10 @@
         {
           "value": "vs_duw",
           "label": {
-              "en": "Dienststelle für Umwelt (DUW), Kanton Wallis",
-              "de": "Dienststelle für Umwelt (DUW), Kanton Wallis",
+              "en": "Dienststelle f\u00FCr Umwelt (DUW), Kanton Wallis",
+              "de": "Dienststelle f\u00FCr Umwelt (DUW), Kanton Wallis",
               "fr": "Service de l'environnement (SEN), Canton du Valais",
-              "it": "Dienststelle für Umwelt (DUW), Kanton Wallis"
+              "it": "Dienststelle f\u00FCr Umwelt (DUW), Kanton Wallis"
           },
           "url": {
             "en": "https://www.vs.ch/web/sen",
@@ -470,10 +463,10 @@
         {
           "value": "so_afu",
           "label": {
-              "en": "Amt für Umwelt des Kantons Solothurn (AFU)",
-              "de": "Amt für Umwelt des Kantons Solothurn (AFU)",
-              "fr": "Amt für Umwelt des Kantons Solothurn (AFU)",
-              "it": "Amt für Umwelt des Kantons Solothurn (AFU)"
+              "en": "Amt f\u00FCr Umwelt des Kantons Solothurn (AFU)",
+              "de": "Amt f\u00FCr Umwelt des Kantons Solothurn (AFU)",
+              "fr": "Amt f\u00FCr Umwelt des Kantons Solothurn (AFU)",
+              "it": "Amt f\u00FCr Umwelt des Kantons Solothurn (AFU)"
           },
           "url": {
             "en": "https://so.ch/verwaltung/bau-und-justizdepartement/amt-fuer-umwelt/",
@@ -485,10 +478,10 @@
         {
           "value": "tg_afu",
           "label": {
-              "en": "Amt für Umwelt (AfU) des Kantons Thurgau",
-              "de": "Amt für Umwelt (AfU) des Kantons Thurgau",
-              "fr": "Amt für Umwelt (AfU) des Kantons Thurgau",
-              "it": "Amt für Umwelt (AfU) des Kantons Thurgau"
+              "en": "Amt f\u00FCr Umwelt (AfU) des Kantons Thurgau",
+              "de": "Amt f\u00FCr Umwelt (AfU) des Kantons Thurgau",
+              "fr": "Amt f\u00FCr Umwelt (AfU) des Kantons Thurgau",
+              "it": "Amt f\u00FCr Umwelt (AfU) des Kantons Thurgau"
           },
           "url": {
             "en": "https://umwelt.tg.ch/",
@@ -500,10 +493,10 @@
         {
           "value": "bl_aue",
           "label": {
-              "en": "Amt für Umweltschutz und Energie (AUE) des Kantons Basel-Landschaft",
-              "de": "Amt für Umweltschutz und Energie (AUE) des Kantons Basel-Landschaft",
-              "fr": "Amt für Umweltschutz und Energie (AUE) des Kantons Basel-Landschaft",
-              "it": "Amt für Umweltschutz und Energie (AUE) des Kantons Basel-Landschaft"
+              "en": "Amt f\u00FCr Umweltschutz und Energie (AUE) des Kantons Basel-Landschaft",
+              "de": "Amt f\u00FCr Umweltschutz und Energie (AUE) des Kantons Basel-Landschaft",
+              "fr": "Amt f\u00FCr Umweltschutz und Energie (AUE) des Kantons Basel-Landschaft",
+              "it": "Amt f\u00FCr Umweltschutz und Energie (AUE) des Kantons Basel-Landschaft"
           },
           "url": {
             "en": "https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/umweltschutz-energie",
@@ -515,10 +508,10 @@
         {
           "value": "fr_afu",
           "label": {
-              "en": "Amt für Umwelt (AfU) des Kantons Freiburg",
-              "de": "Amt für Umwelt (AfU) des Kantons Freiburg",
+              "en": "Amt f\u00FCr Umwelt (AfU) des Kantons Freiburg",
+              "de": "Amt f\u00FCr Umwelt (AfU) des Kantons Freiburg",
               "fr": "Service de l’environnement (SEn), Etat de Fribourg",
-              "it": "Amt für Umwelt (AfU) des Kantons Freiburg"
+              "it": "Amt f\u00FCr Umwelt (AfU) des Kantons Freiburg"
           },
           "url": {
             "en": "https://www.fr.ch/dime/sen",
@@ -530,10 +523,10 @@
         {
           "value": "ge_ocev",
           "label": {
-              "en": "Office cantonal de l'environnement (OCEV), Etat de Genève",
-              "de": "Office cantonal de l'environnement (OCEV), Etat de Genève",
-              "fr": "Office cantonal de l'environnement (OCEV), Etat de Genève",
-              "it": "Office cantonal de l'environnement (OCEV), Etat de Genève"
+              "en": "Office cantonal de l'environnement (OCEV), Etat de Gen\u00E8ve",
+              "de": "Office cantonal de l'environnement (OCEV), Etat de Gen\u00E8ve",
+              "fr": "Office cantonal de l'environnement (OCEV), Etat de Gen\u00E8ve",
+              "it": "Office cantonal de l'environnement (OCEV), Etat de Gen\u00E8ve"
           },
           "url": {
             "en": "https://www.ge.ch/organisation/office-cantonal-environnement-ocev",
@@ -545,10 +538,10 @@
         {
           "value": "ge_ops",
           "label": {
-              "en": "Office du patrimoine et des sites (OPS), Etat de Genève",
-              "de": "Office du patrimoine et des sites (OPS), Etat de Genève",
-              "fr": "Office du patrimoine et des sites (OPS), Etat de Genève",
-              "it": "Office du patrimoine et des sites (OPS), Etat de Genève"
+              "en": "Office du patrimoine et des sites (OPS), Etat de Gen\u00E8ve",
+              "de": "Office du patrimoine et des sites (OPS), Etat de Gen\u00E8ve",
+              "fr": "Office du patrimoine et des sites (OPS), Etat de Gen\u00E8ve",
+              "it": "Office du patrimoine et des sites (OPS), Etat de Gen\u00E8ve"
           },
           "url": {
             "en": "https://www.ge.ch/organisation/office-du-patrimoine-sites-ops",
@@ -614,25 +607,26 @@
           "it": "Livelli dei dati"
       },
       "help_text": {
-          "en": "Select one or more categories by marking them with Ctrl+click or Shift+click. An attribute can be assigned to one or more levels. Attributes are assigned to multiple data levels if they are offered aggregated to different data levels in SEP based on the same source data, but NOT if they are only linked to it in SEP.",
-          "de": "Wähle eine oder mehrere Kategorien durch Markieren mit Strg+Klick oder Umschalt+Klick aus. Ein Attribut kannt einer oder mehreren Ebenen zugewiesen werden. Attribute werden mehreren Datenebenen zugewiesen, wenn sie in SEP auf Basis derselben Ausgangsdaten auf verschiedene Datenebenen aggregiert angeboten werden, hingegen NICHT, wenn sie in SEP nur damit verknüpft werden."
+          "en": "To select one or more categories, click on them while holding down the Ctrl key. To deselect an already selected category, click it again while holding down the Ctrl key. - An attribute can be assigned to one or more layers. Attributes are assigned to multiple data layers if they are offered aggregated to different data layers in SEP based on the same source data, but NOT if they are only linked in SEP.",
+          "de": "Um eine oder mehrere Kategorien auszuw\u00E4hlen, klicke sie an, w\u00E4hrend du die Strg-Taste gedr\u00FCckt h\u00E4ltst. Um eine bereits ausgew\u00E4hlte Kategorie abzuw\u00E4hlen, klicke sie erneut bei gedr\u00FCckter Strg-Taste an. - Ein Attribut kann einer oder mehreren Ebenen zugewiesen werden. Attribute werden mehreren Datenebenen zugewiesen, wenn sie in SEP auf Basis derselben Ausgangsdaten auf verschiedene Datenebenen aggregiert angeboten werden, hingegen NICHT, wenn sie in SEP nur verkn\u00FCpft werden.",
+          "fr": "Pour s\u00E9lectionner une ou plusieurs cat\u00E9gories, clique dessus tout en maintenant la touche Ctrl enfonc\u00E9e. Pour d\u00E9s\u00E9lectionner une cat\u00E9gorie d\u00E9j\u00E0 s\u00E9lectionn\u00E9e, clique \u00E0 nouveau dessus tout en maintenant la touche Ctrl enfonc\u00E9e. - Un attribut peut être affect\u00E9 \u00E0 un ou plusieurs niveaux. Les attributs sont attribu\u00E9s \u00E0 plusieurs niveaux de donn\u00E9es s'ils sont propos\u00E9s dans SEP agr\u00E9g\u00E9s \u00E0 diff\u00E9rents niveaux de donn\u00E9es sur la base des mêmes donn\u00E9es initiales, mais PAS s'ils sont seulement li\u00E9s dans SEP."
       },
       "choices": [
         {
-          "value": "empty_string",
+          "value": "other",
           "label": {
-              "en": "",
-              "de": "",
-              "fr": "",
-              "it": ""
+            "en": "other level",
+            "de": "andere Ebene",
+            "fr": "autre niveau",
+            "it": "altro livello"
           }
         },
         {
           "value": "address",
           "label": {
               "en": "Building entrance",
-              "de": "Gebäudeeingang",
-              "fr": "Entrée de bâtiment",
+              "de": "Geb\u00E4udeeingang",
+              "fr": "Entr\u00E9e de b\u00E2timent",
               "it": "Entrata dell'edificio"
           },
           "url": {
@@ -756,8 +750,8 @@
       "label": {
           "en": "Unit of measure",
           "de": "Masseinheit",
-          "fr": "Unité de mesure",
-          "it": "Unità di misura"
+          "fr": "Unit\u00E9 de mesure",
+          "it": "Unit\u00E0 di misura"
       },
       "choices": [
           {
@@ -810,7 +804,7 @@
             "label": {
                 "en": "Degree of arc (°)",
                 "de": "Bogengrad (°)",
-                "fr": "Degrés d'arc (°)",
+                "fr": "Degr\u00E9s d'arc (°)",
                 "it": "Grado di arco (°)"
             }
           },
@@ -819,7 +813,7 @@
             "label": {
                 "en": "Degree days (°Cd)",
                 "de": "Gradtage (°Cd)",
-                "fr": "Degrés-jours (°Cd)",
+                "fr": "Degr\u00E9s-jours (°Cd)",
                 "it": "Gradi giorno (°Cd)"
             }
           },
@@ -860,12 +854,30 @@
             }
           },
           {
+            "value": "kwh",
+            "label": {
+                "en": "kWh",
+                "de": "kWh",
+                "fr": "kWh",
+                "it": "kWh"
+            }
+          },
+          {
             "value": "kwh_per_year",
             "label": {
                 "en": "kWh/year",
                 "de": "kWh/Jahr",
                 "fr": "kWh/an",
                 "it": "kWh/anno"
+            }
+          },
+          {
+            "value": "kwh_per_m2_per_year",
+            "label": {
+                "en": "kWh/m\u00b2/year",
+                "de": "kWh/m\u00b2/Jahr",
+                "fr": "kWh/m\u00b2/an",
+                "it": "kWh/m\u00b2/anno"
             }
           },
           {
@@ -965,21 +977,12 @@
       "label": {
           "en": "Usability",
           "de": "Nutzbarkeit",
-          "fr": "Utilisabilité",
-          "it": "Usabilità"
+          "fr": "Utilisabilit\u00E9",
+          "it": "Usabilit\u00E0"
       },
       "preset": "geoimpact_fluent_multi_select_url",
       "sorted_choices": true,
       "choices": [
-        {
-          "value": "empty_string",
-          "label": {
-              "en": "",
-              "de": "",
-              "fr": "",
-              "it": ""
-          }
-        },
         {
           "value": "MarketSense API",
           "label": {
@@ -1051,7 +1054,7 @@
       "label": {
           "en": "Tags",
           "de": "Schlagworte (Standard)",
-          "fr": "Mots-cl\u00e9s",
+          "fr": "Mots-cl\u00E9s",
           "it": "Parole chiave"
       }
     },
@@ -1070,7 +1073,7 @@
           "value": "daily",
           "label": {
               "en": "daily",
-              "de": "täglich",
+              "de": "t\u00E4glich",
               "fr": "journalier",
               "it": "giornaliero"
             }
@@ -1079,7 +1082,7 @@
           "value": "weekly",
           "label": {
               "en": "weekly",
-              "de": "wöchentlich",
+              "de": "w\u00F6chentlich",
               "fr": "hebdomadaire",
               "it": "settimanale"
             }
@@ -1097,7 +1100,7 @@
           "value": "semiannual",
           "label": {
               "en": "semiannual",
-              "de": "halbjährlich",
+              "de": "halbj\u00E4hrlich",
               "fr": "semestriel",
               "it": "semestrale"
             }
@@ -1106,7 +1109,7 @@
           "value": "annual",
           "label": {
               "en": "annual",
-              "de": "jährlich",
+              "de": "j\u00E4hrlich",
               "fr": "annuel",
               "it": "annuale"
             }
@@ -1115,8 +1118,8 @@
           "value": "irregular",
           "label": {
               "en": "irregular",
-              "de": "unregelmässig",
-              "fr": "irrégulier",
+              "de": "unregelm\u00E4ssig",
+              "fr": "irr\u00E9gulier",
               "it": "irregolare"
             }
         }
@@ -1128,20 +1131,20 @@
       "label": {
           "en": "Data processing",
           "de": "Datenverarbeitung",
-          "fr": "Traitement des données",
+          "fr": "Traitement des donn\u00E9es",
           "it": "Elaborazione dei dati"
       },
       "help_text": {
-          "en": "Data processing by geoimpact:\n - Unchanged: Data is taken directly from data provider and used at original level, e.g. building attributes from GWR at building level, modeled heat demand from Tachion/Sunroof.\n - Processed: Data is aggregated, filtered, geometrically blended, classified or otherwise processed by geoimpact, e.g. linking building zones or geothermal zones to addresses/parcels, aggregating number of dwellings.\n - Modeled: A new attribute is modeled from existing attributes, e.g. heat demand, energy reference area.",
-          "de": "Datenverarbeitung durch geoimpact:\n - Unverändert: Daten werden direkt vom Datenlieferanten übernommen und auf der Originalebene verwendet, z.B. Gebäudeattribute aus dem GWR auf Ebene Gebäude, modellierter Wärmebedarf von Tachion/Sonnendach.\n - Verarbeitet: Daten werden von geoimpact aggregiert, gefiltert, geometrisch verschnitten, klassifiziert oder sonst irgendwie verarbeitet, z.B. Verknüpfung von Bauzonen oder Erdsondenzonen mit Adressen/Parzellen, Aggregation von Anzahl Wohnungen.\n - Modelliert: Ein neues Attribut wird aus bestehenden Attributen modelliert, zB Wärmebedarf, Energiebezugsfläche."
+          "en": "Data processing by geoimpact: - Unchanged: Data is taken directly from data provider and used at original level, e.g. building attributes from GWR at building level, modeled heat demand from Tachion/Sunroof. - Processed: Data is aggregated, filtered, geometrically blended, classified or otherwise processed by geoimpact, e.g. linking building zones or geothermal zones to addresses/parcels, aggregating number of dwellings. - Modeled: A new attribute is modeled from existing attributes, e.g. heat demand, energy reference area.",
+          "de": "Datenverarbeitung durch geoimpact: - Unver\u00E4ndert: Daten werden direkt vom Datenlieferanten \u00FCbernommen und auf der Originalebene verwendet, z.B. Geb\u00E4udeattribute aus dem GWR auf Ebene Geb\u00E4ude, modellierter W\u00E4rmebedarf von Tachion/Sonnendach. - Verarbeitet: Daten werden von geoimpact aggregiert, gefiltert, geometrisch verschnitten, klassifiziert oder sonst irgendwie verarbeitet, z.B. Verkn\u00FCpfung von Bauzonen oder Erdsondenzonen mit Adressen/Parzellen, Aggregation von Anzahl Wohnungen. - Modelliert: Ein neues Attribut wird aus bestehenden Attributen modelliert, zB W\u00E4rmebedarf, Energiebezugsfl\u00E4che."
       },
       "choices": [
         {
           "value": "unmodified",
           "label": {
               "en": "unmodified",
-              "de": "unverändert",
-              "fr": "inchangé",
+              "de": "unver\u00E4ndert",
+              "fr": "inchang\u00E9",
               "it": "immutato"
           }
         },
@@ -1150,7 +1153,7 @@
           "label": {
               "en": "processed",
               "de": "verarbeitet",
-              "fr": "transformé",
+              "fr": "transform\u00E9",
               "it": "elaborato"
           }
         },
@@ -1159,7 +1162,7 @@
           "label": {
               "en": "modeled",
               "de": "modelliert",
-              "fr": "modélisé",
+              "fr": "mod\u00E9lis\u00E9",
               "it": "modellato"
           }
         }
@@ -1187,7 +1190,7 @@
       "label": {
           "en": "External data documentation",
           "de": "Externe Datendokumentation",
-          "fr": "Documentation de données externe",
+          "fr": "Documentation de donn\u00E9es externe",
           "it": "Documentazione di dati esterna"
       },
      "help_text": {
@@ -1226,8 +1229,8 @@
       "field_name": "stats_count_not_0",
       "label": {
           "en": "Number of values greater than 0",
-          "de": "Anzahl Werte grösser 0",
-          "fr": "Nombre de valeurs supérieur à 0",
+          "de": "Anzahl Werte gr\u00F6sser 0",
+          "fr": "Nombre de valeurs sup\u00E9rieur \u00E0 0",
           "it": "Numero di valori maggiori di 0"
       }
     }
