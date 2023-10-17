@@ -1,11 +1,10 @@
 # Geoimpact CKAN Extension
 
 ## Overview
-**Geoimpact** is a CKAN extension developed to augment our CKAN instance by introducing features oriented towards a 
-datacatalog of a data product company. 
+This extension shifts the focus of CKAN from the download portal to the multilingual metadata catalog of a data-driven company. 
 It leverages the robustness of [CKAN](https://ckan.org/), the world's leading open-source data portal platform, 
 with specific features that are beneficial for organizations that want to maintain their own 
-datagatalog and share it with their customers. 
+datacatalog and share it with their customers. 
 For more details about geoimpact, please visit [geoimpact.ch](https://www.geoimpact.ch/).
 
 ### Features
@@ -15,7 +14,14 @@ For more details about geoimpact, please visit [geoimpact.ch](https://www.geoimp
 4. **Utilities:** Special utility functions for authentication, actions, and templates.
 
 ## Technical Details
-The geoimpact extension introduces several modifications and enhancements over the default CKAN functionalities. Below are the in-depth technical details of each part of the extension.
+
+### Extensions
+We use the following extensions: 
+
+- activity
+- scheming_datasets
+- fluent
+- geoimpact
 
 ### Patches
 - **emails.py:** This file overrides the default CKAN mailing functionalities. It introduces custom email templates for password reset and user invitation.
@@ -66,41 +72,16 @@ This section guides on how to manage translations in the geoimpact extension:
 ### Presets
 - **presets.json:** Global presets file.
 
----
-## Config File
-The CKAN config file is located at ``/etc/ckan/default/ckan.ini``.
-Changes to the config file have to be applied by restarting the services:
-```
-sudo supervisorctl restart all
-```
-
-Changes with respect to the default config:
-- Extension activation
-- Schema activation
-- PostgreSQL connection
-- Language
-- User permissions
-- Site URL
-- CORS
-- Session
-
-We are using following extensions:
-````
-## Plugins Settings ############################################################
-ckan.plugins = activity scheming_datasets fluent geoimpact
-````
-
----
-## Server Setup
-This section describes the steps to install and configure CKAN for the use by geoimpact with the present extension.
+## Installation
+This section describes the steps to install and configure CKAN and extensions.
 
 ### Prerequisites
 CKAN requires the packages libpq5, Redis, nginx, supervisor as well as Solr. 
-PostgreSQL is required for the datastore but we use an existing instance.
+PostgreSQL is required for the datastore, but we use an existing instance.
 
 #### Create PostgreSQL DB, schema and user
-Note: Originally we used a dedicated schema for CKAN named "ckan". 
-But it turned out that a few specific requests are hardcoded to use the public schema.
+Note: Originally we tried to use a dedicated schema for CKAN named "ckan". 
+But it turned out that a few specific DB queries are hardcoded to use the public schema.
 ```
 -- create DB
 CREATE DATABASE datacat;
@@ -184,13 +165,11 @@ sudo dpkg -i python-ckan_2.10-jammy_amd64.deb
 
 #### Install CKAN extensions
 Required extensions:
-- https://github.com/ckan/ckanext-scheming
+- https://github.com/ckan/ckanext-scheming (installed with ckanext-fluent)
 - https://github.com/ckan/ckanext-fluent
-
-Geoimpact extension:
 - https://github.com/geoimpactag/ckanext-geoimpact
 
-Install all extensions with the following procedure:
+Perform the following procedure first for ckanext-fluent, then for ckanext-geoimpact:
 ```
 sudo su
 . /usr/lib/ckan/default/bin/activate
