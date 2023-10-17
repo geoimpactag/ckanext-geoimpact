@@ -79,6 +79,14 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
                 
             filter_query = search_params.get('fq', '')
 
+            # Change default field for special queries            
+            if filter_query.startswith('data_providers'):
+             search_params['df'] = 'extras_data_providers'
+            elif filter_query.startswith('data_level'):
+             search_params['df'] = 'extras_data_level'
+            elif filter_query.startswith('functional_tags'):
+             search_params['df'] = 'extras_functional_tags'
+
             # Get the valid schemas
             schemas = _get_valid_schemas()
 
