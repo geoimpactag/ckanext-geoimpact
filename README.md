@@ -144,7 +144,7 @@ sudo -u solr /opt/solr/bin/solr create -c ckan
 ```
 Replace the standard schema with the CKAN one:
 ```
-sudo -u solr wget -O /var/solr/data/ckan/conf/managed-schema https://raw.githubusercontent.com/ckan/ckan/dev-v2.10/ckan/config/solr/schema.xml
+sudo -u solr wget -O /var/solr/data/ckan/conf/managed-schema https://raw.githubusercontent.com/geoimpactag/ckanext-geoimpact/main/solr/schema.xml
 ```
 Restart Solr:
 ```
