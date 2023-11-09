@@ -180,6 +180,24 @@ python setup.py develop
 pip install -r requirements.txt
 exit
 ```
+Overwrite `ckanext-scheming` extencion template to hide the description of package
+```
+cd /usr/lib/ckan/default/src/ckanext-scheming/ckanext/scheming/templates/scheming/package/snippets/
+nano additional_info.html
+```
+Add `notes_translated` to excluded `exclude_fields`
+```
+{%- set exclude_fields = [
+    'id',
+    'title',
+    'name',
+    'notes',
+    'notes_translated',
+    'tag_string',
+    'license_id',
+    'owner_org',
+    ] -%}
+```
 
 #### Set up a writable directory
 Create the directory where CKAN will be able to write files:
