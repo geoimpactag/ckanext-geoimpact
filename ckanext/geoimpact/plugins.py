@@ -13,6 +13,7 @@ from .utils.template_helpers import (
     get_available_schemas,
     get_fluent_label_from_schema,
     group_facet_items_by_label,
+    custom_list_dict_filter,
 )
 
 log = logging.getLogger(__name__)
@@ -62,6 +63,7 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
             'custom_get_facet_items_dict': custom_get_facet_items_dict,
             'log_data': self._log_data,
             'get_site_title': lambda: p.toolkit.config.get('ckan.site_title', ''),
+            'custom_list_dict_filter': custom_list_dict_filter,
         }
 
     # IPackageController
