@@ -171,3 +171,30 @@ def _get_schema_for_facet(facet):
             if field['field_name'] == facet:
                 return schema
     return None
+
+
+def custom_list_dict_filter(list_, search_field, output_field, value, field):
+    max_length = 25
+    lang_code = p.toolkit.request.environ['CKAN_LANG'] or 'en'
+    schema = _get_schema_for_facet(field)
+    facet_fields = [f for f in schema.get('dataset_fields', []) if f.get('used_in_facets', False)] if schema else []
+    schema_field = next((f for f in facet_fields if f['field_name'] == field), {})
+
+    for item in list_:
+        choices = schema_field.get('choices', [])
+        choice = next((c for c in choices if c['value'] == value), {})
+
+        if choice:
+            result = choice.get('label', {}).get(lang_code, value)
+
+        elif item.get(search_field) == value:
+            # Check if a translated label exists in the schema
+            translated_label = item.get('label', {}).get(lang_code)
+            result = translated_label or item.get(output_field, value)
+        else:
+            continue
+
+        # Truncate the result if it exceeds the maximum length
+        return f"{result[:max_length]}..." if result and len(result) > max_length else result
+
+    return value

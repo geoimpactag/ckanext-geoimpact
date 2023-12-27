@@ -12,6 +12,7 @@ For more details about geoimpact, please visit [geoimpact.ch](https://www.geoimp
 2. **Advanced Scheming:** Introduces custom presets and schemas to define the structure and behavior of datasets.
 3. **Template Overriding:** Custom templates for dataset addition, and facet listing, as well as a customized footer.
 4. **Utilities:** Special utility functions for authentication, actions, and templates.
+5. **Translated Facet Values:** The extension offers the capability to display translated facet values. This is achieved by defining the `used_in_facets` attribute in the schema for fields that have `choices`. If the `choices` attribute is present, the extension will display translated versions of these `choices` based on the current language setting. If `choices` is not defined for a field marked with `used_in_facets`, the extension will display the field's value instead of its translated version.
 
 ## Technical Details
 
