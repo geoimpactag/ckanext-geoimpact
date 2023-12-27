@@ -90,6 +90,7 @@
           "fr": "Pour s\u00E9lectionner une ou plusieurs cat\u00E9gories, clique dessus tout en maintenant la touche Ctrl enfonc\u00E9e. Pour d\u00E9s\u00E9lectionner une cat\u00E9gorie d\u00E9j\u00E0 s\u00E9lectionn\u00E9e, clique \u00E0 nouveau dessus tout en maintenant la touche Ctrl enfonc\u00E9e. - Si possible, tous les fournisseurs de donn\u00E9es sont list\u00E9s. - Mod\u00E8les ML : mentionner les fournisseurs de donn\u00E9es d'entr\u00E9e, mais ne pas mentionner les fournisseurs de donn\u00E9es d'entraînement. - D\u00E8s que nous effectuons un calcul, toujours mentionner \"geoimpact Analytics\" comme fournisseur."
       },
       "sorted_choices": true,
+      "used_in_facets": true,
       "choices": [
         {
           "value": "geoimpact",
@@ -611,6 +612,7 @@
           "de": "Um eine oder mehrere Kategorien auszuw\u00E4hlen, klicke sie an, w\u00E4hrend du die Strg-Taste gedr\u00FCckt h\u00E4ltst. Um eine bereits ausgew\u00E4hlte Kategorie abzuw\u00E4hlen, klicke sie erneut bei gedr\u00FCckter Strg-Taste an. - Ein Attribut kann einer oder mehreren Ebenen zugewiesen werden. Attribute werden mehreren Datenebenen zugewiesen, wenn sie in SEP auf Basis derselben Ausgangsdaten auf verschiedene Datenebenen aggregiert angeboten werden, hingegen NICHT, wenn sie in SEP nur verkn\u00FCpft werden.",
           "fr": "Pour s\u00E9lectionner une ou plusieurs cat\u00E9gories, clique dessus tout en maintenant la touche Ctrl enfonc\u00E9e. Pour d\u00E9s\u00E9lectionner une cat\u00E9gorie d\u00E9j\u00E0 s\u00E9lectionn\u00E9e, clique \u00E0 nouveau dessus tout en maintenant la touche Ctrl enfonc\u00E9e. - Un attribut peut être affect\u00E9 \u00E0 un ou plusieurs niveaux. Les attributs sont attribu\u00E9s \u00E0 plusieurs niveaux de donn\u00E9es s'ils sont propos\u00E9s dans SEP agr\u00E9g\u00E9s \u00E0 diff\u00E9rents niveaux de donn\u00E9es sur la base des mêmes donn\u00E9es initiales, mais PAS s'ils sont seulement li\u00E9s dans SEP."
       },
+      "used_in_facets": true,
       "choices": [
         {
           "value": "other",
@@ -982,6 +984,7 @@
       },
       "preset": "geoimpact_fluent_multi_select_url",
       "sorted_choices": true,
+      "used_in_facets": true,
       "choices": [
         {
           "value": "MarketSense API",
