@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-geoimpact 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-09-22 08:29+0000\n"
+"POT-Creation-Date: 2023-12-27 13:16+0100\n"
 "PO-Revision-Date: 2023-09-07 13:03+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -19,17 +19,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-#: ckanext/geoimpact/plugins.py:101
-msgid "Usability"
-msgstr "Utilisabilité"
-
-#: ckanext/geoimpact/plugins.py:115
+#: ckanext/geoimpact/plugins.py:111
 msgid "Data Providers"
 msgstr "Fournisseurs de données"
 
-#: ckanext/geoimpact/plugins.py:116
+#: ckanext/geoimpact/plugins.py:112
 msgid "Data Level"
 msgstr "Niveau des données"
+
+#: ckanext/geoimpact/plugins.py:113
+msgid "Usability"
+msgstr "Utilisabilité"
 
 #: ckanext/geoimpact/patches/emails.py:13
 msgid "No recipient email address available!"
@@ -239,6 +239,95 @@ msgstr ""
 "technologie de l'information. Les personnes chez geoimpact viennent des "
 "domaines de l'énergie, de l'IT et de la géoinformation."
 
+#: ckanext/geoimpact/templates/home/snippets/search.html:2
+msgid "E.g. environment"
+msgstr "P.ex. chaleur"
+
+#: ckanext/geoimpact/templates/home/snippets/search.html:7
+msgid "Search data"
+msgstr ""
+
+#: ckanext/geoimpact/templates/home/snippets/search.html:9
+msgid "Search datasets"
+msgstr ""
+
+#: ckanext/geoimpact/templates/home/snippets/search.html:12
+msgid "Search"
+msgstr ""
+
+#: ckanext/geoimpact/templates/home/snippets/search.html:17
+msgid "Popular tags"
+msgstr ""
+
+#: ckanext/geoimpact/templates/package/read.html:9
+#: ckanext/geoimpact/templates/snippets/package_item.html:35
+msgid "Private"
+msgstr "Restreint"
+
+#: ckanext/geoimpact/templates/package/read.html:16
+#: ckanext/geoimpact/templates/snippets/package_item.html:46
+msgid "Draft"
+msgstr ""
+
+#: ckanext/geoimpact/templates/package/read.html:19
+#: ckanext/geoimpact/templates/snippets/package_item.html:48
+msgid "Deleted"
+msgstr ""
+
+#: ckanext/geoimpact/templates/package/search.html:30
+msgid "Relevance"
+msgstr ""
+
+#: ckanext/geoimpact/templates/package/search.html:31
+msgid "Name Ascending"
+msgstr ""
+
+#: ckanext/geoimpact/templates/package/search.html:32
+msgid "Name Descending"
+msgstr ""
+
+#: ckanext/geoimpact/templates/package/search.html:33
+msgid "Last Modified"
+msgstr ""
+
+#: ckanext/geoimpact/templates/package/search.html:34
+msgid "Popular"
+msgstr ""
+
+#: ckanext/geoimpact/templates/package/search.html:37
+msgid "Search datasets..."
+msgstr ""
+
+#: ckanext/geoimpact/templates/package/search.html:54
+msgid "API"
+msgstr ""
+
+#: ckanext/geoimpact/templates/package/search.html:55
+msgid "API Docs"
+msgstr ""
+
+#: ckanext/geoimpact/templates/package/search.html:57
+msgid "full {format} dump"
+msgstr ""
+
+#: ckanext/geoimpact/templates/package/search.html:58
+#, python-format
+msgid ""
+"You can also access this registry using the %(api_link)s (see "
+"%(api_doc_link)s) or download a %(dump_link)s."
+msgstr ""
+
+#: ckanext/geoimpact/templates/package/search.html:62
+#, python-format
+msgid ""
+"You can also access this registry using the %(api_link)s (see "
+"%(api_doc_link)s)."
+msgstr ""
+
+#: ckanext/geoimpact/templates/scheming/package/snippets/additional_info.html:36
+msgid "State"
+msgstr ""
+
 #: ckanext/geoimpact/templates/snippets/add_dataset.html:4
 msgid "Add Dataset"
 msgstr ""
@@ -255,16 +344,12 @@ msgstr ""
 msgid "There are no {facet_type} that match this search"
 msgstr ""
 
-#: ckanext/geoimpact/templates/snippets/package_item.html:35
-msgid "Private"
+#: ckanext/geoimpact/templates/snippets/language_selector.html:5
+msgid "Language"
 msgstr ""
 
-#: ckanext/geoimpact/templates/snippets/package_item.html:46
-msgid "Draft"
-msgstr ""
-
-#: ckanext/geoimpact/templates/snippets/package_item.html:48
-msgid "Deleted"
+#: ckanext/geoimpact/templates/snippets/language_selector.html:14
+msgid "Go"
 msgstr ""
 
 #: ckanext/geoimpact/templates/snippets/package_item.html:58
