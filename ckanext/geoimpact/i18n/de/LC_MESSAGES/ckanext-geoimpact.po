@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-geoimpact 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-12-27 13:16+0100\n"
+"POT-Creation-Date: 2024-01-10 21:14+0100\n"
 "PO-Revision-Date: 2023-09-07 13:03+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-#: ckanext/geoimpact/plugins.py:111
+#: ckanext/geoimpact/plugins.py:113
 msgid "Data Providers"
 msgstr "Datenlieferanten"
 
-#: ckanext/geoimpact/plugins.py:112
+#: ckanext/geoimpact/plugins.py:114
 msgid "Data Level"
 msgstr "Datenebene"
 
-#: ckanext/geoimpact/plugins.py:113
+#: ckanext/geoimpact/plugins.py:115
 msgid "Usability"
 msgstr "Nutzbarkeit"
 
@@ -237,30 +237,26 @@ msgstr ""
 "diese mit Informationstechnologie zugänglich. Die Menschen bei geoimpact "
 "kommen aus den Bereichen Energie, IT und Geoinformation."
 
-#: ckanext/geoimpact/templates/home/snippets/search.html:2
-msgid "E.g. environment"
+#: ckanext/geoimpact/templates/home/snippets/search.html:1
+msgid "E.g. heat"
 msgstr "z.B. Wärme"
 
-#: ckanext/geoimpact/templates/home/snippets/search.html:7
+#: ckanext/geoimpact/templates/home/snippets/search.html:6
 msgid "Search data"
 msgstr "Suche Daten"
 
-#: ckanext/geoimpact/templates/home/snippets/search.html:9
+#: ckanext/geoimpact/templates/home/snippets/search.html:8
 msgid "Search datasets"
 msgstr ""
 
-#: ckanext/geoimpact/templates/home/snippets/search.html:12
+#: ckanext/geoimpact/templates/home/snippets/search.html:11
 msgid "Search"
-msgstr ""
-
-#: ckanext/geoimpact/templates/home/snippets/search.html:17
-msgid "Popular tags"
 msgstr ""
 
 #: ckanext/geoimpact/templates/package/read.html:9
 #: ckanext/geoimpact/templates/snippets/package_item.html:35
-msgid "Private"
-msgstr "Eingeschränkt"
+msgid "Non-public"
+msgstr "Nicht öffentlich"
 
 #: ckanext/geoimpact/templates/package/read.html:16
 #: ckanext/geoimpact/templates/snippets/package_item.html:46
@@ -277,10 +273,12 @@ msgid "Relevance"
 msgstr ""
 
 #: ckanext/geoimpact/templates/package/search.html:31
+#: ckanext/geoimpact/templates/snippets/search_form.html:4
 msgid "Name Ascending"
 msgstr ""
 
 #: ckanext/geoimpact/templates/package/search.html:32
+#: ckanext/geoimpact/templates/snippets/search_form.html:4
 msgid "Name Descending"
 msgstr ""
 
@@ -293,6 +291,7 @@ msgid "Popular"
 msgstr ""
 
 #: ckanext/geoimpact/templates/package/search.html:37
+#: ckanext/geoimpact/templates/snippets/search_form.html:3
 msgid "Search datasets..."
 msgstr ""
 
@@ -330,15 +329,15 @@ msgstr ""
 msgid "Add Dataset"
 msgstr ""
 
-#: ckanext/geoimpact/templates/snippets/facet_list.html:38
+#: ckanext/geoimpact/templates/snippets/facet_list.html:41
 msgid "Show More {facet_type}"
 msgstr ""
 
-#: ckanext/geoimpact/templates/snippets/facet_list.html:41
+#: ckanext/geoimpact/templates/snippets/facet_list.html:44
 msgid "Show Only Popular {facet_type}"
 msgstr ""
 
-#: ckanext/geoimpact/templates/snippets/facet_list.html:45
+#: ckanext/geoimpact/templates/snippets/facet_list.html:48
 msgid "There are no {facet_type} that match this search"
 msgstr ""
 
@@ -347,6 +346,7 @@ msgid "Language"
 msgstr ""
 
 #: ckanext/geoimpact/templates/snippets/language_selector.html:14
+#: ckanext/geoimpact/templates/snippets/search_form.html:42
 msgid "Go"
 msgstr ""
 
@@ -354,8 +354,33 @@ msgstr ""
 msgid "There is no description for this dataset"
 msgstr ""
 
+#: ckanext/geoimpact/templates/snippets/search_form.html:16
+msgid "Submit"
+msgstr ""
+
+#: ckanext/geoimpact/templates/snippets/search_form.html:33
+msgid "Order by"
+msgstr ""
+
+#: ckanext/geoimpact/templates/snippets/search_form.html:69
+msgid "Remove"
+msgstr ""
+
+#: ckanext/geoimpact/templates/snippets/search_form.html:74
+msgid "Filter Results"
+msgstr ""
+
+#: ckanext/geoimpact/templates/snippets/search_form.html:81
+msgid "<p class=\"extra\">Please try another search.</p>"
+msgstr ""
+
+#: ckanext/geoimpact/templates/snippets/search_form.html:87
+msgid ""
+"<p id=\"search-error\"><strong>There was an error while "
+"searching.</strong> Please try again.</p>"
+msgstr ""
+
 #: ckanext/geoimpact/utils/auth_functions.py:84
 #, python-format
 msgid "User %s not authorized to read group %s"
 msgstr "Benutzer %s ist nicht berechtigt, die Gruppe %s zu lesen"
-
