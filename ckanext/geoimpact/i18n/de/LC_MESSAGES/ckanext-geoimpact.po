@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-geoimpact 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-10 21:14+0100\n"
+"POT-Creation-Date: 2024-01-20 01:52+0100\n"
 "PO-Revision-Date: 2023-09-07 13:03+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -238,8 +238,8 @@ msgstr ""
 "kommen aus den Bereichen Energie, IT und Geoinformation."
 
 #: ckanext/geoimpact/templates/home/snippets/search.html:1
-msgid "E.g. heat"
-msgstr "z.B. Wärme"
+msgid "for example &quot;heat&quot;"
+msgstr "zum Beispiel &quot;Wärme&quot;"
 
 #: ckanext/geoimpact/templates/home/snippets/search.html:6
 msgid "Search data"
@@ -384,3 +384,4 @@ msgstr ""
 #, python-format
 msgid "User %s not authorized to read group %s"
 msgstr "Benutzer %s ist nicht berechtigt, die Gruppe %s zu lesen"
+
