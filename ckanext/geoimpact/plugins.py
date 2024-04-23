@@ -5,7 +5,7 @@ from ckan.lib.plugins import DefaultTranslation
 from ckan.common import _, CKANConfig
 
 from .patches.emails import send_reset_link, send_invite
-from .utils.auth_functions import organization_show, user_list, user_show
+from .utils.auth_functions import organization_show, user_list, user_show, group_list
 from .utils.custom_actions import organization_list
 from .utils.template_helpers import (
     _get_valid_schemas,
@@ -44,6 +44,7 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
             'user_list': user_list,
             'user_show': user_show,
             'organization_show': organization_show,
+            'group_list': group_list,
         }
 
     # IActions
