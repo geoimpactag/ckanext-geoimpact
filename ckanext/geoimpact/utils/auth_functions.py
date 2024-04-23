@@ -13,6 +13,10 @@ def user_list(context, data_dict):
     return {'success': _requester_is_sysadmin(context)}
 
 
+def group_list(context, data_dict):
+    """Only authenticated users are allowed to retrieve the list of groups."""
+    return {'success': context.get('auth_user_obj') is not None}
+
 @auth_allow_anonymous_access
 def user_show(context, data_dict):
     """
@@ -70,6 +74,11 @@ def user_show(context, data_dict):
 
 @auth_allow_anonymous_access
 def group_show(context, data_dict):
+    # Get authenticated user object from the context
+    user = context.get('auth_user_obj')
+    if not user:
+        return {'success': False}
+
     """Only administrators and users with the 'update' permission for the group are allowed to retrieve a group."""
     user = context.get('user')
     group = logic_auth.get_group_object(context, data_dict)
