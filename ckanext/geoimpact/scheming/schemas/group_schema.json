@@ -1,6 +1,6 @@
 {
   "scheming_version": 1,
-  "dataset_type": "group",
+  "group_type": "group",
   "about_url": "http://github.com/open-data/ckanext-fluent",
   "form_languages": ["en", "de", "fr", "it"],
   "fields": [
