@@ -5,6 +5,13 @@
   "form_languages": ["en", "de", "fr", "it"],
   "fields": [
     {
+      "field_name": "name",
+      "label": "URL",
+      "validators": "not_empty unicode_safe name_validator group_name_validator",
+      "form_snippet": "slug.html",
+      "form_placeholder": "my-theme"
+    },
+    {
       "field_name": "title_translated",
       "preset": "fluent_core_translated",
       "required": true,
