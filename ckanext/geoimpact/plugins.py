@@ -79,10 +79,10 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
                 wildcard_query = ' '.join(f"{word}*" for word in words)
                 search_params['q'] = wildcard_query.strip()
                 search_params['qf'] = QUERY_FIELDS
-                
+
             filter_query = search_params.get('fq', '')
 
-            # Change default field for special queries            
+            # Change default field for special queries
             if filter_query.startswith('data_providers'):
              search_params['df'] = 'extras_data_providers'
             elif filter_query.startswith('data_level'):

@@ -1,0 +1,53 @@
+{
+  "scheming_version": 1,
+  "group_type": "group",
+  "about_url": "http://github.com/open-data/ckanext-fluent",
+  "form_languages": ["en", "de", "fr", "it"],
+  "fields": [
+    {
+      "field_name": "name",
+      "label": "URL",
+      "validators": "not_empty unicode_safe name_validator group_name_validator",
+      "form_snippet": "slug.html"
+    },
+    {
+      "field_name": "title_translated",
+      "preset": "fluent_core_translated",
+      "required": true,
+      "label": {
+          "en": "Title",
+          "de": "Titel",
+          "fr": "Titre",
+          "it": "Titolo"
+      }
+    },
+    {
+      "field_name": "title_for_slug",
+      "preset": "title",
+      "label": {
+          "en": "ID for this record",
+          "de": "ID f\u00FCr diesen Eintrag",
+          "fr": "ID pour cette entr\u00E9e",
+          "it": "ID di questa voce"
+      }
+    },
+    {
+      "field_name": "notes_translated",
+      "preset": "fluent_core_translated",
+      "form_snippet": "fluent_markdown.html",
+      "required": false,
+      "label": {
+          "en": "Description",
+          "de": "Beschreibung",
+          "fr": "Description",
+          "it": "Descrizione"
+      }
+    },
+    {
+      "field_name": "bookface",
+      "label": "Bookface",
+      "form_placeholder": "http://bookface.example.com/ourgroup",
+      "output_validators": "ignore_missing"
+    }
+  ]
+}

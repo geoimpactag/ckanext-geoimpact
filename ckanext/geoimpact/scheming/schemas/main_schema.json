@@ -892,6 +892,34 @@
             }
           },
           {
+            "value": "mw",
+            "label": {
+                "en": "MW",
+                "de": "MW",
+                "fr": "MW",
+                "it": "MW"
+            }
+          },
+          {
+            "value": "mwh",
+            "label": {
+                "en": "MWh",
+                "de": "MWh",
+                "fr": "MWh",
+                "it": "MWh"
+            }
+          },
+          {
+            "value": "mwh_per_year",
+            "label": {
+                "en": "MWh/year",
+                "de": "MWh/Jahr",
+                "fr": "MWh/an",
+                "it": "MWh/anno"
+            }
+          },
+
+          {
             "value": "l",
             "label": {
                 "en": "l",
