@@ -8,8 +8,7 @@
       "field_name": "name",
       "label": "URL",
       "validators": "not_empty unicode_safe name_validator group_name_validator",
-      "form_snippet": "slug.html",
-      "form_placeholder": "my-theme"
+      "form_snippet": "slug.html"
     },
     {
       "field_name": "title_translated",
