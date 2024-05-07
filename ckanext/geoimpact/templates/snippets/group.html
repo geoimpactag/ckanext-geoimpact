@@ -23,7 +23,6 @@ Example:
             {% else %}
               <p>{{ h.markdown_extract(h.get_translated(group,"notes"), truncate) }}</p>
             {% endif %}
-          {% endif %}
         {% elif group.description %}
           <p>{{ h.markdown_extract(group.description, 120) }}</p>
         {% endif %}
