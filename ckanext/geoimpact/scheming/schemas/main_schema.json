@@ -974,6 +974,15 @@
             }
           },
           {
+            "value": "mwh_per_year_per_person",
+            "label": {
+                "en": "MWh/year/person",
+                "de": "MWh/Jahr/Person",
+                "fr": "MWh/an/personne",
+                "it": "MWh/anno/persona"
+            }
+          },
+          {
             "value": "percent",
             "label": {
                 "en": "Percent",

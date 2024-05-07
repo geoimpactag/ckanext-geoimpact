@@ -11,7 +11,6 @@ from .utils.template_helpers import (
     _get_valid_schemas,
     custom_get_facet_items_dict,
     get_available_schemas,
-    get_fluent_label_from_schema,
     group_facet_items_by_label,
     custom_list_dict_filter,
 )
@@ -60,7 +59,6 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
     def get_helpers(self):
         return {
             'get_available_schemas': get_available_schemas,
-            'get_fluent_label_from_schema': get_fluent_label_from_schema,
             'group_facet_items_by_label': group_facet_items_by_label,
             'custom_get_facet_items_dict': custom_get_facet_items_dict,
             'log_data': self._log_data,
@@ -70,10 +68,16 @@ class GeoimpactPlugin(p.SingletonPlugin, DefaultTranslation):
 
     # IPackageController
     def before_dataset_search(self, search_params):
+        # See Solr’s dismax and edismax documentation for further details
         search_params['defType'] = 'edismax'
         try:
             # Append wildcard '*' to each word in the query string
+            # NOTE: CKAN supports "advanced search" where users can search
+            #  usign solr query syntax. We enable this feature by default
+            #  for simple word searching by appending the wildcard.
             query_string = search_params.get('q', '')
+            # Double check that the user knows what is going on,
+            #  i.e. if the user is using “advanced search characters”, do not change the query
             if query_string and not any(char in query_string for char in ':*"~'):
                 words = query_string.split()
                 wildcard_query = ' '.join(f"{word}*" for word in words)
