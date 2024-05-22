@@ -252,6 +252,36 @@
           }
         },
         {
+          "value": "bav",
+          "label": {
+              "en": "Federal Office of Transport FOT",
+              "de": "Bundesamt für Verkehr BAV",
+              "fr": "Office f\u00E9d\u00E9ral des transports OFT",
+              "it": "Ufficio federale dei transporti UFT"
+          },
+          "url": {
+            "en": "https://www.bav.admin.ch/bav/en/home.html",
+            "de": "https://www.bav.admin.ch/bav/de/home.html",
+            "fr": "https://www.bav.admin.ch/bav/fr/home.html",
+            "it": "https://www.bav.admin.ch/bav/it/home.html"
+          }
+        },
+        {
+          "value": "swissgrid",
+          "label": {
+              "en": "Swissgrid",
+              "de": "Swissgrid",
+              "fr": "Swissgrid",
+              "it": "Swissgrid"
+          },
+          "url": {
+            "en": "https://www.swissgrid.ch/en/home.html",
+            "de": "https://www.swissgrid.ch/de/home.html",
+            "fr": "https://www.swissgrid.ch/fr/home.html",
+            "it": "https://www.swissgrid.ch/it/home.html"
+          }
+        },
+        {
           "value": "oereb",
           "label": {
               "en": "PLR Cadastre CH/FL",
