@@ -117,6 +117,21 @@
           }
         },
         {
+          "value": "babs",
+          "label": {
+              "en": "Swiss Federal Office for Civil Protection FOCP",
+              "de": "Bundesamt f\u00FCr Bev\u00f6lkerungsschutz BABS",
+              "fr": "Office f\u00E9d\u00E9ral de la protection de la population OFPP",
+              "it": "Ufficio federale della protezione della popolazione UFPP"
+          },
+          "url": {
+            "en": "https://www.babs.admin.ch/en",
+            "de": "https://www.babs.admin.ch/de",
+            "fr": "https://www.babs.admin.ch/fr",
+            "it": "https://www.babs.admin.ch/it"
+          }
+        },
+        {
           "value": "bfe",
           "label": {
               "en": "Swiss Federal Office of Energy SFOE",
