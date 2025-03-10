@@ -258,16 +258,16 @@
         {
           "value": "docu_media",
           "label": {
-              "en": "Docu Media Schweiz GmbH",
-              "de": "Docu Media Schweiz GmbH",
-              "fr": "Docu Media Suisse Sàrl",
-              "it": "Docu Media Schweiz GmbH"
+              "en": "Infopro Digital Schweiz GmbH",
+              "de": "Infopro Digital Schweiz GmbH",
+              "fr": "Infopro Digital Suisse Sàrl",
+              "it": "Infopro Digital Schweiz GmbH"
           },
           "url": {
-            "en": "https://www.docu.ch/de/",
-            "de": "https://www.docu.ch/de/",
-            "fr": "https://www.docu.ch/fr/",
-            "it": "https://www.docu.ch/fr/"
+            "en": "https://www.infopro-digital.ch/de/",
+            "de": "https://www.infopro-digital.ch/de/",
+            "fr": "https://www.infopro-digital.ch/fr/",
+            "it": "https://www.infopro-digital.ch/fr/"
           }
         },
         {
