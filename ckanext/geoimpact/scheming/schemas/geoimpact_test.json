@@ -301,6 +301,21 @@
           }
         },
         {
+          "value": "kgk-cgc",
+          "label": {
+              "en": "KGK-CGC Operations Center",
+              "de": "Gesch\u00E4ftsstelle KGK-CGC",
+              "fr": "Centre op\u00E9rationnel de la CGC / Gesch\u00E4ftsstelle KGK",
+              "it": "Direzione operativa KGK-CGC"
+          },
+          "url": {
+            "en": "https://www.kgk-cgc.ch/",
+            "de": "https://www.kgk-cgc.ch/",
+            "fr": "https://www.kgk-cgc.ch/fr",
+            "it": "https://www.kgk-cgc.ch/it"
+          }
+        },
+        {
           "value": "vese",
           "label": {
               "en": "VESE / pvtarif.ch",
